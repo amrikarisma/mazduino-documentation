@@ -8,20 +8,20 @@ This page provides firmware files and configuration files for both Mazduino ECU 
 rusEFI is the primary firmware for Mazduino Compact ECU with full feature support.
 
 #### Firmware Files
-- **Binary Format**: [rusefi.bin](files/rusefi/rusefi.bin)
-- **Intel Hex Format**: [rusefi.hex](files/rusefi/rusefi.hex)
+- **Binary Format**: [rusefi.bin](myfiles/rusefi/rusefi.bin)
+- **Intel Hex Format**: [rusefi.hex](myfiles/rusefi/rusefi.hex)
 
 #### Configuration File
-- **TunerStudio INI**: [rusefi_mazduino.ini](files/rusefi/rusefi_mazduino.ini)
+- **TunerStudio INI**: [rusefi_mazduino.ini](myfiles/rusefi/rusefi_mazduino.ini)
 
 ### Speeduino Firmware
 Custom Speeduino firmware specifically configured for Mazduino Compact ECU pin mapping.
 
 #### Firmware Files
-- **Binary Format**: [firmware.bin](files/speeduino/mazduino_compact/firmware.bin)
+- **Binary Format**: [firmware.bin](myfiles/speeduino/mazduino_compact/firmware.bin)
 
 #### Configuration File
-- **TunerStudio INI**: [speeduino.ini](files/speeduino/mazduino_compact/speeduino.ini)
+- **TunerStudio INI**: [speeduino.ini](myfiles/speeduino/mazduino_compact/speeduino.ini)
 
 ---
 
@@ -31,11 +31,11 @@ Custom Speeduino firmware specifically configured for Mazduino Compact ECU pin m
 rusEFI firmware with full 6-channel support and advanced features.
 
 #### Firmware Files
-- **Binary Format**: [rusefi.bin](files/rusefi/rusefi.bin)
-- **Intel Hex Format**: [rusefi.hex](files/rusefi/rusefi.hex)
+- **Binary Format**: [rusefi.bin](myfiles/rusefi/rusefi.bin)
+- **Intel Hex Format**: [rusefi.hex](myfiles/rusefi/rusefi.hex)
 
 #### Configuration File
-- **TunerStudio INI**: [rusefi_mazduino.ini](files/rusefi/rusefi_mazduino.ini)
+- **TunerStudio INI**: [rusefi_mazduino.ini](myfiles/rusefi/rusefi_mazduino.ini)
 
 **Note**: Speeduino firmware for Mazduino Mini 6CH is currently in development.
 
