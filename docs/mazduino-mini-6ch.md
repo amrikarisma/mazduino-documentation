@@ -7,118 +7,22 @@ The Mazduino Mini 6CH is a compact 6-channel engine control unit designed for us
 ![Mazduino Mini 6ch](img/mazduino-mini-6ch.jpg)
 
 ## Key Features
-
-### Engine Control Capabilities
-- **6 Channel Injector**: Individual injector control for sequential operation
-- **6 Channel Coil**: Smart coil outputs (external IGBT required for dump coils)
-- **Flexible Configuration**: 6-cylinder full sequential or 4-cylinder with spare outputs
-- **2 High Current Outputs**: Configurable for idle/boost/VVT control
-
-### Advanced Control Systems
-- **Launch Control**: Dedicated input for launch control activation
-- **Data Logging**: Micro SD card support via SPI interface
-- **CANbus Communication**: MCP2551 IC for network communication
-- **Professional Connectivity**: 48-pin Yamaha ECU Connector
-
-## Technical Specifications
-
-### Processor/MCU
-- **MCU**: STM32F407VGT6 ARM 32-bit
-- **Architecture**: ARM Cortex-M4
-- **Performance**: High-speed processing for real-time engine control
-
-### Engine Control Outputs
-- **Injector Channels**: 6 channel injector outputs
-- **Ignition Channels**: 6 channel coil outputs for smart coils
-- **High Current Outputs**: 2 dedicated outputs (Idle/Boost/VVT)
-- **Low Current Outputs**: Tachometer, fuel pump, fan, AC compressor
-
-### Trigger/Timing Inputs
-- **CKP Trigger Input**: Hall/Optical/VR sensor support
-- **CMP Trigger Input**: Hall/Optical/VR sensor support
-- **VR-Conditioner Support**: Module VR-Conditioner DIP 8 compatible
-- **Stepper Motor Support**: Module Stepper (DRV8825) compatible
-
-### Analog Sensor Inputs
-- **External MAP Sensor**: Analog input for manifold pressure
-- **TPS Sensor**: Throttle position sensor input
-- **IAT Sensor**: Intake air temperature input
-- **ECT/CLT Sensor**: Engine/coolant temperature input
-- **O2 Sensor**: Oxygen sensor analog input
-- **Spare Analog Input 1**: Configurable (fuel pressure sensor, etc.)
-- **Spare Analog Input 2**: Configurable (oil pressure sensor, etc.)
-
-### Digital Inputs
-- **AC Switch**: Digital input/GND signal
-- **Launch Control Input**: Dedicated launch control activation
-- **Clutch Input**: Clutch position sensor input
-- **VSS Input**: Vehicle speed sensor input
-
-## Connectivity
-
-### Main Connector
-- **Type**: 48-pin Yamaha ECU Connector
-- **Professional Grade**: Automotive-rated connector system
-- **Compatibility**: Standard Yamaha ECU connector pinout
-
-### Data Logging & Communication
-- **Micro SD Card**: Data logging via SPI interface
-- **CANbus Support**: MCP2551 IC for reliable communication
-- **Data Storage**: High-speed logging capability
-- **Network Integration**: CAN network compatibility
-
-## Firmware Compatibility
-
-### rusEFI
-- **Native Support**: Designed specifically for rusEFI firmware
-- **Full Feature Set**: Complete access to rusEFI capabilities
-- **Real-time Tuning**: TunerStudio integration
-- **Advanced Features**: Professional engine management functions
-
-### Speeduino
-- **Compatible**: Fully compatible with Speeduino firmware
-- **Custom Configuration**: Mazduino Mini 6CH specific setup
-- **Optimized Performance**: STM32 platform optimizations
-- **Community Support**: Active development and support
-
-## Supported Engine Configurations
-
-### 6-Cylinder Engines
-- **Full Sequential**: Individual cylinder control for all 6 cylinders
-- **Inline 6**: BMW, Toyota, Nissan, and other I6 engines
-- **V6 Engines**: 60° and 90° V-angle configurations
-- **Performance Applications**: High-output 6-cylinder builds
-
-### 4-Cylinder with Extensions
-- **4 Injectors + 4 Spare**: 4-cylinder with additional high-current outputs
-- **Auxiliary Control**: Extra outputs for boost, water injection, etc.
-- **Flexible Configuration**: Adaptable to various setups
-- **Future Expansion**: Ready for additional accessories
-
-### Special Applications
-- **Smart Coil Systems**: Optimized for modern coil-on-plug systems
-- **External IGBT**: Support for dump coil systems with external drivers
-- **Module Integration**: VR-Conditioner and stepper motor modules
-
-## Applications
-
-### 6-Cylinder Engine Management
-- **Sequential Injection**: Full 6-cylinder sequential control
-- **Performance Builds**: High-output 6-cylinder applications
-- **Engine Swaps**: Modern control for classic 6-cylinder engines
-- **Racing Applications**: Professional motorsport 6-cylinder setups
-
-### 4-Cylinder with Expansion
-- **Enhanced Control**: 4-cylinder with additional high-current outputs
-- **Boost Control**: Dedicated outputs for turbo/supercharger management
-- **Water Injection**: Additional outputs for methanol/water injection
-- **Auxiliary Systems**: Spare outputs for custom applications
-
-### Professional Installation
-- **Yamaha Connector**: Professional-grade automotive connector
-- **Modular Design**: Support for VR-Conditioner and stepper modules
-- **Data Logging**: Onboard SD card logging capability
-- **Network Ready**: CANbus integration for advanced setups
+- Primary trigger input for CKP VR, hall or optical sensor
+- Secondary trigger input for CMP VR, hall or optical sensor
+- 7 analog inputs (0-5V) for MAP, TPS, IAT, CLT, O2, and 2 spare that can be used for fuel pressure or other sensors
+- 5V power supply for sensors with internal fuse protection
+- 4 digital pullup inputs for AC Switch, VSS, Clutch, Launch Control
+- 8x high current low-side drivers 3A for high-impedance injectors, idle PWM (ISC), Boost, VVT and others
+- 5x low current low-side drivers for main relay, fuel pump, AC compressor, fan, and tachometer control
+- 6x 12V or 5V outputs for ignition coil signals
+- Support for additional VR Conditioner Module
+- Support for additional Stepper Idle Module
+- 168 MHz ARM Cortex-M4 processor
+- Data communication via CANbus
+- Data communication via USB Type-C
+- Serial RX/TX communication
+- 48-pin automotive connector
+- SD card for data logging
 
 ## Wiring and Installation
 
@@ -296,49 +200,9 @@ For 4-cylinder engines:
 - **Coil Selection**: Choose appropriate coil type for your application
 - **Safety**: Proper external drivers essential for dump coil systems
 
-## Ordering Information
-
-The Mazduino Mini 6CH is available through authorized distributors worldwide with multiple purchase variants to suit different user requirements:
-
-### Purchase Variants
-
-#### PCB Only
-- Mazduino Mini 6CH bare PCB
-- For experienced builders who source their own components
-
-#### PCB + Components
-- Mazduino Mini 6CH PCB
-- All electronic components included
-- Self-assembly required
-
-#### Full Assembly (Ready to Use)
-- Mazduino Mini 6CH fully assembled and tested
-- 48-pin Yamaha ECU connector (1 pair - male/female) included
-- 3D printed ABS case included
-- USB programming cable
-- Micro SD card for data logging
-- Quick start guide
-- Access to base maps and tuning software
-
-### Optional Modules and Accessories
-- VR-Conditioner Module (DIP 8)
-- Stepper Motor Module (DRV8825)
-- External IGBT modules for dump coil applications
-- Custom wiring harnesses (made to order)
-- Professional tuning software licenses
-
-**Note**: Wiring harnesses are sold separately and can be customized based on your specific engine and application requirements.
-
-### Technical Support
-- Comprehensive documentation
-- Online community support
-- Firmware updates and releases
-- Application-specific guidance
-
 ### Firmware & Configuration Files
 - **[Download Page](downloads.md)** - Get the latest rusEFI firmware and TunerStudio configuration files
 - Full 6-channel support with advanced features
 - Custom pin mapping configuration included
 - Compatible with both rusEFI firmware
 
-Contact your regional distributor or visit our website for current pricing, availability, and technical specifications.
