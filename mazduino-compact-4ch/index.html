@@ -53,60 +53,6 @@
     <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#key-features">Key Features</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#engine-control-capabilities">Engine Control Capabilities</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#advanced-engine-management">Advanced Engine Management</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#technical-specifications">Technical Specifications</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#engine-control-outputs">Engine Control Outputs</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#sensor-inputs">Sensor Inputs</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#communication-data-logging">Communication &amp; Data Logging</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#connectivity-options">Connectivity Options</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#firmware-compatibility">Firmware Compatibility</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#rusefi">rusEFI</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#speeduino">Speeduino</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#supported-engine-configurations">Supported Engine Configurations</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#4-cylinder-engines">4-Cylinder Engines</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#8-cylinder-engines">8-Cylinder Engines</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#universal-applications">Universal Applications</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#advanced-features">Advanced Features</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#performance-control-systems">Performance Control Systems</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#fuel-ignition-management">Fuel &amp; Ignition Management</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#data-logging-communication">Data Logging &amp; Communication</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#applications">Applications</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#ideal-use-cases">Ideal Use Cases</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#installation-flexibility">Installation Flexibility</a>
-    </li>
-        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#wiring-and-installation">Wiring and Installation</a>
         <ul>
@@ -128,37 +74,11 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#tuning-and-configuration">Tuning and Configuration</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#base-maps">Base Maps</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#tuning-process">Tuning Process</a>
-    </li>
-        </ul>
-    </li>
     <li class="toctree-l2"><a class="reference internal" href="#support-and-resources">Support and Resources</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#documentation">Documentation</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#firmware-configuration-files">Firmware &amp; Configuration Files</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#community-support">Community Support</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#ordering-information">Ordering Information</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#connector-options">Connector Options</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#purchase-variants">Purchase Variants</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#pcb-only">PCB Only</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#pcb-components">PCB + Components</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#full-assembly-ready-to-use">Full Assembly (Ready to Use)</a>
-    </li>
-        </ul>
     </li>
         </ul>
     </li>
@@ -201,119 +121,21 @@
 <p>The Mazduino Compact ECU is a 4-channel standalone engine control unit designed for versatile engine management applications. Made specifically for rusEFI and Speeduino firmware, it provides comprehensive engine control in a compact package suitable for 4-cylinder full sequential or 8-cylinder paired operation.</p>
 <p><img alt="Mazduino Compact 4ch" src="../img/mazduino-compact-4ch.jpg" /></p>
 <h2 id="key-features">Key Features</h2>
-<h3 id="engine-control-capabilities">Engine Control Capabilities</h3>
 <ul>
-<li><strong>4 Channel Operation</strong>: 4 injectors and 4 ignition outputs</li>
-<li><strong>Flexible Configuration</strong>: 4-cylinder full sequential or 8-cylinder paired</li>
-<li><strong>Sequential Control</strong>: Full sequential fuel injection and ignition control</li>
-<li><strong>Idle Control</strong>: PWM/IACV idle air control valve support</li>
-<li><strong>Air Conditioning</strong>: Integrated AC control system</li>
-</ul>
-<h3 id="advanced-engine-management">Advanced Engine Management</h3>
-<ul>
-<li><strong>Launch Control</strong>: Advanced launch control system</li>
-<li><strong>Boost Control</strong>: Turbo/supercharger boost management</li>
-<li><strong>Anti-Lag System (ALS)</strong>: Turbo anti-lag functionality</li>
-<li><strong>Flat Shift</strong>: Seamless gear changes without lift</li>
-<li><strong>Rev Limiter</strong>: Both hard and soft cut options</li>
-<li><strong>Closed-loop Lambda Control</strong>: O2 feedback for precise fuel control</li>
-</ul>
-<h2 id="technical-specifications">Technical Specifications</h2>
-<h3 id="engine-control-outputs">Engine Control Outputs</h3>
-<ul>
-<li><strong>Injection Channels</strong>: 4 high-current injector outputs</li>
-<li><strong>Ignition Channels</strong>: 4 ignition outputs</li>
-<li><strong>Idle Control</strong>: 1 PWM/IACV output</li>
-<li><strong>Low Current Outputs</strong>: Tachometer, fuel pump, fan, AC compressor</li>
-</ul>
-<h3 id="sensor-inputs">Sensor Inputs</h3>
-<ul>
-<li><strong>Engine Position</strong>: CKP/CMP hall or optical sensor input</li>
-<li><strong>Engine Sensors</strong>: O2, MAP, IAT, TPS, coolant temperature</li>
-<li><strong>Vehicle Inputs</strong>: Clutch, AC switch/blower, VSS/speedometer</li>
-<li><strong>Additional</strong>: Multiple analog and digital sensor inputs</li>
-</ul>
-<h3 id="communication-data-logging">Communication &amp; Data Logging</h3>
-<ul>
-<li><strong>SD Card</strong>: Onboard data logging capability</li>
-<li><strong>CANbus</strong>: Communication support for external devices</li>
-<li><strong>Tuning Interface</strong>: Full tuning via TunerStudio software</li>
-</ul>
-<h3 id="connectivity-options">Connectivity Options</h3>
-<p>Two connector configurations available:
-- <strong>Option 1</strong>: 30-pin Molex Micro-Fit 3.0 (6-pin + 24-pin)
-- <strong>Option 2</strong>: 33-pin Automotive Connector</p>
-<h2 id="firmware-compatibility">Firmware Compatibility</h2>
-<h3 id="rusefi">rusEFI</h3>
-<ul>
-<li><strong>Native Support</strong>: Designed specifically for rusEFI firmware</li>
-<li><strong>Full Feature Set</strong>: Complete access to all rusEFI capabilities</li>
-<li><strong>Real-time Tuning</strong>: TunerStudio integration for live tuning</li>
-<li><strong>Advanced Features</strong>: Launch control, boost control, ALS, and more</li>
-</ul>
-<h3 id="speeduino">Speeduino</h3>
-<ul>
-<li><strong>Compatible</strong>: Fully compatible with Speeduino firmware</li>
-<li><strong>Custom Configuration</strong>: Mazduino-specific pin mapping available</li>
-<li><strong>Performance Optimized</strong>: Optimized for reliable operation</li>
-<li><strong>Community Support</strong>: Active community and documentation</li>
-</ul>
-<h2 id="supported-engine-configurations">Supported Engine Configurations</h2>
-<h3 id="4-cylinder-engines">4-Cylinder Engines</h3>
-<ul>
-<li><strong>Full Sequential</strong>: Individual cylinder control for maximum performance</li>
-<li><strong>Naturally Aspirated</strong>: Complete engine management for NA engines</li>
-<li><strong>Forced Induction</strong>: Turbo and supercharger support with boost control</li>
-</ul>
-<h3 id="8-cylinder-engines">8-Cylinder Engines</h3>
-<ul>
-<li><strong>Paired Operation</strong>: 8-cylinder support using paired injection/ignition</li>
-<li><strong>Wasted Spark</strong>: Efficient ignition control for V8 applications</li>
-<li><strong>Performance Tuning</strong>: Advanced tuning capabilities for high-performance V8s</li>
-</ul>
-<h3 id="universal-applications">Universal Applications</h3>
-<ul>
-<li><strong>Engine Swaps</strong>: Modern control for classic vehicle conversions</li>
-<li><strong>Racing</strong>: Professional motorsport applications</li>
-<li><strong>Custom Builds</strong>: Flexible configuration for unique projects</li>
-</ul>
-<h2 id="advanced-features">Advanced Features</h2>
-<h3 id="performance-control-systems">Performance Control Systems</h3>
-<ul>
-<li><strong>Launch Control</strong>: Configurable launch RPM and timing control</li>
-<li><strong>Boost Control</strong>: Closed-loop wastegate and boost control</li>
-<li><strong>Anti-Lag System (ALS)</strong>: Turbo anti-lag for improved response</li>
-<li><strong>Flat Shift</strong>: No-lift shifting for seamless gear changes</li>
-<li><strong>Rev Limiter</strong>: Soft cut (fuel) and hard cut (ignition) options</li>
-</ul>
-<h3 id="fuel-ignition-management">Fuel &amp; Ignition Management</h3>
-<ul>
-<li><strong>Sequential Injection</strong>: Individual cylinder fuel control</li>
-<li><strong>Closed-loop Lambda</strong>: O2 sensor feedback for precise AFR control</li>
-<li><strong>Ignition Control</strong>: Advanced timing control with knock protection</li>
-<li><strong>Fuel Pump Control</strong>: Variable speed fuel pump management</li>
-</ul>
-<h3 id="data-logging-communication">Data Logging &amp; Communication</h3>
-<ul>
-<li><strong>SD Card Logging</strong>: High-speed onboard data recording</li>
-<li><strong>CANbus Support</strong>: Integration with dashboard and other ECUs</li>
-<li><strong>TunerStudio</strong>: Full-featured tuning software compatibility</li>
-<li><strong>Real-time Data</strong>: Live monitoring and adjustment capabilities</li>
-</ul>
-<h2 id="applications">Applications</h2>
-<h3 id="ideal-use-cases">Ideal Use Cases</h3>
-<ul>
-<li><strong>4-Cylinder Builds</strong>: Complete sequential control for 4-cyl engines</li>
-<li><strong>V8 Conversions</strong>: Paired operation for V8 engine swaps</li>
-<li><strong>Turbo Applications</strong>: Advanced boost and anti-lag control</li>
-<li><strong>Racing</strong>: Professional motorsport engine management</li>
-<li><strong>Street Performance</strong>: Enhanced control for modified street cars</li>
-</ul>
-<h3 id="installation-flexibility">Installation Flexibility</h3>
-<ul>
-<li><strong>Connector Options</strong>: Choice of Molex or automotive connectors</li>
-<li><strong>Compact Design</strong>: Space-efficient installation</li>
-<li><strong>Professional Grade</strong>: Reliable operation in demanding environments</li>
+<li>Primary trigger input for CKP hall or optical sensor only</li>
+<li>Secondary trigger input for CMP hall or optical sensor only</li>
+<li>6 analog inputs (0-5V) for MAP, TPS, IAT, CLT, O2, and 1 spare that can be used for fuel pressure or other sensors</li>
+<li>5V power supply for sensors with internal fuse protection</li>
+<li>3 digital pullup inputs for AC Switch, VSS, Clutch (AC or VSS can be used for Launch Control button if not needed)</li>
+<li>5x high current low-side drivers 3A for high-impedance injectors and idle PWM (ISC)</li>
+<li>5x low current low-side drivers for main relay, fuel pump, AC compressor, fan, and tachometer control</li>
+<li>4x 12V or 5V outputs for ignition coil signals</li>
+<li>168 MHz ARM Cortex-M4 processor</li>
+<li>Data communication via CANbus</li>
+<li>Data communication via USB Type-C</li>
+<li>Serial RX/TX communication</li>
+<li>30-pin connector with 6-pin and 24-pin configuration</li>
+<li>SD card for data logging</li>
 </ul>
 <h2 id="wiring-and-installation">Wiring and Installation</h2>
 <h3 id="connector-pin-mapping">Connector Pin Mapping</h3>
@@ -662,21 +484,6 @@
 <li><strong>Wiring Compatibility</strong>: Wiring is compatible with Speeduino standards</li>
 <li><strong>Reference</strong>: Additional wiring information available at <a href="https://wiki.speeduino.com/en/wiring/system">Speeduino Wiki</a></li>
 </ul>
-<h2 id="tuning-and-configuration">Tuning and Configuration</h2>
-<h3 id="base-maps">Base Maps</h3>
-<ul>
-<li><strong>Generic 4-cylinder</strong>: Starting point for most engines</li>
-<li><strong>Motorcycle</strong>: Optimized for bike applications</li>
-<li><strong>Turbo/Supercharged</strong>: Forced induction starting maps</li>
-</ul>
-<h3 id="tuning-process">Tuning Process</h3>
-<ol>
-<li><strong>Engine Configuration</strong>: Set basic engine parameters</li>
-<li><strong>Sensor Calibration</strong>: Calibrate all input sensors</li>
-<li><strong>Base Timing</strong>: Set initial ignition timing</li>
-<li><strong>Fuel Maps</strong>: Configure injection timing and duration</li>
-<li><strong>Fine Tuning</strong>: Optimize for performance and emissions</li>
-</ol>
 <h2 id="support-and-resources">Support and Resources</h2>
 <h3 id="documentation">Documentation</h3>
 <ul>
@@ -689,46 +496,7 @@
 <ul>
 <li><a href="../downloads/">Download Page</a> - Get the latest firmware and TunerStudio configuration files</li>
 <li>rusEFI and Speeduino firmware available</li>
-<li>Custom pin mapping configuration files included</li>
 </ul>
-<h3 id="community-support">Community Support</h3>
-<ul>
-<li>User forums and discussion groups</li>
-<li>Technical support channels</li>
-<li>Firmware updates and releases</li>
-<li>Community-contributed configurations</li>
-</ul>
-<h2 id="ordering-information">Ordering Information</h2>
-<p>The Mazduino Compact ECU is available with two connector options and multiple purchase variants to suit different installation requirements:</p>
-<h3 id="connector-options">Connector Options</h3>
-<ul>
-<li><strong>Option 1</strong>: 30-pin Molex Micro-Fit 3.0 (6-pin + 24-pin configuration)</li>
-<li><strong>Option 2</strong>: 33-pin Automotive Connector</li>
-</ul>
-<h3 id="purchase-variants">Purchase Variants</h3>
-<h4 id="pcb-only">PCB Only</h4>
-<ul>
-<li>Mazduino Compact ECU bare PCB</li>
-<li>For experienced builders who source their own components</li>
-</ul>
-<h4 id="pcb-components">PCB + Components</h4>
-<ul>
-<li>Mazduino Compact ECU PCB</li>
-<li>All electronic components included</li>
-<li>Self-assembly required</li>
-</ul>
-<h4 id="full-assembly-ready-to-use">Full Assembly (Ready to Use)</h4>
-<ul>
-<li>Mazduino Compact ECU fully assembled and tested</li>
-<li>1 pair of connectors (male/female) included</li>
-<li>3D printed ABS case included</li>
-<li>USB programming cable</li>
-<li>SD card for data logging</li>
-<li>Quick start guide</li>
-<li>Access to TunerStudio software and base maps</li>
-</ul>
-<p><strong>Note</strong>: Wiring harnesses are sold separately and can be customized based on your specific application requirements.</p>
-<p>Contact your local Mazduino distributor or visit our website for current pricing and availability.</p>
               
             </div>
           </div><footer>

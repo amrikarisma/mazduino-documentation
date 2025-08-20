@@ -57,62 +57,6 @@
     <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#key-features">Key Features</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#engine-control-capabilities">Engine Control Capabilities</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#advanced-control-systems">Advanced Control Systems</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#technical-specifications">Technical Specifications</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#processormcu">Processor/MCU</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#engine-control-outputs">Engine Control Outputs</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#triggertiming-inputs">Trigger/Timing Inputs</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#analog-sensor-inputs">Analog Sensor Inputs</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#digital-inputs">Digital Inputs</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#connectivity">Connectivity</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#main-connector">Main Connector</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#data-logging-communication">Data Logging &amp; Communication</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#firmware-compatibility">Firmware Compatibility</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#rusefi">rusEFI</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#speeduino">Speeduino</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#supported-engine-configurations">Supported Engine Configurations</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#6-cylinder-engines">6-Cylinder Engines</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#4-cylinder-with-extensions">4-Cylinder with Extensions</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#special-applications">Special Applications</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#applications">Applications</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#6-cylinder-engine-management">6-Cylinder Engine Management</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#4-cylinder-with-expansion">4-Cylinder with Expansion</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#professional-installation">Professional Installation</a>
-    </li>
-        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#wiring-and-installation">Wiring and Installation</a>
         <ul>
@@ -154,24 +98,6 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#ignition-system-requirements">Ignition System Requirements</a>
     </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#ordering-information">Ordering Information</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#purchase-variants">Purchase Variants</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#pcb-only">PCB Only</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#pcb-components">PCB + Components</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#full-assembly-ready-to-use">Full Assembly (Ready to Use)</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#optional-modules-and-accessories">Optional Modules and Accessories</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#technical-support">Technical Support</a>
-    </li>
     <li class="toctree-l3"><a class="reference internal" href="#firmware-configuration-files">Firmware &amp; Configuration Files</a>
     </li>
         </ul>
@@ -211,129 +137,23 @@
 <p>The Mazduino Mini 6CH is a compact 6-channel engine control unit designed for use with rusEFI and Speeduino firmware. Built around the powerful STM32F407VGT6 ARM 32-bit processor, it provides comprehensive engine management in a compact form factor suitable for 6-cylinder engines or 4-cylinder engines with additional high-current outputs.</p>
 <p><img alt="Mazduino Mini 6ch" src="../img/mazduino-mini-6ch.jpg" /></p>
 <h2 id="key-features">Key Features</h2>
-<h3 id="engine-control-capabilities">Engine Control Capabilities</h3>
 <ul>
-<li><strong>6 Channel Injector</strong>: Individual injector control for sequential operation</li>
-<li><strong>6 Channel Coil</strong>: Smart coil outputs (external IGBT required for dump coils)</li>
-<li><strong>Flexible Configuration</strong>: 6-cylinder full sequential or 4-cylinder with spare outputs</li>
-<li><strong>2 High Current Outputs</strong>: Configurable for idle/boost/VVT control</li>
-</ul>
-<h3 id="advanced-control-systems">Advanced Control Systems</h3>
-<ul>
-<li><strong>Launch Control</strong>: Dedicated input for launch control activation</li>
-<li><strong>Data Logging</strong>: Micro SD card support via SPI interface</li>
-<li><strong>CANbus Communication</strong>: MCP2551 IC for network communication</li>
-<li><strong>Professional Connectivity</strong>: 48-pin Yamaha ECU Connector</li>
-</ul>
-<h2 id="technical-specifications">Technical Specifications</h2>
-<h3 id="processormcu">Processor/MCU</h3>
-<ul>
-<li><strong>MCU</strong>: STM32F407VGT6 ARM 32-bit</li>
-<li><strong>Architecture</strong>: ARM Cortex-M4</li>
-<li><strong>Performance</strong>: High-speed processing for real-time engine control</li>
-</ul>
-<h3 id="engine-control-outputs">Engine Control Outputs</h3>
-<ul>
-<li><strong>Injector Channels</strong>: 6 channel injector outputs</li>
-<li><strong>Ignition Channels</strong>: 6 channel coil outputs for smart coils</li>
-<li><strong>High Current Outputs</strong>: 2 dedicated outputs (Idle/Boost/VVT)</li>
-<li><strong>Low Current Outputs</strong>: Tachometer, fuel pump, fan, AC compressor</li>
-</ul>
-<h3 id="triggertiming-inputs">Trigger/Timing Inputs</h3>
-<ul>
-<li><strong>CKP Trigger Input</strong>: Hall/Optical/VR sensor support</li>
-<li><strong>CMP Trigger Input</strong>: Hall/Optical/VR sensor support</li>
-<li><strong>VR-Conditioner Support</strong>: Module VR-Conditioner DIP 8 compatible</li>
-<li><strong>Stepper Motor Support</strong>: Module Stepper (DRV8825) compatible</li>
-</ul>
-<h3 id="analog-sensor-inputs">Analog Sensor Inputs</h3>
-<ul>
-<li><strong>External MAP Sensor</strong>: Analog input for manifold pressure</li>
-<li><strong>TPS Sensor</strong>: Throttle position sensor input</li>
-<li><strong>IAT Sensor</strong>: Intake air temperature input</li>
-<li><strong>ECT/CLT Sensor</strong>: Engine/coolant temperature input</li>
-<li><strong>O2 Sensor</strong>: Oxygen sensor analog input</li>
-<li><strong>Spare Analog Input 1</strong>: Configurable (fuel pressure sensor, etc.)</li>
-<li><strong>Spare Analog Input 2</strong>: Configurable (oil pressure sensor, etc.)</li>
-</ul>
-<h3 id="digital-inputs">Digital Inputs</h3>
-<ul>
-<li><strong>AC Switch</strong>: Digital input/GND signal</li>
-<li><strong>Launch Control Input</strong>: Dedicated launch control activation</li>
-<li><strong>Clutch Input</strong>: Clutch position sensor input</li>
-<li><strong>VSS Input</strong>: Vehicle speed sensor input</li>
-</ul>
-<h2 id="connectivity">Connectivity</h2>
-<h3 id="main-connector">Main Connector</h3>
-<ul>
-<li><strong>Type</strong>: 48-pin Yamaha ECU Connector</li>
-<li><strong>Professional Grade</strong>: Automotive-rated connector system</li>
-<li><strong>Compatibility</strong>: Standard Yamaha ECU connector pinout</li>
-</ul>
-<h3 id="data-logging-communication">Data Logging &amp; Communication</h3>
-<ul>
-<li><strong>Micro SD Card</strong>: Data logging via SPI interface</li>
-<li><strong>CANbus Support</strong>: MCP2551 IC for reliable communication</li>
-<li><strong>Data Storage</strong>: High-speed logging capability</li>
-<li><strong>Network Integration</strong>: CAN network compatibility</li>
-</ul>
-<h2 id="firmware-compatibility">Firmware Compatibility</h2>
-<h3 id="rusefi">rusEFI</h3>
-<ul>
-<li><strong>Native Support</strong>: Designed specifically for rusEFI firmware</li>
-<li><strong>Full Feature Set</strong>: Complete access to rusEFI capabilities</li>
-<li><strong>Real-time Tuning</strong>: TunerStudio integration</li>
-<li><strong>Advanced Features</strong>: Professional engine management functions</li>
-</ul>
-<h3 id="speeduino">Speeduino</h3>
-<ul>
-<li><strong>Compatible</strong>: Fully compatible with Speeduino firmware</li>
-<li><strong>Custom Configuration</strong>: Mazduino Mini 6CH specific setup</li>
-<li><strong>Optimized Performance</strong>: STM32 platform optimizations</li>
-<li><strong>Community Support</strong>: Active development and support</li>
-</ul>
-<h2 id="supported-engine-configurations">Supported Engine Configurations</h2>
-<h3 id="6-cylinder-engines">6-Cylinder Engines</h3>
-<ul>
-<li><strong>Full Sequential</strong>: Individual cylinder control for all 6 cylinders</li>
-<li><strong>Inline 6</strong>: BMW, Toyota, Nissan, and other I6 engines</li>
-<li><strong>V6 Engines</strong>: 60° and 90° V-angle configurations</li>
-<li><strong>Performance Applications</strong>: High-output 6-cylinder builds</li>
-</ul>
-<h3 id="4-cylinder-with-extensions">4-Cylinder with Extensions</h3>
-<ul>
-<li><strong>4 Injectors + 4 Spare</strong>: 4-cylinder with additional high-current outputs</li>
-<li><strong>Auxiliary Control</strong>: Extra outputs for boost, water injection, etc.</li>
-<li><strong>Flexible Configuration</strong>: Adaptable to various setups</li>
-<li><strong>Future Expansion</strong>: Ready for additional accessories</li>
-</ul>
-<h3 id="special-applications">Special Applications</h3>
-<ul>
-<li><strong>Smart Coil Systems</strong>: Optimized for modern coil-on-plug systems</li>
-<li><strong>External IGBT</strong>: Support for dump coil systems with external drivers</li>
-<li><strong>Module Integration</strong>: VR-Conditioner and stepper motor modules</li>
-</ul>
-<h2 id="applications">Applications</h2>
-<h3 id="6-cylinder-engine-management">6-Cylinder Engine Management</h3>
-<ul>
-<li><strong>Sequential Injection</strong>: Full 6-cylinder sequential control</li>
-<li><strong>Performance Builds</strong>: High-output 6-cylinder applications</li>
-<li><strong>Engine Swaps</strong>: Modern control for classic 6-cylinder engines</li>
-<li><strong>Racing Applications</strong>: Professional motorsport 6-cylinder setups</li>
-</ul>
-<h3 id="4-cylinder-with-expansion">4-Cylinder with Expansion</h3>
-<ul>
-<li><strong>Enhanced Control</strong>: 4-cylinder with additional high-current outputs</li>
-<li><strong>Boost Control</strong>: Dedicated outputs for turbo/supercharger management</li>
-<li><strong>Water Injection</strong>: Additional outputs for methanol/water injection</li>
-<li><strong>Auxiliary Systems</strong>: Spare outputs for custom applications</li>
-</ul>
-<h3 id="professional-installation">Professional Installation</h3>
-<ul>
-<li><strong>Yamaha Connector</strong>: Professional-grade automotive connector</li>
-<li><strong>Modular Design</strong>: Support for VR-Conditioner and stepper modules</li>
-<li><strong>Data Logging</strong>: Onboard SD card logging capability</li>
-<li><strong>Network Ready</strong>: CANbus integration for advanced setups</li>
+<li>Primary trigger input for CKP VR, hall or optical sensor</li>
+<li>Secondary trigger input for CMP VR, hall or optical sensor</li>
+<li>7 analog inputs (0-5V) for MAP, TPS, IAT, CLT, O2, and 2 spare that can be used for fuel pressure or other sensors</li>
+<li>5V power supply for sensors with internal fuse protection</li>
+<li>4 digital pullup inputs for AC Switch, VSS, Clutch, Launch Control</li>
+<li>8x high current low-side drivers 3A for high-impedance injectors, idle PWM (ISC), Boost, VVT and others</li>
+<li>5x low current low-side drivers for main relay, fuel pump, AC compressor, fan, and tachometer control</li>
+<li>6x 12V or 5V outputs for ignition coil signals</li>
+<li>Support for additional VR Conditioner Module</li>
+<li>Support for additional Stepper Idle Module</li>
+<li>168 MHz ARM Cortex-M4 processor</li>
+<li>Data communication via CANbus</li>
+<li>Data communication via USB Type-C</li>
+<li>Serial RX/TX communication</li>
+<li>48-pin automotive connector</li>
+<li>SD card for data logging</li>
 </ul>
 <h2 id="wiring-and-installation">Wiring and Installation</h2>
 <h3 id="connector-pin-mapping">Connector Pin Mapping</h3>
@@ -850,46 +670,6 @@
 <li><strong>Coil Selection</strong>: Choose appropriate coil type for your application</li>
 <li><strong>Safety</strong>: Proper external drivers essential for dump coil systems</li>
 </ul>
-<h2 id="ordering-information">Ordering Information</h2>
-<p>The Mazduino Mini 6CH is available through authorized distributors worldwide with multiple purchase variants to suit different user requirements:</p>
-<h3 id="purchase-variants">Purchase Variants</h3>
-<h4 id="pcb-only">PCB Only</h4>
-<ul>
-<li>Mazduino Mini 6CH bare PCB</li>
-<li>For experienced builders who source their own components</li>
-</ul>
-<h4 id="pcb-components">PCB + Components</h4>
-<ul>
-<li>Mazduino Mini 6CH PCB</li>
-<li>All electronic components included</li>
-<li>Self-assembly required</li>
-</ul>
-<h4 id="full-assembly-ready-to-use">Full Assembly (Ready to Use)</h4>
-<ul>
-<li>Mazduino Mini 6CH fully assembled and tested</li>
-<li>48-pin Yamaha ECU connector (1 pair - male/female) included</li>
-<li>3D printed ABS case included</li>
-<li>USB programming cable</li>
-<li>Micro SD card for data logging</li>
-<li>Quick start guide</li>
-<li>Access to base maps and tuning software</li>
-</ul>
-<h3 id="optional-modules-and-accessories">Optional Modules and Accessories</h3>
-<ul>
-<li>VR-Conditioner Module (DIP 8)</li>
-<li>Stepper Motor Module (DRV8825)</li>
-<li>External IGBT modules for dump coil applications</li>
-<li>Custom wiring harnesses (made to order)</li>
-<li>Professional tuning software licenses</li>
-</ul>
-<p><strong>Note</strong>: Wiring harnesses are sold separately and can be customized based on your specific engine and application requirements.</p>
-<h3 id="technical-support">Technical Support</h3>
-<ul>
-<li>Comprehensive documentation</li>
-<li>Online community support</li>
-<li>Firmware updates and releases</li>
-<li>Application-specific guidance</li>
-</ul>
 <h3 id="firmware-configuration-files">Firmware &amp; Configuration Files</h3>
 <ul>
 <li><strong><a href="../downloads/">Download Page</a></strong> - Get the latest rusEFI firmware and TunerStudio configuration files</li>
@@ -897,7 +677,6 @@
 <li>Custom pin mapping configuration included</li>
 <li>Compatible with both rusEFI firmware</li>
 </ul>
-<p>Contact your regional distributor or visit our website for current pricing, availability, and technical specifications.</p>
               
             </div>
           </div><footer>
