@@ -1,0 +1,7 @@
+site_name: Mazduino Documentation
+nav:
+  - Home: index.md
+  - Compact 4 Channel: mazduino-compact-4ch.md
+  - Mini 6 Channel: mazduino-mini-6ch.md
+  - About: about.md
+theme: readthedocs
