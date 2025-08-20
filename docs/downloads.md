@@ -125,7 +125,7 @@ Check individual firmware repositories for detailed changelog information:
 4. **Sensor Reading Issues**: Verify wiring against pin mapping tables
 
 ### Getting Help
-- Review the [troubleshooting guides](troubleshooting.md) for your specific ECU model
+- Review the documentation for your specific ECU model for troubleshooting guidance
 - Check community forums for similar issues
 - Contact technical support for hardware-related problems
 
