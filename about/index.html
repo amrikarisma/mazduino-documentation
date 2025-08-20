@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>About - Mazduino Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "About";
+        var mkdocs_page_input_path = "about.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Mazduino Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../mazduino-compact-4ch/">Compact 4 Channel</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../mazduino-mini-6ch/">Mini 6 Channel</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">About</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-features">Key Features</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#hardware-platform">Hardware Platform</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#firmware-options">Firmware Options</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#rusefi-firmware">rusEFI Firmware</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#speeduino-compatibility">Speeduino Compatibility</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#target-applications">Target Applications</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#open-source-philosophy">Open Source Philosophy</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#future-development">Future Development</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Mazduino Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">About</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="about-mazduino-ecu">About Mazduino ECU</h1>
+<h2 id="overview">Overview</h2>
+<p>Mazduino ECU is a standalone Engine Control Unit (ECU) designed for automotive enthusiasts and professionals who need a flexible, open-source solution for engine management. Built around the powerful STM32F407VGT6 microcontroller, Mazduino offers exceptional performance and expandability for various engine control applications.</p>
+<h2 id="key-features">Key Features</h2>
+<h3 id="hardware-platform">Hardware Platform</h3>
+<ul>
+<li><strong>Primary MCU</strong>: STM32F407VGT6 (ARM Cortex-M4 @ 168MHz)</li>
+<li><strong>Future Compatibility</strong>: Planned support for multiple STM32 variants</li>
+<li><strong>Open Hardware Design</strong>: Fully documented schematics and PCB layouts</li>
+<li><strong>Robust Construction</strong>: Automotive-grade components and connectors</li>
+</ul>
+<h3 id="firmware-options">Firmware Options</h3>
+<h4 id="rusefi-firmware">rusEFI Firmware</h4>
+<p>Mazduino ECU primarily runs on <strong>rusEFI</strong>, a comprehensive open-source engine management firmware that provides:</p>
+<ul>
+<li>Advanced fuel injection control</li>
+<li>Ignition timing management</li>
+<li>Sensor data acquisition and processing</li>
+<li>Real-time tuning capabilities</li>
+<li>Extensive logging and diagnostics</li>
+<li>CAN bus communication</li>
+<li>Support for various engine configurations</li>
+</ul>
+<h4 id="speeduino-compatibility">Speeduino Compatibility</h4>
+<p>Due to the STM32F407VGT6 MCU, Mazduino is also compatible with <strong>Speeduino firmware</strong>. However, please note:</p>
+<ul>
+<li><strong>Custom firmware required</strong> due to different pin mapping</li>
+<li>Pin assignments differ from popular and official Speeduino boards</li>
+<li>Community support available for custom configurations</li>
+<li>Full documentation provided for pin mapping differences</li>
+</ul>
+<h2 id="target-applications">Target Applications</h2>
+<p>Mazduino ECU is designed for:</p>
+<ul>
+<li><strong>Standalone Engine Management</strong>: Complete replacement for factory ECUs</li>
+<li><strong>Racing Applications</strong>: High-performance motorsport environments</li>
+<li><strong>Engine Swaps</strong>: Modern engine management for classic vehicles</li>
+<li><strong>Research &amp; Development</strong>: Educational and experimental projects</li>
+<li><strong>Aftermarket Tuning</strong>: Enhanced control for modified engines</li>
+</ul>
+<h2 id="open-source-philosophy">Open Source Philosophy</h2>
+<p>Mazduino embraces the open-source community by providing:</p>
+<ul>
+<li><strong>Open Hardware</strong>: Complete schematics, PCB files, and BOM</li>
+<li><strong>Open Firmware</strong>: Based on established open-source projects</li>
+<li><strong>Community Driven</strong>: Collaborative development and support</li>
+<li><strong>Educational Resources</strong>: Comprehensive documentation and tutorials</li>
+<li><strong>Customization Freedom</strong>: Full access to modify and adapt</li>
+</ul>
+<h2 id="future-development">Future Development</h2>
+<p>The Mazduino project continues to evolve with planned enhancements:</p>
+<ul>
+<li><strong>Multi-MCU Support</strong>: Expanding to various STM32 family members</li>
+<li><strong>Enhanced I/O</strong>: Additional sensor and actuator interfaces</li>
+<li><strong>Wireless Connectivity</strong>: WiFi and Bluetooth integration options</li>
+<li><strong>Advanced Features</strong>: Knock detection, flex fuel, and more</li>
+<li><strong>Community Contributions</strong>: User-submitted improvements and variants</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<p>Whether you're a seasoned tuner or new to standalone engine management, Mazduino provides the tools and documentation needed to successfully implement modern engine control in your project. Our comprehensive documentation covers everything from basic installation to advanced tuning strategies.</p>
+<p>Join the Mazduino community and take control of your engine management with this powerful, flexible, and open-source ECU solution.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../mazduino-mini-6ch/" class="btn btn-neutral float-left" title="Mini 6 Channel"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../mazduino-mini-6ch/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
