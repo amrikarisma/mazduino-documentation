@@ -4,7 +4,6 @@ repo_url: https://github.com/amrikarisma/mazduino-documentation
 nav:
   - Downloads: downloads.md
   - Quick Start: quick-start.md
-  - Products:
   - Compact 4 Channel: mazduino-compact-4ch.md
   - Mini 6 Channel: mazduino-mini-6ch.md
   - About: about.md
