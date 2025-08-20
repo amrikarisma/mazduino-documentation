@@ -248,6 +248,11 @@ The PCB includes solder jumpers on the back for configuration:
 - [Tuning Guide](tuning-compact-4ch.md)
 - [Troubleshooting](troubleshooting-compact-4ch.md)
 
+### Firmware & Configuration Files
+- [Download Page](download.md) - Get the latest firmware and TunerStudio configuration files
+- rusEFI and Speeduino firmware available
+- Custom pin mapping configuration files included
+
 ### Community Support
 - User forums and discussion groups
 - Technical support channels

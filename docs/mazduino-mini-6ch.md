@@ -335,4 +335,10 @@ The Mazduino Mini 6CH is available through authorized distributors worldwide wit
 - Firmware updates and releases
 - Application-specific guidance
 
+### Firmware & Configuration Files
+- **[Download Page](download.md)** - Get the latest rusEFI firmware and TunerStudio configuration files
+- Full 6-channel support with advanced features
+- Custom pin mapping configuration included
+- Compatible with both rusEFI firmware
+
 Contact your regional distributor or visit our website for current pricing, availability, and technical specifications.
