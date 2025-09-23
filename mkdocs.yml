@@ -2,8 +2,12 @@ site_name: Mazduino Documentation
 nav:
   - Downloads: downloads.md
   - Quick Start: index.md
-  - Compact 4 Channel: mazduino-compact-4ch.md
-  - Mini 6 Channel: mazduino-mini-6ch.md
+  - Compact 4 Channel:
+    - v1: mazduino-compact-4ch-v1.md
+    - v2.1: mazduino-compact-4ch-v2.1.md
+  - Mini 6 Channel:
+    - v1.0-v1.2: mazduino-mini-6ch-v1.0-v1.2.md
+    - v1.3: mazduino-mini-6ch-v1.3.md
   - About: about.md
 theme: 
   name: readthedocs

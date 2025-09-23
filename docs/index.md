@@ -1,51 +1,55 @@
-# Welcome to Mazduino ECU Documentation
+# Selamat Datang di Dokumentasi ECU Mazduino
 
-Welcome to the official documentation for Mazduino ECU - an open-source standalone engine control unit powered by STM32 microcontrollers and compatible with rusEFI and Speeduino firmware.
+Selamat datang di dokumentasi resmi untuk ECU Mazduino - unit kontrol mesin standalone open-source yang didukung oleh mikrokontroler STM32 dan kompatibel dengan firmware rusEFI dan Speeduino.
 
-## Current Products
+## Produk Saat Ini
 
 ### Mazduino Compact 4ch
-A compact 4-channel engine control unit designed for smaller engines and space-constrained applications.
+Unit kontrol mesin 4-channel yang kompak dirancang untuk mesin yang lebih kecil dan aplikasi dengan keterbatasan ruang.
 
 ![Mazduino Compact 4ch](img/mazduino-compact-4ch.jpg)
 
-**Features:**
-- 4 injection channels
-- Compact form factor
-- STM32F407VGT6 MCU
-- rusEFI & Speeduino compatible
+**Fitur Umum:**
+- 4 channel injeksi
+- Faktor bentuk kompak
+- MCU STM32F407VGT6
+- Kompatibel dengan rusEFI & Speeduino
 
-**[View Complete Specifications →](mazduino-compact-4ch.md)**
+**Versi yang Tersedia:**
+- **[v1](mazduino-compact-4ch-v1.md)** - Konektor Microfit 30-pin (2x12 + 2x3)
+- **[v2.1](mazduino-compact-4ch-v2.1.md)** - Konektor Yamaha 33-pin + Knock Sensor
 
 ### Mazduino Mini 6ch
-A full-featured 6-channel engine control unit for full sequential injection control.
+Unit kontrol mesin 6-channel berfitur lengkap untuk kontrol injeksi sequential penuh.
 
 ![Mazduino Mini 6ch](img/mazduino-mini-6ch.jpg)
 
-**Features:**
-- 6 injection channels
-- Full sequential operation
-- STM32F407VGT6 MCU
-- Extended I/O capabilities
-- rusEFI & Speeduino compatible
+**Fitur Umum:**
+- 6 channel injeksi
+- Operasi sequential penuh
+- MCU STM32F407VGT6
+- Kemampuan I/O yang diperluas
+- Kompatibel dengan rusEFI & Speeduino
 
-**[View Complete Specifications →](mazduino-mini-6ch.md)**
+**Versi yang Tersedia:**
+- **[v1.0-v1.2](mazduino-mini-6ch-v1.0-v1.2.md)** - Versi standar dengan fitur dasar
+- **[v1.3](mazduino-mini-6ch-v1.3.md)** - Dengan Knock Input dan Electronic Throttle Body (ETB)
 
-## Getting Started
+## Memulai
 
-1. **Choose Your Model** - Select between Compact 4ch or Mini 6ch based on your engine requirements
-2. **Install Firmware** - Flash rusEFI or custom Speeduino firmware
-3. **Configure Settings** - Set up your engine parameters and pin mappings
-4. **Start Tuning** - Begin with base maps and refine for your specific application
+1. **Pilih Model Anda** - Pilih antara Compact 4ch atau Mini 6ch berdasarkan kebutuhan mesin Anda
+2. **Install Firmware** - Flash firmware rusEFI atau Speeduino khusus
+3. **Konfigurasi Pengaturan** - Atur parameter mesin dan pin mapping Anda
+4. **Mulai Tuning** - Mulai dengan base map dan perbaiki untuk aplikasi spesifik Anda
 
-## Documentation Sections
+## Bagian Dokumentasi
 
-- **[About](about.md)** - Learn more about Mazduino ECU project
-- **Hardware Guide** - Detailed specifications and wiring diagrams
-- **Firmware Installation** - Step-by-step firmware flashing instructions
-- **Configuration** - Engine setup and parameter configuration
-- **Tuning Guide** - Performance optimization and troubleshooting
+- **[Tentang](about.md)** - Pelajari lebih lanjut tentang proyek ECU Mazduino
+- **Panduan Hardware** - Spesifikasi detail dan diagram wiring
+- **Instalasi Firmware** - Petunjuk langkah demi langkah flashing firmware
+- **Konfigurasi** - Setup mesin dan konfigurasi parameter
+- **Panduan Tuning** - Optimisasi performa dan pemecahan masalah
 
-## Support
+## Dukungan
 
-For technical support, questions, or contributions, please visit our community forums or GitHub repository.
+Untuk dukungan teknis, pertanyaan, atau kontribusi, silakan kunjungi forum komunitas kami atau repositori GitHub.

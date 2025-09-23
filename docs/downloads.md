@@ -1,134 +1,134 @@
-# Downloads
+# Unduhan
 
-This page provides firmware files and configuration files for both Mazduino ECU models. Choose the appropriate firmware and configuration files based on your ECU model and preferred engine management software.
+Halaman ini menyediakan file firmware dan file konfigurasi untuk kedua model ECU Mazduino. Pilih firmware dan file konfigurasi yang sesuai berdasarkan model ECU Anda dan software manajemen mesin yang diinginkan.
 
 ## Mazduino Compact ECU
 
-### rusEFI Firmware
-rusEFI is the primary firmware for Mazduino Compact ECU with full feature support.
+### Firmware rusEFI
+rusEFI adalah firmware utama untuk Mazduino Compact ECU dengan dukungan fitur lengkap.
 
-#### Firmware Files
-- **Binary Format**: [rusefi.bin](myfiles/rusefi/rusefi.bin)
-- **Intel Hex Format**: [rusefi.hex](myfiles/rusefi/rusefi.hex)
+#### File Firmware
+- **Format Binary**: [rusefi.bin](myfiles/rusefi/rusefi.bin)
+- **Format Intel Hex**: [rusefi.hex](myfiles/rusefi/rusefi.hex)
 
-#### Configuration File
+#### File Konfigurasi
 - **TunerStudio INI**: [rusefi_mazduino.ini](myfiles/rusefi/rusefi_mazduino.ini)
 
-### Speeduino Firmware
-Custom Speeduino firmware specifically configured for Mazduino Compact ECU pin mapping.
+### Firmware Speeduino
+Firmware Speeduino khusus yang dikonfigurasi secara spesifik untuk pin mapping Mazduino Compact ECU.
 
-#### Firmware Files
-- **Binary Format**: [firmware.bin](myfiles/speeduino/mazduino_compact/firmware.bin)
+#### File Firmware
+- **Format Binary**: [firmware.bin](myfiles/speeduino/mazduino_compact/firmware.bin)
 
-#### Configuration File
+#### File Konfigurasi
 - **TunerStudio INI**: [speeduino.ini](myfiles/speeduino/mazduino_compact/speeduino.ini)
 
 ---
 
 ## Mazduino Mini 6CH
 
-### rusEFI Firmware
-rusEFI firmware with full 6-channel support and advanced features.
+### Firmware rusEFI
+Firmware rusEFI dengan dukungan 6-channel penuh dan fitur-fitur canggih.
 
-#### Firmware Files
-- **Binary Format**: [rusefi.bin](myfiles/rusefi/rusefi.bin)
-- **Intel Hex Format**: [rusefi.hex](myfiles/rusefi/rusefi.hex)
+#### File Firmware
+- **Format Binary**: [rusefi.bin](myfiles/rusefi/rusefi.bin)
+- **Format Intel Hex**: [rusefi.hex](myfiles/rusefi/rusefi.hex)
 
-#### Configuration File
+#### File Konfigurasi
 - **TunerStudio INI**: [rusefi_mazduino.ini](myfiles/rusefi/rusefi_mazduino.ini)
 
-**Note**: Speeduino firmware for Mazduino Mini 6CH is currently in development.
+**Catatan**: Firmware Speeduino untuk Mazduino Mini 6CH saat ini sedang dalam pengembangan.
 
 ---
 
-## Installation Instructions
+## Petunjuk Instalasi
 
-### rusEFI Installation
+### Instalasi rusEFI
 
-1. **Download Firmware**: Choose either `.bin` or `.hex` format
-2. **Download Configuration**: Download the `rusefi_mazduino.ini` file
-3. **Flash Firmware**: Use ST-Link, DFU mode, or rusEFI Console
-4. **Configure TunerStudio**: Load the INI file in TunerStudio
-5. **Initial Setup**: Configure basic engine parameters
+1. **Unduh Firmware**: Pilih format `.bin` atau `.hex`
+2. **Unduh Konfigurasi**: Unduh file `rusefi_mazduino.ini`
+3. **Flash Firmware**: Gunakan ST-Link, mode DFU, atau rusEFI Console
+4. **Konfigurasi TunerStudio**: Muat file INI di TunerStudio
+5. **Setup Awal**: Konfigurasi parameter dasar mesin
 
-### Speeduino Installation (Compact Only)
+### Instalasi Speeduino (Hanya Compact)
 
-1. **Download Firmware**: Download `firmware.bin` file
-2. **Download Configuration**: Download `speeduino.ini` file
-3. **Flash Firmware**: Use Arduino IDE or ST-Link programmer
-4. **Configure TunerStudio**: Load the INI file in TunerStudio
-5. **Pin Mapping**: Verify pin assignments match Mazduino Compact layout
+1. **Unduh Firmware**: Unduh file `firmware.bin`
+2. **Unduh Konfigurasi**: Unduh file `speeduino.ini`
+3. **Flash Firmware**: Gunakan Arduino IDE atau programmer ST-Link
+4. **Konfigurasi TunerStudio**: Muat file INI di TunerStudio
+5. **Pin Mapping**: Verifikasi pin assignment sesuai dengan layout Mazduino Compact
 
 ---
 
-## Software Requirements
+## Kebutuhan Software
 
 ### TunerStudio
-Download the latest version of TunerStudio from:
-- **Official Website**: [tunerstudio.com](https://www.tunerstudio.com/index.php/downloads)
-- **Recommended Version**: TunerStudio MS Ultra or higher
+Unduh versi terbaru TunerStudio dari:
+- **Website Resmi**: [tunerstudio.com](https://www.tunerstudio.com/index.php/downloads)
+- **Versi yang Disarankan**: TunerStudio MS Ultra atau lebih tinggi
 
-### Programming Tools
+### Tool Programming
 
-#### For rusEFI:
-- **rusEFI Console**: Available from [rusEFI website](https://rusefi.com)
-- **ST-Link Utility**: For direct STM32 programming
-- **DFU Programmer**: For USB DFU mode flashing
+#### Untuk rusEFI:
+- **rusEFI Console**: Tersedia dari [website rusEFI](https://rusefi.com)
+- **ST-Link Utility**: Untuk programming STM32 secara langsung
+- **DFU Programmer**: Untuk flashing mode USB DFU
 
-#### For Speeduino:
-- **Arduino IDE**: With STM32 support package
-- **ST-Link Programmer**: Hardware programmer
-- **platformio**: Alternative development environment
+#### Untuk Speeduino:
+- **Arduino IDE**: Dengan paket dukungan STM32
+- **Programmer ST-Link**: Programmer hardware
+- **platformio**: Environment pengembangan alternatif
 
 ---
 
-## Important Notes
+## Catatan Penting
 
-### Firmware Compatibility
-- **rusEFI**: Compatible with both Mazduino Compact and Mini 6CH
-- **Speeduino**: Currently only available for Mazduino Compact
-- **Version Compatibility**: Always use matching firmware and INI files
+### Kompatibilitas Firmware
+- **rusEFI**: Kompatibel dengan Mazduino Compact dan Mini 6CH
+- **Speeduino**: Saat ini hanya tersedia untuk Mazduino Compact
+- **Kompatibilitas Versi**: Selalu gunakan firmware dan file INI yang sesuai
 
 ### Pin Mapping
-- **Mazduino-Specific**: These files contain custom pin mappings for Mazduino ECUs
-- **Not Interchangeable**: Do not use with other ECU boards
-- **Verification Required**: Always verify pin assignments before connecting hardware
+- **Khusus Mazduino**: File-file ini berisi pin mapping khusus untuk ECU Mazduino
+- **Tidak Dapat Ditukar**: Jangan gunakan dengan board ECU lain
+- **Verifikasi Diperlukan**: Selalu verifikasi pin assignment sebelum menghubungkan hardware
 
-### Support Resources
+### Sumber Dukungan
 - **rusEFI Wiki**: [wiki.rusefi.com](https://wiki.rusefi.com)
 - **Speeduino Wiki**: [wiki.speeduino.com](https://wiki.speeduino.com)
-- **Mazduino Documentation**: This documentation site
-- **Community Support**: User forums and discussion groups
+- **Dokumentasi Mazduino**: Situs dokumentasi ini
+- **Dukungan Komunitas**: Forum pengguna dan grup diskusi
 
 ---
 
-## Version History
+## Riwayat Versi
 
-### Latest Updates
-- **rusEFI**: Latest stable release with Mazduino support
-- **Speeduino Compact**: Custom build with Mazduino pin mapping
-- **Configuration Files**: Updated for latest firmware versions
+### Update Terbaru
+- **rusEFI**: Rilis stabil terbaru dengan dukungan Mazduino
+- **Speeduino Compact**: Build khusus dengan pin mapping Mazduino
+- **File Konfigurasi**: Diperbarui untuk versi firmware terbaru
 
 ### Changelog
-Check individual firmware repositories for detailed changelog information:
-- rusEFI: Official rusEFI GitHub repository
-- Speeduino: Official Speeduino GitHub repository
+Periksa repositori firmware individual untuk informasi changelog detail:
+- rusEFI: Repositori GitHub resmi rusEFI
+- Speeduino: Repositori GitHub resmi Speeduino
 
 ---
 
-## Troubleshooting
+## Pemecahan Masalah
 
-### Common Issues
-1. **Communication Problems**: Verify USB drivers and port settings
-2. **Flash Failures**: Ensure correct programmer and connection
-3. **Pin Mapping Errors**: Double-check INI file loading
-4. **Sensor Reading Issues**: Verify wiring against pin mapping tables
+### Masalah Umum
+1. **Masalah Komunikasi**: Verifikasi driver USB dan pengaturan port
+2. **Kegagalan Flash**: Pastikan programmer dan koneksi yang benar
+3. **Error Pin Mapping**: Periksa kembali pemuatan file INI
+4. **Masalah Pembacaan Sensor**: Verifikasi wiring terhadap tabel pin mapping
 
-### Getting Help
-- Review the documentation for your specific ECU model for troubleshooting guidance
-- Check community forums for similar issues
-- Contact technical support for hardware-related problems
+### Mendapatkan Bantuan
+- Tinjau dokumentasi untuk model ECU spesifik Anda untuk panduan pemecahan masalah
+- Periksa forum komunitas untuk masalah serupa
+- Hubungi dukungan teknis untuk masalah terkait hardware
 
 ---
 
-**Warning**: Always verify firmware compatibility with your specific Mazduino ECU model before flashing. Incorrect firmware can damage your ECU or cause unsafe engine operation.
+**Peringatan**: Selalu verifikasi kompatibilitas firmware dengan model ECU Mazduino spesifik Anda sebelum flashing. Firmware yang salah dapat merusak ECU Anda atau menyebabkan operasi mesin yang tidak aman.
