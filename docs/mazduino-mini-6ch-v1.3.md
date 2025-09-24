@@ -8,7 +8,7 @@ Mazduino Mini 6CH v1.3 adalah unit kontrol mesin 6-channel yang kompak dirancang
 - **Knock Input**: Dukungan sensor knock untuk deteksi ketukan mesin
 - **ETB (Electronic Throttle Body)**: Kontrol throttle elektronik terintegrasi
 
-![Mazduino Mini 6ch](img/mazduino-mini-6ch.jpg)
+![Mazduino Mini 6ch](img/mazduino-mini-6ch-v1.3.jpeg)
 
 ## Fitur Utama
 - Input trigger utama untuk sensor CKP VR, hall atau optical

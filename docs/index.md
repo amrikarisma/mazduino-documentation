@@ -1,5 +1,4 @@
-# Selamat Datang di Dokumentasi ECU Mazduino
-
+# Dokumentasi ECU Mazduino
 Selamat datang di dokumentasi resmi untuk ECU Mazduino - unit kontrol mesin standalone open-source yang didukung oleh mikrokontroler STM32 dan kompatibel dengan firmware rusEFI dan Speeduino.
 
 ## Produk Saat Ini
