@@ -46,7 +46,7 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#firmware-rusefi">Firmware rusEFI</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#file-firmware">File Firmware</a>
+    <li class="toctree-l4"><a class="reference internal" href="#download-firmware">Download Firmware</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#file-konfigurasi">File Konfigurasi</a>
     </li>
@@ -54,7 +54,7 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#firmware-speeduino">Firmware Speeduino</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#file-firmware_1">File Firmware</a>
+    <li class="toctree-l4"><a class="reference internal" href="#file-firmware">File Firmware</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#file-konfigurasi_1">File Konfigurasi</a>
     </li>
@@ -66,7 +66,7 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#firmware-rusefi_1">Firmware rusEFI</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#file-firmware_2">File Firmware</a>
+    <li class="toctree-l4"><a class="reference internal" href="#download-firmware_1">Download Firmware</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#file-konfigurasi_2">File Konfigurasi</a>
     </li>
@@ -77,6 +77,10 @@
     <li class="toctree-l2"><a class="reference internal" href="#petunjuk-instalasi">Petunjuk Instalasi</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#instalasi-rusefi">Instalasi rusEFI</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#metode-flashing-firmware">Metode Flashing Firmware</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#instalasi-speeduino-hanya-compact">Instalasi Speeduino (Hanya Compact)</a>
     </li>
@@ -90,6 +94,8 @@
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#untuk-rusefi">Untuk rusEFI:</a>
     </li>
+    <li class="toctree-l4"><a class="reference internal" href="#hardware-programming">Hardware Programming:</a>
+    </li>
     <li class="toctree-l4"><a class="reference internal" href="#untuk-speeduino">Untuk Speeduino:</a>
     </li>
         </ul>
@@ -102,15 +108,9 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#pin-mapping">Pin Mapping</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#kompatibilitas-file-ini">Kompatibilitas File .ini</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#sumber-dukungan">Sumber Dukungan</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#riwayat-versi">Riwayat Versi</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#update-terbaru">Update Terbaru</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#changelog">Changelog</a>
     </li>
         </ul>
     </li>
@@ -175,18 +175,24 @@
 <h2 id="mazduino-compact-ecu">Mazduino Compact ECU</h2>
 <h3 id="firmware-rusefi">Firmware rusEFI</h3>
 <p>rusEFI adalah firmware utama untuk Mazduino Compact ECU dengan dukungan fitur lengkap.</p>
-<h4 id="file-firmware">File Firmware</h4>
+<h4 id="download-firmware">Download Firmware</h4>
 <ul>
-<li><strong>Format Binary</strong>: <a href="../myfiles/rusefi/rusefi.bin">rusefi.bin</a></li>
-<li><strong>Format Intel Hex</strong>: <a href="../myfiles/rusefi/rusefi.hex">rusefi.hex</a></li>
+<li><strong>GitHub Actions</strong>: <a href="https://github.com/amrikarisma/fw-custom-mazduino/actions">https://github.com/amrikarisma/fw-custom-mazduino/actions</a></li>
+<li>Pilih build terbaru yang berhasil (status hijau ✓)</li>
+<li><strong>Pilihan Download</strong>:<ul>
+<li><strong>File .hex</strong>: Firmware format Intel Hex (untuk programmer)</li>
+<li><strong>File .bin</strong>: Firmware format binary (untuk DFU/ST-Link)</li>
+<li><strong>Bundle (.zip ~40MB)</strong>: <strong>REKOMENDASI</strong> - Paket lengkap termasuk firmware, driver, dan file .ini untuk TunerStudio</li>
+</ul>
+</li>
 </ul>
 <h4 id="file-konfigurasi">File Konfigurasi</h4>
 <ul>
-<li><strong>TunerStudio INI</strong>: <a href="../myfiles/rusefi/rusefi_mazduino.ini">rusefi_mazduino.ini</a></li>
+<li><strong>TunerStudio INI</strong>: Sudah termasuk dalam bundle (selalu update otomatis)</li>
 </ul>
 <h3 id="firmware-speeduino">Firmware Speeduino</h3>
 <p>Firmware Speeduino khusus yang dikonfigurasi secara spesifik untuk pin mapping Mazduino Compact ECU.</p>
-<h4 id="file-firmware_1">File Firmware</h4>
+<h4 id="file-firmware">File Firmware</h4>
 <ul>
 <li><strong>Format Binary</strong>: <a href="../myfiles/speeduino/mazduino_compact/firmware.bin">firmware.bin</a></li>
 </ul>
@@ -198,26 +204,55 @@
 <h2 id="mazduino-mini-6ch">Mazduino Mini 6CH</h2>
 <h3 id="firmware-rusefi_1">Firmware rusEFI</h3>
 <p>Firmware rusEFI dengan dukungan 6-channel penuh dan fitur-fitur canggih.</p>
-<h4 id="file-firmware_2">File Firmware</h4>
+<h4 id="download-firmware_1">Download Firmware</h4>
 <ul>
-<li><strong>Format Binary</strong>: <a href="../myfiles/rusefi/rusefi.bin">rusefi.bin</a></li>
-<li><strong>Format Intel Hex</strong>: <a href="../myfiles/rusefi/rusefi.hex">rusefi.hex</a></li>
+<li><strong>GitHub Actions</strong>: <a href="https://github.com/amrikarisma/fw-custom-mazduino/actions">https://github.com/amrikarisma/fw-custom-mazduino/actions</a></li>
+<li>Pilih build terbaru yang berhasil (status hijau ✓)</li>
+<li><strong>Pilihan Download</strong>:<ul>
+<li><strong>File .hex</strong>: Firmware format Intel Hex (untuk programmer)</li>
+<li><strong>File .bin</strong>: Firmware format binary (untuk DFU/ST-Link)</li>
+<li><strong>Bundle (.zip ~40MB)</strong>: <strong>REKOMENDASI</strong> - Paket lengkap termasuk firmware, driver, dan file .ini untuk TunerStudio</li>
+</ul>
+</li>
 </ul>
 <h4 id="file-konfigurasi_2">File Konfigurasi</h4>
 <ul>
-<li><strong>TunerStudio INI</strong>: <a href="../myfiles/rusefi/rusefi_mazduino.ini">rusefi_mazduino.ini</a></li>
+<li><strong>TunerStudio INI</strong>: Sudah termasuk dalam bundle (selalu update otomatis)</li>
 </ul>
-<p><strong>Catatan</strong>: Firmware Speeduino untuk Mazduino Mini 6CH saat ini sedang dalam pengembangan.</p>
+<p><strong>Catatan</strong>: Firmware Speeduino untuk Mazduino Mini 6CH saat ini tidak dilanjutkan. Hanya mendukung firmware rusEFI saja.</p>
 <hr />
 <h2 id="petunjuk-instalasi">Petunjuk Instalasi</h2>
 <h3 id="instalasi-rusefi">Instalasi rusEFI</h3>
+<p><strong>Opsi 1: Bundle (REKOMENDASI)</strong></p>
 <ol>
-<li><strong>Unduh Firmware</strong>: Pilih format <code>.bin</code> atau <code>.hex</code></li>
-<li><strong>Unduh Konfigurasi</strong>: Unduh file <code>rusefi_mazduino.ini</code></li>
-<li><strong>Flash Firmware</strong>: Gunakan ST-Link, mode DFU, atau rusEFI Console</li>
-<li><strong>Konfigurasi TunerStudio</strong>: Muat file INI di TunerStudio</li>
-<li><strong>Setup Awal</strong>: Konfigurasi parameter dasar mesin</li>
+<li><strong>Unduh Bundle</strong>: Kunjungi <a href="https://github.com/amrikarisma/fw-custom-mazduino/actions">GitHub Actions</a></li>
+<li><strong>Pilih Build</strong>: Pilih workflow run terbaru dengan status berhasil (✓)</li>
+<li><strong>Download Bundle</strong>: Pilih bundle (.zip ~40MB) yang berisi firmware, driver, dan file .ini terbaru</li>
+<li><strong>Extract</strong>: Extract file .zip ke folder kerja Anda</li>
+<li><strong>Flash Firmware</strong>: Pilih metode flashing di bawah</li>
+<li><strong>Konfigurasi TunerStudio</strong>: Muat file .ini yang sudah disertakan dalam bundle</li>
 </ol>
+<h4 id="metode-flashing-firmware">Metode Flashing Firmware</h4>
+<p><strong>A. STM32CubeProgrammer + ST-Link (REKOMENDASI untuk instalasi pertama kali)</strong></p>
+<ol>
+<li><strong>Install STM32CubeProgrammer</strong>: Download dari <a href="https://www.st.com/en/development-tools/stm32cubeprog.html">website ST</a></li>
+<li><strong>Koneksi Hardware</strong>: Hubungkan ST-Link ke Mazduino ECU via SWD (4-pin)</li>
+<li><strong>Buka STM32CubeProgrammer</strong>: Pilih ST-Link sebagai interface</li>
+<li><strong>Connect</strong>: Klik Connect untuk terhubung ke MCU</li>
+<li><strong>Load File</strong>: Browse dan pilih file .hex atau .bin dari bundle</li>
+<li><strong>Program</strong>: Klik "Download" untuk flash firmware</li>
+</ol>
+<p><strong>B. rusEFI Console (Untuk update firmware)</strong></p>
+<ul>
+<li>Gunakan setelah firmware pertama kali sudah ter-install</li>
+<li>Mendukung flashing via USB</li>
+</ul>
+<p><strong>C. DFU Mode (USB)</strong></p>
+<ul>
+<li>Untuk ECU yang sudah memiliki bootloader</li>
+<li>Tidak memerlukan programmer eksternal</li>
+</ul>
+<p><strong>Opsi 2: Download Individual (Hanya untuk jika hanya perlu file tertentu)</strong></p>
 <h3 id="instalasi-speeduino-hanya-compact">Instalasi Speeduino (Hanya Compact)</h3>
 <ol>
 <li><strong>Unduh Firmware</strong>: Unduh file <code>firmware.bin</code></li>
@@ -229,15 +264,23 @@
 <hr />
 <h2 id="kebutuhan-software">Kebutuhan Software</h2>
 <h3 id="tunerstudio">TunerStudio</h3>
-<p>Unduh versi terbaru TunerStudio dari:
-- <strong>Website Resmi</strong>: <a href="https://www.tunerstudio.com/index.php/downloads">tunerstudio.com</a>
-- <strong>Versi yang Disarankan</strong>: TunerStudio MS Ultra atau lebih tinggi</p>
+<p>Unduh versi terbaru TunerStudio dari:</p>
+<ul>
+<li><strong>Website Resmi</strong>: <a href="https://www.tunerstudio.com/index.php/downloads">tunerstudio.com</a></li>
+<li><strong>Versi yang Disarankan</strong>: TunerStudio MS Ultra atau lebih tinggi</li>
+</ul>
 <h3 id="tool-programming">Tool Programming</h3>
 <h4 id="untuk-rusefi">Untuk rusEFI:</h4>
 <ul>
+<li><strong>STM32CubeProgrammer</strong>: <strong>REKOMENDASI</strong> untuk instalasi firmware pertama kali dengan ST-Link</li>
 <li><strong>rusEFI Console</strong>: Tersedia dari <a href="https://rusefi.com">website rusEFI</a></li>
-<li><strong>ST-Link Utility</strong>: Untuk programming STM32 secara langsung</li>
+<li><strong>ST-Link Utility</strong>: Untuk programming STM32 secara langsung (legacy)</li>
 <li><strong>DFU Programmer</strong>: Untuk flashing mode USB DFU</li>
+</ul>
+<h4 id="hardware-programming">Hardware Programming:</h4>
+<ul>
+<li><strong>ST-Link V2/V3</strong>: Programmer hardware untuk koneksi SWD ke Mazduino ECU</li>
+<li><strong>Kabel SWD</strong>: 4-pin connector (VCC, GND, SWDIO, SWCLK)</li>
 </ul>
 <h4 id="untuk-speeduino">Untuk Speeduino:</h4>
 <ul>
@@ -259,6 +302,12 @@
 <li><strong>Tidak Dapat Ditukar</strong>: Jangan gunakan dengan board ECU lain</li>
 <li><strong>Verifikasi Diperlukan</strong>: Selalu verifikasi pin assignment sebelum menghubungkan hardware</li>
 </ul>
+<h3 id="kompatibilitas-file-ini">Kompatibilitas File .ini</h3>
+<ul>
+<li><strong>Gunakan Bundle</strong>: <strong>PENTING</strong> - Selalu gunakan bundle untuk memastikan file .ini cocok dengan firmware</li>
+<li><strong>Hindari File Terpisah</strong>: File .ini yang didownload terpisah mungkin tidak kompatibel dengan firmware terbaru</li>
+<li><strong>Auto Update</strong>: Bundle selalu berisi file .ini yang sudah ditest dengan firmware yang sama</li>
+</ul>
 <h3 id="sumber-dukungan">Sumber Dukungan</h3>
 <ul>
 <li><strong>rusEFI Wiki</strong>: <a href="https://wiki.rusefi.com">wiki.rusefi.com</a></li>
@@ -266,18 +315,6 @@
 <li><strong>Dokumentasi Mazduino</strong>: Situs dokumentasi ini</li>
 <li><strong>Dukungan Komunitas</strong>: Forum pengguna dan grup diskusi</li>
 </ul>
-<hr />
-<h2 id="riwayat-versi">Riwayat Versi</h2>
-<h3 id="update-terbaru">Update Terbaru</h3>
-<ul>
-<li><strong>rusEFI</strong>: Rilis stabil terbaru dengan dukungan Mazduino</li>
-<li><strong>Speeduino Compact</strong>: Build khusus dengan pin mapping Mazduino</li>
-<li><strong>File Konfigurasi</strong>: Diperbarui untuk versi firmware terbaru</li>
-</ul>
-<h3 id="changelog">Changelog</h3>
-<p>Periksa repositori firmware individual untuk informasi changelog detail:
-- rusEFI: Repositori GitHub resmi rusEFI
-- Speeduino: Repositori GitHub resmi Speeduino</p>
 <hr />
 <h2 id="pemecahan-masalah">Pemecahan Masalah</h2>
 <h3 id="masalah-umum">Masalah Umum</h3>
