@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Pengaturan Air Conditioning (A/C) - Mazduino Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Pengaturan Air Conditioning (A/C)";
+        var mkdocs_page_input_path = "tunerstudio-ac-settings.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Mazduino Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Quick Start</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Compact 4 Channel</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-compact-4ch-v1/">v1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-compact-4ch-v2.1/">v2.1</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mini 6 Channel</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-mini-6ch-v1.0-v1.2/">v1.0-v1.2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-mini-6ch-v1.3/">v1.3</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">TunerStudio Manual</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-manual/">Manual Utama</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-output-controls/">Pengaturan Output Controls</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Pengaturan Air Conditioning (A/C)</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#pengantar">Pengantar</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pengaturan-utama-ac">Pengaturan Utama A/C</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#input-controls">Input Controls</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#output-controls">Output Controls</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pengaturan-timing-dan-proteksi">Pengaturan Timing dan Proteksi</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#compressor-delay">Compressor Delay</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#batas-operasi-maximum">Batas Operasi Maximum</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#kompensasi-idle">Kompensasi Idle</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#idle-speed-compensation">Idle Speed Compensation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rpm-protection">RPM Protection</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#kontrol-tekanan-sistem">Kontrol Tekanan Sistem</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#pressure-limits">Pressure Limits</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hysteresis-control">Hysteresis Control</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#indikator-status-ac">Indikator Status A/C</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rekomendasi-konfigurasi">Rekomendasi Konfigurasi</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#untuk-unit-plug-and-play">Untuk Unit Plug and Play</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#untuk-unit-kitdiy">Untuk Unit Kit/DIY</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#best-practices">Best Practices</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Mazduino Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">TunerStudio Manual</li>
+      <li class="breadcrumb-item active">Pengaturan Air Conditioning (A/C)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="pengaturan-air-conditioning-ac-tunerstudio">Pengaturan Air Conditioning (A/C) - TunerStudio</h1>
+<h2 id="pengantar">Pengantar</h2>
+<p>Bagian A/C Settings memungkinkan konfigurasi kontrol air conditioning dalam ECU, mencakup fitur seperti compressor delay, kompensasi idle, dan kontrol berbasis tekanan untuk mengoptimalkan performa dan mengelola beban mesin. Untuk unit Plug and Play, pengaturan A/C mungkin sudah dikonfigurasi dalam basemap, meskipun penyesuaian masih dapat dilakukan untuk memenuhi kebutuhan spesifik. Unit Kit/DIY mungkin memerlukan konfigurasi lengkap pengaturan ini berdasarkan setup kendaraan.</p>
+<p><img alt="Air Conditioner Overview" src="../img/manual/ac-overview.png" /></p>
+<h2 id="pengaturan-utama-ac">Pengaturan Utama A/C</h2>
+<h3 id="input-controls">Input Controls</h3>
+<p><strong>A/C Switch</strong>: Memilih sumber input untuk mengaktifkan sistem A/C. Mengatur ini ke NONE akan menonaktifkan kontrol ECU atas switch A/C, selama tidak dikontrol oleh metode lain, seperti Lua.</p>
+<p><strong>A/C Switch Mode</strong>: Menentukan mode input switch A/C, tergantung pada instalasi dan fungsionalitas yang diinginkan.</p>
+<h3 id="output-controls">Output Controls</h3>
+<p><strong>A/C Relay</strong>: Mengkonfigurasi pin output yang ditugaskan untuk mengontrol relay A/C. Misalnya, memilih PC7 memungkinkan kontrol A/C melalui pin spesifik tersebut.</p>
+<p><strong>A/C Relay Mode</strong>: Mendefinisikan mode output relay A/C. Ini dapat dibiarkan sebagai default untuk sebagian besar aplikasi atau disesuaikan jika diperlukan.</p>
+<h2 id="pengaturan-timing-dan-proteksi">Pengaturan Timing dan Proteksi</h2>
+<h3 id="compressor-delay">Compressor Delay</h3>
+<p><strong>A/C Compressor Delay (sec)</strong>: Mengatur penundaan sebelum kompresor A/C aktif, mencegah peningkatan beban mendadak pada mesin ketika A/C dinyalakan.
+- <strong>Rekomendasi</strong>: 1-3 detik untuk startup yang smooth
+- <strong>Aplikasi</strong>: Mengurangi shock load pada mesin</p>
+<h3 id="batas-operasi-maximum">Batas Operasi Maximum</h3>
+<p><strong>Max RPM (RPM)</strong>: Mengatur RPM mesin maksimum yang diizinkan untuk operasi A/C. Jika RPM melebihi batas ini, A/C akan dinonaktifkan untuk melindungi mesin.
+- <strong>Rekomendasi</strong>: 6000-6500 RPM untuk mesin standar
+- <strong>Tujuan</strong>: Melindungi mesin pada RPM tinggi</p>
+<p><strong>Max CLT (deg C)</strong>: Mengkonfigurasi suhu coolant maksimum untuk operasi A/C. Jika terlampaui, A/C akan otomatis mati untuk mencegah overheating.
+- <strong>Rekomendasi</strong>: 100-105°C untuk mesin standar
+- <strong>Tujuan</strong>: Mencegah overheating mesin</p>
+<p><strong>Max TPS (%)</strong>: Mendefinisikan posisi throttle maksimum untuk operasi A/C. Jika throttle melebihi persentase ini, A/C akan mati untuk memprioritaskan performa mesin.
+- <strong>Rekomendasi</strong>: 80-90% untuk performa optimal
+- <strong>Aplikasi</strong>: Full throttle performance priority</p>
+<h2 id="kompensasi-idle">Kompensasi Idle</h2>
+<h3 id="idle-speed-compensation">Idle Speed Compensation</h3>
+<p><strong>A/C Idle Adder (%)</strong>: Mengatur persentase peningkatan kecepatan idle untuk mengkompensasi beban yang disebabkan oleh kompresor A/C.
+- <strong>Rekomendasi</strong>: 10-15% untuk sebagian besar mesin
+- <strong>Penyesuaian</strong>: Sesuaikan berdasarkan beban kompresor</p>
+<p><strong>A/C Idle RPM</strong>: Menentukan target idle RPM ketika A/C aktif, menyesuaikan kecepatan idle mesin untuk memperhitungkan beban kompresor.
+- <strong>Rekomendasi</strong>: +100-200 RPM dari idle normal
+- <strong>Aplikasi</strong>: Mencegah engine stalling saat A/C aktif</p>
+<h3 id="rpm-protection">RPM Protection</h3>
+<p><strong>RPM Low Threshold (RPM)</strong>: Ambang batas RPM minimum di bawah mana A/C secara otomatis dinonaktifkan untuk mencegah mesin mati.
+- <strong>Rekomendasi</strong>: 400-500 RPM di bawah idle normal
+- <strong>Safety</strong>: Mencegah engine stalling</p>
+<h2 id="kontrol-tekanan-sistem">Kontrol Tekanan Sistem</h2>
+<h3 id="pressure-limits">Pressure Limits</h3>
+<p><strong>Pressure Low Disable (kPa)</strong>: Mengatur batas tekanan rendah; jika tekanan turun di bawah level ini, A/C akan dinonaktifkan untuk melindungi kompresor.
+- <strong>Rekomendasi</strong>: Sesuai dengan spesifikasi sistem A/C kendaraan
+- <strong>Tujuan</strong>: Perlindungan kompresor dari kerusakan</p>
+<p><strong>Pressure High Disable (kPa)</strong>: Mengkonfigurasi batas tekanan tinggi; jika tekanan melebihi level ini, A/C akan dinonaktifkan untuk perlindungan sistem.
+- <strong>Rekomendasi</strong>: Sesuai dengan spesifikasi sistem A/C kendaraan<br />
+- <strong>Tujuan</strong>: Perlindungan sistem dari tekanan berlebih</p>
+<h3 id="hysteresis-control">Hysteresis Control</h3>
+<p><strong>A/C Pressure Enable Hysteresis (kPa)</strong>: Menyediakan rentang buffer di sekitar batas tekanan untuk mencegah cycling cepat sistem A/C.
+- <strong>Rekomendasi</strong>: 50-100 kPa untuk operasi yang stabil
+- <strong>Fungsi</strong>: Mencegah on/off yang terlalu sering</p>
+<h2 id="indikator-status-ac">Indikator Status A/C</h2>
+<p>Kotak putih di sisi kanan jendela mewakili berbagai pemeriksaan dan status yang terkait dengan sistem A/C. Indikator ini berubah merah untuk menunjukkan kondisi aktif, seperti:</p>
+<ul>
+<li><strong>A/C Button</strong>: Tombol A/C ditekan/aktif</li>
+<li><strong>Pressure OK</strong>: Tekanan dalam batas yang dapat diterima</li>
+<li><strong>RPM OK</strong>: RPM dalam rentang operasi A/C</li>
+<li><strong>CLT OK</strong>: Suhu coolant dalam batas normal</li>
+<li><strong>TPS OK</strong>: Throttle position dalam batas A/C</li>
+<li><strong>System Ready</strong>: Semua kondisi terpenuhi untuk operasi A/C</li>
+</ul>
+<p>Umpan balik visual ini membantu pengguna dengan cepat menilai apakah semua kondisi terpenuhi untuk operasi A/C.</p>
+<h2 id="rekomendasi-konfigurasi">Rekomendasi Konfigurasi</h2>
+<h3 id="untuk-unit-plug-and-play">Untuk Unit Plug and Play</h3>
+<ul>
+<li>Pengaturan biasanya sudah dioptimalkan dalam basemap</li>
+<li>Fokus pada penyesuaian suhu dan tekanan sesuai sistem kendaraan</li>
+<li>Verifikasi idle compensation sesuai dengan karakteristik mesin</li>
+</ul>
+<h3 id="untuk-unit-kitdiy">Untuk Unit Kit/DIY</h3>
+<ul>
+<li>Konfigurasi lengkap diperlukan sesuai spesifikasi kendaraan</li>
+<li>Konsultasi manual kendaraan untuk nilai tekanan yang tepat</li>
+<li>Test semua fungsi proteksi sebelum penggunaan normal</li>
+</ul>
+<h3 id="best-practices">Best Practices</h3>
+<ol>
+<li><strong>Start Conservative</strong>: Mulai dengan nilai yang aman dan sesuaikan bertahap</li>
+<li><strong>Monitor Temperature</strong>: Selalu monitor suhu coolant saat A/C beroperasi</li>
+<li><strong>Test All Limits</strong>: Verifikasi semua batas proteksi berfungsi dengan baik</li>
+<li><strong>Document Changes</strong>: Catat semua perubahan untuk referensi masa depan</li>
+</ol>
+<hr />
+<p><strong><a href="../tunerstudio-manual/">← Kembali ke Manual TunerStudio</a></strong></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../tunerstudio-output-controls/" class="btn btn-neutral float-left" title="Pengaturan Output Controls"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../about/" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../tunerstudio-output-controls/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../about/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

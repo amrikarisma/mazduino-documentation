@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Manual Utama - Mazduino Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Manual Utama";
+        var mkdocs_page_input_path = "tunerstudio-manual.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Mazduino Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Quick Start</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Compact 4 Channel</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-compact-4ch-v1/">v1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-compact-4ch-v2.1/">v2.1</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mini 6 Channel</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-mini-6ch-v1.0-v1.2/">v1.0-v1.2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-mini-6ch-v1.3/">v1.3</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">TunerStudio Manual</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Manual Utama</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#pengantar">Pengantar</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#daftar-menu-konfigurasi">Daftar Menu Konfigurasi</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#pengaturan-output-controls">🔧 Pengaturan Output Controls</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pengaturan-air-conditioning-ac">❄️ Pengaturan Air Conditioning (A/C)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#menu-konfigurasi-lainnya">📋 Menu Konfigurasi Lainnya</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#troubleshooting-dan-diagnostik">Troubleshooting dan Diagnostik</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#masalah-umum-dan-solusi">Masalah Umum dan Solusi</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#1-tidak-ada-sinyal-rpm">1. Tidak Ada Sinyal RPM</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#2-pembacaan-sensor-o2-wideband-salah">2. Pembacaan Sensor O2 Wideband Salah</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#3-mesin-misfire-atau-kasar">3. Mesin Misfire atau Kasar</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#4-tegangan-sensor-di-luar-rentang">4. Tegangan Sensor Di Luar Rentang</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#5-alert-tekanan-bahan-bakar-atau-oli">5. Alert Tekanan Bahan Bakar atau Oli</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#6-error-kalibrasi-throttle">6. Error Kalibrasi Throttle</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tips-umum">Tips Umum</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-output-controls/">Pengaturan Output Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-ac-settings/">Pengaturan Air Conditioning (A/C)</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Mazduino Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">TunerStudio Manual</li>
+      <li class="breadcrumb-item active">Manual Utama</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="manual-tuning-tunerstudio-untuk-ecu-mazduino">Manual Tuning TunerStudio untuk ECU Mazduino</h1>
+<p>Manual ini berlaku untuk semua ECU Mazduino (Compact dan Mini 6CH) yang menggunakan firmware rusEFI dengan TunerStudio sebagai software tuning.</p>
+<h2 id="pengantar">Pengantar</h2>
+<p>TunerStudio adalah software tuning yang digunakan untuk mengkonfigurasi dan memonitor ECU Mazduino. Software ini memungkinkan Anda untuk mengatur parameter mesin, melihat data sensor real-time, dan melakukan tuning untuk performa optimal.</p>
+<p>Dokumentasi ini telah dibagi menjadi bagian-bagian terpisah untuk memudahkan navigasi dan pemahaman. Setiap menu konfigurasi memiliki panduan lengkap dengan contoh praktis dan rekomendasi untuk unit Plug &amp; Play maupun Kit/DIY.</p>
+<h2 id="daftar-menu-konfigurasi">Daftar Menu Konfigurasi</h2>
+<h3 id="pengaturan-output-controls">🔧 <a href="../tunerstudio-output-controls/">Pengaturan Output Controls</a></h3>
+<p>Konfigurasi komprehensif untuk semua kontrol output ECU, meliputi:</p>
+<ul>
+<li>Main Relay dan Fuel Pump Control</li>
+<li>Tachometer dan Speedometer Output  </li>
+<li>Fan Cooling (Dual Fan Support)</li>
+<li>Starter Control dan Safety Features</li>
+<li>Check Engine Light Configuration</li>
+</ul>
+<h3 id="pengaturan-air-conditioning-ac">❄️ <a href="../tunerstudio-ac-settings/">Pengaturan Air Conditioning (A/C)</a></h3>
+<p>Kontrol sistem A/C yang terintegrasi dengan ECU, mencakup:</p>
+<ul>
+<li>Input dan Output Controls A/C</li>
+<li>Timing dan Protection Settings</li>
+<li>Kompensasi Idle Speed</li>
+<li>Kontrol Tekanan Sistem</li>
+<li>Status Monitoring dan Indikator</li>
+</ul>
+<h3 id="menu-konfigurasi-lainnya">📋 Menu Konfigurasi Lainnya</h3>
+<p><em>(Dalam pengembangan - akan ditambahkan secara bertahap)</em></p>
+<p>Menu tambahan yang akan tersedia:</p>
+<ul>
+<li>Pengaturan Fuel System</li>
+<li>Ignition Timing Control  </li>
+<li>Sensor Configuration</li>
+<li>Data Logging Setup</li>
+<li>Advanced Tuning Options</li>
+</ul>
+<h2 id="troubleshooting-dan-diagnostik">Troubleshooting dan Diagnostik</h2>
+<p>Bagian ini menyediakan panduan komprehensif untuk mengidentifikasi dan menyelesaikan masalah umum yang ditemui selama operasi ECU Mazduino. Setiap masalah mencakup gejala, penyebab potensial, dan solusi yang direkomendasikan untuk memastikan fungsionalitas yang tepat.</p>
+<h3 id="masalah-umum-dan-solusi">Masalah Umum dan Solusi</h3>
+<h4 id="1-tidak-ada-sinyal-rpm">1. Tidak Ada Sinyal RPM</h4>
+<p><strong>Gejala</strong>: Mesin tidak menyala; gauge RPM tetap nol saat cranking.</p>
+<p><strong>Kemungkinan Penyebab</strong>:</p>
+<ul>
+<li>Sensor crankshaft atau camshaft tidak dipasang dengan benar</li>
+<li>Kabel sensor rusak atau terputus</li>
+<li>Jenis sensor atau konfigurasi salah di software</li>
+</ul>
+<p><strong>Solusi</strong>:</p>
+<ul>
+<li>Verifikasi pemasangan sensor crank dan cam yang tepat, pastikan alignment dan gap yang benar</li>
+<li>Periksa kabel yang rusak atau longgar dan pastikan semua koneksi aman</li>
+<li>Konfirmasi jenis sensor yang benar (Hall atau VR) dan konfigurasi di software Mazduino</li>
+</ul>
+<h4 id="2-pembacaan-sensor-o2-wideband-salah">2. Pembacaan Sensor O2 Wideband Salah</h4>
+<p><strong>Gejala</strong>: Pembacaan AFR tidak akurat atau tidak ditampilkan.</p>
+<p><strong>Kemungkinan Penyebab</strong>:</p>
+<ul>
+<li>Scaling sensor salah yang dikonfigurasi di software</li>
+<li>Kabel atau grounding sensor wideband rusak</li>
+<li>Miskonfigurasi sinyal CAN atau analog</li>
+</ul>
+<p><strong>Solusi</strong>:</p>
+<ul>
+<li>Verifikasi jenis sensor dan input scaling di software Mazduino (misal AEM, PLX, atau Custom)</li>
+<li>Inspeksi koneksi power dan ground ke controller wideband</li>
+<li>Konfirmasi konfigurasi CAN ID atau channel input analog yang benar</li>
+</ul>
+<h4 id="3-mesin-misfire-atau-kasar">3. Mesin Misfire atau Kasar</h4>
+<p><strong>Gejala</strong>: Idle kasar, hesitasi saat akselerasi, atau misfire saat beban.</p>
+<p><strong>Kemungkinan Penyebab</strong>:</p>
+<ul>
+<li>Setting timing pengapian atau bahan bakar salah</li>
+<li>Busi rusak atau gap tidak tepat</li>
+<li>Driver injector atau koil gagal</li>
+</ul>
+<p><strong>Solusi</strong>:</p>
+<ul>
+<li>Gunakan timing light untuk verifikasi timing pengapian sesuai dengan base timing yang dikonfigurasi</li>
+<li>Inspeksi dan ganti busi jika aus atau gap salah</li>
+<li>Lakukan bench test untuk verifikasi output injector dan pengapian</li>
+</ul>
+<h4 id="4-tegangan-sensor-di-luar-rentang">4. Tegangan Sensor Di Luar Rentang</h4>
+<p><strong>Gejala</strong>: Peringatan error sensor di diagnostik; pembacaan sensor tidak menentu atau tidak ada.</p>
+<p><strong>Kemungkinan Penyebab</strong>:</p>
+<ul>
+<li>Kabel sensor rusak atau grounding salah</li>
+<li>Ketidakcocokkan kalibrasi antara sensor dan ECU</li>
+<li>Sensor rusak atau malfunction</li>
+</ul>
+<p><strong>Solusi</strong>:</p>
+<ul>
+<li>Periksa kabel sensor untuk kontinuitas dan grounding yang tepat</li>
+<li>Gunakan sinyal tegangan sensor mentah di menu diagnostik untuk konfirmasi pembacaan</li>
+<li>Ganti sensor jika rusak</li>
+</ul>
+<h4 id="5-alert-tekanan-bahan-bakar-atau-oli">5. Alert Tekanan Bahan Bakar atau Oli</h4>
+<p><strong>Gejala</strong>: Peringatan tekanan rendah atau engine shutdown saat beban.</p>
+<p><strong>Kemungkinan Penyebab</strong>:</p>
+<ul>
+<li>Kegagalan mekanis pada sistem delivery bahan bakar atau oli</li>
+<li>Threshold sensor tekanan salah konfigurasi</li>
+<li>Sensor tekanan rusak</li>
+</ul>
+<p><strong>Solusi</strong>:</p>
+<ul>
+<li>Inspeksi pompa bahan bakar, filter, dan pompa oli untuk masalah mekanis</li>
+<li>Sesuaikan threshold tekanan di software Mazduino sesuai spesifikasi sistem</li>
+<li>Ganti sensor yang rusak</li>
+</ul>
+<h4 id="6-error-kalibrasi-throttle">6. Error Kalibrasi Throttle</h4>
+<p><strong>Gejala</strong>: ETB (Electronic Throttle Body) gagal kalibrasi; masalah respon throttle.</p>
+<p><strong>Kemungkinan Penyebab</strong>:</p>
+<ul>
+<li>Kalibrasi TPS dan PPS salah atau tidak lengkap</li>
+<li>Sensor posisi throttle atau pedal rusak</li>
+<li>Masalah kabel atau power supply</li>
+</ul>
+<p><strong>Solusi</strong>:</p>
+<ul>
+<li>Lakukan kalibrasi TPS dan PPS seperti yang dijelaskan di bagian setup</li>
+<li>Ganti sensor rusak jika kalibrasi gagal</li>
+<li>Pastikan kabel dan konektor utuh dan bertenaga dengan benar</li>
+</ul>
+<h3 id="tips-umum">Tips Umum</h3>
+<ul>
+<li><strong>Backup konfigurasi secara berkala</strong> untuk menghindari kehilangan data</li>
+<li><strong>Gunakan menu diagnostik bawaan</strong> untuk mereset kode error setelah menyelesaikan masalah</li>
+<li><strong>Untuk masalah yang persisten</strong>, hubungi support Mazduino atau gunakan remote assistance untuk bantuan tambahan</li>
+</ul>
+<p>Panduan ini memastikan pendekatan metodis untuk troubleshooting sistem Mazduino Anda, menggunakan alat diagnostik yang tersedia untuk performa yang andal.</p>
+<hr />
+<p><em>Manual ini akan terus diperbarui dengan penambahan menu konfigurasi baru. Pastikan Anda menggunakan versi terbaru untuk informasi yang akurat.</em></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../mazduino-mini-6ch-v1.3/" class="btn btn-neutral float-left" title="v1.3"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tunerstudio-output-controls/" class="btn btn-neutral float-right" title="Pengaturan Output Controls">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../mazduino-mini-6ch-v1.3/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../tunerstudio-output-controls/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
