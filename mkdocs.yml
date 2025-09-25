@@ -8,6 +8,10 @@ nav:
   - Mini 6 Channel:
     - v1.0-v1.2: mazduino-mini-6ch-v1.0-v1.2.md
     - v1.3: mazduino-mini-6ch-v1.3.md
+  - TunerStudio Manual: 
+    - 'Manual Utama': 'tunerstudio-manual.md'
+    - 'Pengaturan Output Controls': 'tunerstudio-output-controls.md'
+    - 'Pengaturan Air Conditioning (A/C)': 'tunerstudio-ac-settings.md'
   - About: about.md
 theme: 
   name: readthedocs
