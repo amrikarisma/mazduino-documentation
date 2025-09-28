@@ -30,6 +30,88 @@ Mazduino Mini 6CH v1.3 adalah unit kontrol mesin 6-channel yang kompak dirancang
 - Konektor otomotif 48-pin
 - Kartu SD untuk data logging
 
+## ⚙️ Konfigurasi Jumper
+
+Mazduino Mini 6CH v1.3 dilengkapi dengan sistem jumper solder yang memungkinkan kustomisasi fungsi sesuai kebutuhan aplikasi Anda. Jumper ini memberikan fleksibilitas konfigurasi tanpa perlu mengubah firmware, memastikan kompatibilitas optimal dengan berbagai setup mesin.
+
+![Mazduino Mini 6ch](img/mini6ch/IMG_6232.jpeg)
+
+### 🔌 Zona Konfigurasi Atas (Kanan)
+
+#### JP11 - Tachometer Pullup
+- **Fungsi**: Menentukan tegangan sinyal output tachometer
+- **Pilihan**: 12V atau 5V
+- **Aplikasi**: Sesuaikan dengan kompatibilitas dashboard kendaraan Anda
+
+#### Ignition VDrive Jumper
+- **Fungsi**: Mengatur tegangan sinyal pengapian untuk **Smart Coil Only**
+- **Pilihan**: Sinyal 12V atau 5V
+- **Khusus Smart Coil**: Jumper ini hanya untuk smart coil dengan driver internal
+- **⚠️ PENTING**: Dump coil memerlukan IGBT eksternal 
+
+#### Knock/PC13 Input Selection
+- **Mode Knock**: Input sensor knock untuk deteksi ketukan mesin (default)
+- **Mode PC13**: Akses langsung ke pin MCU untuk fungsi custom
+- **Fitur Baru v1.3**: Dukungan deteksi knock terintegrasi
+
+![Mazduino Mini 6ch](img/mini6ch/IMG_6229.jpeg)
+
+### 🎛️ Zona Konfigurasi Tengah
+
+#### JP5 & JP4 - Sensor Pullup Configuration
+- **JP5**: Pullup 5V untuk sinyal CKP (Crankshaft Position)
+- **JP4**: Pullup 5V untuk sinyal CMP (Camshaft Position)
+- **Manfaat**: Sinyal trigger yang bersih dan stabil
+
+#### JP3 & JP2 - Sensor Type Selection
+- **JP3**: Mode sinyal CKP (VR atau Hall sensor)
+- **JP2**: Mode sinyal CMP (VR atau Hall sensor)
+- **Fleksibilitas**: Kompatibel dengan berbagai jenis sensor posisi
+
+![Mazduino Mini 6ch](img/mini6ch/IMG_6230.jpeg)
+
+### 🌐 Zona Konfigurasi Kiri
+
+#### JP10 - CAN Bus Controller
+- **Fungsi**: Mengaktifkan IC CAN bus TJA1051T/3
+- **Aplikasi**: Komunikasi data high-speed dengan perangkat lain
+- **Protocol**: Mendukung standar automotive CAN 2.0
+
+#### JP6 - Stepper Motor Enable
+- **Fungsi**: Kontrol aktivasi driver stepper motor
+- **Note**: Konsultasi skematik untuk konfigurasi optimal
+- **Aplikasi**: Idle Air Control (IAC) dengan presisi tinggi
+
+#### JP7 & JP8 - Knock Sensor Filter Bypass
+- **Fungsi**: Bypass filter untuk sensor knock
+- **JP7**: Bypass filter knock channel 1
+- **JP8**: Bypass filter knock channel 2
+- **Advanced Feature**: Fine-tuning sensitivitas deteksi knock
+
+![Mazduino Mini 6ch](img/mini6ch/IMG_6231.jpeg)
+
+### 💡 Tips Konfigurasi Jumper
+
+#### ⚡ Pengaturan Optimal:
+- **Smart Coils**: Gunakan VDrive 5V untuk Coil dengan sinyal 5V dan 12V untuk coil dengan sinyal 12V
+- **Dump/Conventional Coils**: Memerlukan IGBT eksternal
+- **VR Sensors**: Aktifkan pullup dan pilih mode VR untuk sinyal bersih
+- **Hall Sensors**: Nonaktifkan pullup dan pilih mode Hall
+
+#### 🔧 Best Practices:
+1. **Pre-Installation**: Konfigurasi jumper sebelum instalasi final
+2. **Documentation**: Catat konfigurasi jumper untuk referensi masa depan
+3. **Testing**: Verifikasi sinyal setelah perubahan konfigurasi jumper
+4. **Compatibility**: Pastikan jumper sesuai dengan hardware yang digunakan
+
+#### ⚠️ Perhatian Khusus:
+- **Jenis Coil Kritis**: VDrive hanya untuk smart coil - dump coil butuh IGBT eksternal
+- **Solder dengan Hati-hati**: Gunakan suhu solder yang tepat
+- **Verifikasi Koneksi**: Pastikan sambungan solder yang solid
+- **Konsultasi Skematik**: Rujuk diagram untuk konfigurasi lanjutan
+- **Power Off**: Selalu matikan power saat mengubah jumper
+
+
 ## Wiring dan Instalasi
 
 ### Pin Mapping Konektor
@@ -254,9 +336,3 @@ Untuk mesin 4-silinder:
 - **Dual PPS**: Pedal Position Sensor 1 & 2 untuk input pedal gas
 - **H-Bridge Control**: Driver ETB terintegrasi dengan kontrol PWM, Direction, dan Disable
 - **Safety**: Sistem failsafe dengan dual sensor untuk keamanan operasi
-
-### File Firmware & Konfigurasi
-- **[Halaman Download](downloads.md)** - Dapatkan firmware rusEFI terbaru dan file konfigurasi TunerStudio
-- Dukungan penuh 6-channel dengan fitur-fitur canggih v1.3
-- Konfigurasi pin mapping khusus sudah disertakan
-- Kompatibel dengan firmware rusEFI
