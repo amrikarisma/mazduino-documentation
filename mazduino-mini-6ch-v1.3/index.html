@@ -64,6 +64,48 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#fitur-utama">Fitur Utama</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#konfigurasi-jumper">⚙️ Konfigurasi Jumper</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#zona-konfigurasi-atas-kanan">🔌 Zona Konfigurasi Atas (Kanan)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#jp11-tachometer-pullup">JP11 - Tachometer Pullup</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#ignition-vdrive-jumper">Ignition VDrive Jumper</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#knockpc13-input-selection">Knock/PC13 Input Selection</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#zona-konfigurasi-tengah">🎛️ Zona Konfigurasi Tengah</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#jp5-jp4-sensor-pullup-configuration">JP5 &amp; JP4 - Sensor Pullup Configuration</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#jp3-jp2-sensor-type-selection">JP3 &amp; JP2 - Sensor Type Selection</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#zona-konfigurasi-kiri">🌐 Zona Konfigurasi Kiri</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#jp10-can-bus-controller">JP10 - CAN Bus Controller</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#jp6-stepper-motor-enable">JP6 - Stepper Motor Enable</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#jp7-jp8-knock-sensor-filter-bypass">JP7 &amp; JP8 - Knock Sensor Filter Bypass</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tips-konfigurasi-jumper">💡 Tips Konfigurasi Jumper</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#pengaturan-optimal">⚡ Pengaturan Optimal:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#best-practices">🔧 Best Practices:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#perhatian-khusus">⚠️ Perhatian Khusus:</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#wiring-dan-instalasi">Wiring dan Instalasi</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#pin-mapping-konektor">Pin Mapping Konektor</a>
@@ -119,8 +161,6 @@
     <li class="toctree-l3"><a class="reference internal" href="#knock-detection-v13">Knock Detection (v1.3)</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#electronic-throttle-body-v13">Electronic Throttle Body (v1.3)</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#file-firmware-konfigurasi_1">File Firmware &amp; Konfigurasi</a>
     </li>
         </ul>
     </li>
@@ -191,6 +231,88 @@
 <li>Komunikasi Serial RX/TX</li>
 <li>Konektor otomotif 48-pin</li>
 <li>Kartu SD untuk data logging</li>
+</ul>
+<h2 id="konfigurasi-jumper">⚙️ Konfigurasi Jumper</h2>
+<p>Mazduino Mini 6CH v1.3 dilengkapi dengan sistem jumper solder yang memungkinkan kustomisasi fungsi sesuai kebutuhan aplikasi Anda. Jumper ini memberikan fleksibilitas konfigurasi tanpa perlu mengubah firmware, memastikan kompatibilitas optimal dengan berbagai setup mesin.</p>
+<p><img alt="Mazduino Mini 6ch" src="../img/mini6ch/IMG_6232.jpeg" /></p>
+<h3 id="zona-konfigurasi-atas-kanan">🔌 Zona Konfigurasi Atas (Kanan)</h3>
+<h4 id="jp11-tachometer-pullup">JP11 - Tachometer Pullup</h4>
+<ul>
+<li><strong>Fungsi</strong>: Menentukan tegangan sinyal output tachometer</li>
+<li><strong>Pilihan</strong>: 12V atau 5V</li>
+<li><strong>Aplikasi</strong>: Sesuaikan dengan kompatibilitas dashboard kendaraan Anda</li>
+</ul>
+<h4 id="ignition-vdrive-jumper">Ignition VDrive Jumper</h4>
+<ul>
+<li><strong>Fungsi</strong>: Mengatur tegangan sinyal pengapian untuk <strong>Smart Coil Only</strong></li>
+<li><strong>Pilihan</strong>: Sinyal 12V atau 5V</li>
+<li><strong>Khusus Smart Coil</strong>: Jumper ini hanya untuk smart coil dengan driver internal</li>
+<li><strong>⚠️ PENTING</strong>: Dump coil memerlukan IGBT eksternal </li>
+</ul>
+<h4 id="knockpc13-input-selection">Knock/PC13 Input Selection</h4>
+<ul>
+<li><strong>Mode Knock</strong>: Input sensor knock untuk deteksi ketukan mesin (default)</li>
+<li><strong>Mode PC13</strong>: Akses langsung ke pin MCU untuk fungsi custom</li>
+<li><strong>Fitur Baru v1.3</strong>: Dukungan deteksi knock terintegrasi</li>
+</ul>
+<p><img alt="Mazduino Mini 6ch" src="../img/mini6ch/IMG_6229.jpeg" /></p>
+<h3 id="zona-konfigurasi-tengah">🎛️ Zona Konfigurasi Tengah</h3>
+<h4 id="jp5-jp4-sensor-pullup-configuration">JP5 &amp; JP4 - Sensor Pullup Configuration</h4>
+<ul>
+<li><strong>JP5</strong>: Pullup 5V untuk sinyal CKP (Crankshaft Position)</li>
+<li><strong>JP4</strong>: Pullup 5V untuk sinyal CMP (Camshaft Position)</li>
+<li><strong>Manfaat</strong>: Sinyal trigger yang bersih dan stabil</li>
+</ul>
+<h4 id="jp3-jp2-sensor-type-selection">JP3 &amp; JP2 - Sensor Type Selection</h4>
+<ul>
+<li><strong>JP3</strong>: Mode sinyal CKP (VR atau Hall sensor)</li>
+<li><strong>JP2</strong>: Mode sinyal CMP (VR atau Hall sensor)</li>
+<li><strong>Fleksibilitas</strong>: Kompatibel dengan berbagai jenis sensor posisi</li>
+</ul>
+<p><img alt="Mazduino Mini 6ch" src="../img/mini6ch/IMG_6230.jpeg" /></p>
+<h3 id="zona-konfigurasi-kiri">🌐 Zona Konfigurasi Kiri</h3>
+<h4 id="jp10-can-bus-controller">JP10 - CAN Bus Controller</h4>
+<ul>
+<li><strong>Fungsi</strong>: Mengaktifkan IC CAN bus TJA1051T/3</li>
+<li><strong>Aplikasi</strong>: Komunikasi data high-speed dengan perangkat lain</li>
+<li><strong>Protocol</strong>: Mendukung standar automotive CAN 2.0</li>
+</ul>
+<h4 id="jp6-stepper-motor-enable">JP6 - Stepper Motor Enable</h4>
+<ul>
+<li><strong>Fungsi</strong>: Kontrol aktivasi driver stepper motor</li>
+<li><strong>Note</strong>: Konsultasi skematik untuk konfigurasi optimal</li>
+<li><strong>Aplikasi</strong>: Idle Air Control (IAC) dengan presisi tinggi</li>
+</ul>
+<h4 id="jp7-jp8-knock-sensor-filter-bypass">JP7 &amp; JP8 - Knock Sensor Filter Bypass</h4>
+<ul>
+<li><strong>Fungsi</strong>: Bypass filter untuk sensor knock</li>
+<li><strong>JP7</strong>: Bypass filter knock channel 1</li>
+<li><strong>JP8</strong>: Bypass filter knock channel 2</li>
+<li><strong>Advanced Feature</strong>: Fine-tuning sensitivitas deteksi knock</li>
+</ul>
+<p><img alt="Mazduino Mini 6ch" src="../img/mini6ch/IMG_6231.jpeg" /></p>
+<h3 id="tips-konfigurasi-jumper">💡 Tips Konfigurasi Jumper</h3>
+<h4 id="pengaturan-optimal">⚡ Pengaturan Optimal:</h4>
+<ul>
+<li><strong>Smart Coils</strong>: Gunakan VDrive 5V untuk Coil dengan sinyal 5V dan 12V untuk coil dengan sinyal 12V</li>
+<li><strong>Dump/Conventional Coils</strong>: Memerlukan IGBT eksternal</li>
+<li><strong>VR Sensors</strong>: Aktifkan pullup dan pilih mode VR untuk sinyal bersih</li>
+<li><strong>Hall Sensors</strong>: Nonaktifkan pullup dan pilih mode Hall</li>
+</ul>
+<h4 id="best-practices">🔧 Best Practices:</h4>
+<ol>
+<li><strong>Pre-Installation</strong>: Konfigurasi jumper sebelum instalasi final</li>
+<li><strong>Documentation</strong>: Catat konfigurasi jumper untuk referensi masa depan</li>
+<li><strong>Testing</strong>: Verifikasi sinyal setelah perubahan konfigurasi jumper</li>
+<li><strong>Compatibility</strong>: Pastikan jumper sesuai dengan hardware yang digunakan</li>
+</ol>
+<h4 id="perhatian-khusus">⚠️ Perhatian Khusus:</h4>
+<ul>
+<li><strong>Jenis Coil Kritis</strong>: VDrive hanya untuk smart coil - dump coil butuh IGBT eksternal</li>
+<li><strong>Solder dengan Hati-hati</strong>: Gunakan suhu solder yang tepat</li>
+<li><strong>Verifikasi Koneksi</strong>: Pastikan sambungan solder yang solid</li>
+<li><strong>Konsultasi Skematik</strong>: Rujuk diagram untuk konfigurasi lanjutan</li>
+<li><strong>Power Off</strong>: Selalu matikan power saat mengubah jumper</li>
 </ul>
 <h2 id="wiring-dan-instalasi">Wiring dan Instalasi</h2>
 <h3 id="pin-mapping-konektor">Pin Mapping Konektor</h3>
@@ -775,13 +897,6 @@
 <li><strong>Dual PPS</strong>: Pedal Position Sensor 1 &amp; 2 untuk input pedal gas</li>
 <li><strong>H-Bridge Control</strong>: Driver ETB terintegrasi dengan kontrol PWM, Direction, dan Disable</li>
 <li><strong>Safety</strong>: Sistem failsafe dengan dual sensor untuk keamanan operasi</li>
-</ul>
-<h3 id="file-firmware-konfigurasi_1">File Firmware &amp; Konfigurasi</h3>
-<ul>
-<li><strong><a href="../downloads/">Halaman Download</a></strong> - Dapatkan firmware rusEFI terbaru dan file konfigurasi TunerStudio</li>
-<li>Dukungan penuh 6-channel dengan fitur-fitur canggih v1.3</li>
-<li>Konfigurasi pin mapping khusus sudah disertakan</li>
-<li>Kompatibel dengan firmware rusEFI</li>
 </ul>
               
             </div>
