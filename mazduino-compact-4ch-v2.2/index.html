@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>v2.2 - Mazduino Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "v2.2";
+        var mkdocs_page_input_path = "mazduino-compact-4ch-v2.2.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Mazduino Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Quick Start</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Compact 4 Channel</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-compact-4ch-v1/">v1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-compact-4ch-v2.1/">v2.1</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">v2.2</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#gambaran-umum">Gambaran Umum</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#fitur-utama">Fitur Utama</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#core-features">Core Features</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#high-side-switching-v22">High Side Switching (v2.2)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#wiring-dan-instalasi">Wiring dan Instalasi</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#pin-mapping-konektor">Pin Mapping Konektor</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#layout-konektor">Layout Konektor</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#pin-assignment">Pin Assignment</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pin-mapping-mcu">Pin Mapping MCU</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#high-side-switching-fitur-utama-v22">High Side Switching (Fitur Utama v2.2)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#spesifikasi-high-side-output">🔌 Spesifikasi High Side Output</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#karakteristik-teknis">Karakteristik Teknis</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aplikasi-utama">Aplikasi Utama</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#konfigurasi-software">💡 Konfigurasi Software</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#tunerstudio-configuration">TunerStudio Configuration</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#firmware-support">Firmware Support</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#panduan-instalasi">🔧 Panduan Instalasi</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#wiring-high-side-output">Wiring High Side Output</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#contoh-wiring-alternator">Contoh Wiring Alternator</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#contoh-wiring-vvt">Contoh Wiring VVT</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#perhatian-keamanan">⚠️ Perhatian Keamanan</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#electrical-safety">Electrical Safety</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#installation-safety">Installation Safety</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dukungan-dan-sumber-daya">Dukungan dan Sumber Daya</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#dokumentasi">Dokumentasi</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#file-firmware-konfigurasi">File Firmware &amp; Konfigurasi</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#catatan-penting">Catatan Penting</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#persyaratan-sistem-pengapian">Persyaratan Sistem Pengapian</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#high-side-switching-v22_1">High Side Switching (v2.2)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#upgrade-dari-v21">Upgrade dari v2.1</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fitur-khusus-v22">Fitur Khusus v2.2</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#konektor-yamaha-33-pin">Konektor Yamaha 33-pin</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#knock-sensor-support">Knock Sensor Support</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#enhanced-high-current-outputs">Enhanced High Current Outputs</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#solder-jumper">Solder Jumper</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#perbandingan-versi">Perbandingan Versi</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mini 6 Channel</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-mini-6ch-v1.0-v1.2/">v1.0-v1.2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-mini-6ch-v1.3/">v1.3</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">TunerStudio Manual</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-manual/">Manual Utama</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-output-controls/">Pengaturan Output Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-ac-settings/">Pengaturan Air Conditioning (A/C)</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Mazduino Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Compact 4 Channel</li>
+      <li class="breadcrumb-item active">v2.2</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="ecu-mazduino-compact-v22">ECU Mazduino Compact (v2.2)</h1>
+<h2 id="gambaran-umum">Gambaran Umum</h2>
+<p>ECU Mazduino Compact v2.2 adalah evolusi terbaru dari Engine Control Unit standalone 4-channel yang dirancang untuk aplikasi manajemen mesin yang serbaguna. Dibuat khusus untuk firmware rusEFI dan Speeduino, memberikan engine control komprehensif dalam paket kompak yang cocok untuk operasi 4-silinder sequential penuh atau 8-silinder paired.</p>
+<p><strong>Fitur Baru v2.2:</strong>
+- <strong>High Side Switching</strong>: Output high-side MOSFET untuk kontrol alternator, VVT, dan switching 12V lainnya
+- <strong>Enhanced Pin Mapping</strong>: Pin 22 konektor dialokasikan untuk output High Side
+- <strong>PA8 MCU Support</strong>: Kontrol high-side melalui pin MCU PA8</p>
+<p><img alt="Mazduino Compact 4ch v2.2" src="../img/mazduino-compact-4ch-v2.2.jpeg" /></p>
+<h2 id="fitur-utama">Fitur Utama</h2>
+<h3 id="core-features">Core Features</h3>
+<ul>
+<li>Input trigger utama untuk sensor CKP hall atau optical saja</li>
+<li>Input trigger kedua untuk sensor CMP hall atau optical saja  </li>
+<li>6 input analog (0-5V) untuk MAP, TPS, IAT, CLT, O2, dan 1 cadangan</li>
+<li><strong>Knock Sensor Input</strong>: Input khusus untuk sensor knock dengan IC conditioning</li>
+<li>Catu daya 5V untuk sensor dengan perlindungan fuse internal</li>
+<li>3 input digital pullup untuk AC Switch, VSS, Clutch (AC atau VSS dapat digunakan untuk tombol Launch Control jika tidak diperlukan)</li>
+<li><strong>6x driver low-side arus tinggi 3A</strong>: 4 injektor + Idle 1 + Idle 2 untuk high-impedance injector, idle PWM, boost control, VVT</li>
+<li>5x driver low-side arus rendah untuk relay utama, pompa bahan bakar, kompresor AC, kipas, dan kontrol tachometer</li>
+<li>4x output 12V atau 5V untuk sinyal koil pengapian</li>
+<li><strong>NEW: 1x High Side Switching</strong> untuk kontrol alternator/VVT/12V switching</li>
+<li>Prosesor 168 MHz ARM Cortex-M4</li>
+<li>Komunikasi data via CANbus</li>
+<li>Komunikasi data via USB Type-C</li>
+<li>Komunikasi Serial RX/TX</li>
+<li><strong>Konektor Yamaha 33-pin</strong>: Konektor otomotif grade profesional dengan pin assignment yang optimal</li>
+<li>Kartu SD untuk data logging</li>
+</ul>
+<h3 id="high-side-switching-v22">High Side Switching (v2.2)</h3>
+<ul>
+<li><strong>Output Type</strong>: High-side MOSFET switching</li>
+<li><strong>Voltage</strong>: 12V switching capability</li>
+<li><strong>Current Rating</strong>: High current handling untuk beban berat</li>
+<li><strong>Applications</strong>: </li>
+<li>Kontrol alternator field</li>
+<li>Variable Valve Timing (VVT) solenoid</li>
+<li>High current 12V loads</li>
+<li>Auxiliary systems control</li>
+<li><strong>MCU Control</strong>: Pin PA8 untuk kontrol PWM dan digital switching</li>
+</ul>
+<h2 id="wiring-dan-instalasi">Wiring dan Instalasi</h2>
+<h3 id="pin-mapping-konektor">Pin Mapping Konektor</h3>
+<p>ECU Mazduino Compact v2.2 menggunakan konektor Yamaha 33-pin dengan pin assignment sebagai berikut:</p>
+<p><img alt="Mazduino Compact 33-pin Connector" src="../img/connector-33p.jpeg" /></p>
+<h4 id="layout-konektor">Layout Konektor</h4>
+<pre><code>11  10   9   8   7   6   5   4   3   2   1
+22  21  20  19  18  17  16  15  14  13  12
+33  32  31  30  29  28  27  26  25  24  23
+</code></pre>
+<h4 id="pin-assignment">Pin Assignment</h4>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Fungsi</th>
+<th>Deskripsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Injector 1</td>
+<td>Channel injektor 1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Injector 2</td>
+<td>Channel injektor 2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Injector 3</td>
+<td>Channel injektor 3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Injector 4</td>
+<td>Channel injektor 4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Idle 1</td>
+<td>Output kontrol idle 1 (high current 3A)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Tacho</td>
+<td>Output tachometer</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Fan</td>
+<td>Kontrol relay kipas</td>
+</tr>
+<tr>
+<td>8</td>
+<td>5V</td>
+<td>Output referensi 5V</td>
+</tr>
+<tr>
+<td>9</td>
+<td>12V</td>
+<td>Catu daya utama</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Main Relay</td>
+<td>Kontrol relay utama</td>
+</tr>
+<tr>
+<td>11</td>
+<td>GND</td>
+<td>Ground</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Idle 2</td>
+<td>Output kontrol idle 2 (high current 3A) - dapat digunakan untuk boost/VVT</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Ignition 4</td>
+<td>Channel pengapian 4</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Ignition 3</td>
+<td>Channel pengapian 3</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Ignition 2</td>
+<td>Channel pengapian 2</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Ignition 1</td>
+<td>Channel pengapian 1</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Fuel Pump</td>
+<td>Kontrol relay pompa bahan bakar</td>
+</tr>
+<tr>
+<td>18</td>
+<td>AC Compressor</td>
+<td>Relay kompresor AC</td>
+</tr>
+<tr>
+<td>19</td>
+<td>CKP</td>
+<td>Sensor posisi crankshaft (Trigger 1)</td>
+</tr>
+<tr>
+<td>20</td>
+<td>GND</td>
+<td>Ground</td>
+</tr>
+<tr>
+<td>21</td>
+<td>GND</td>
+<td>Ground</td>
+</tr>
+<tr>
+<td><strong>22</strong></td>
+<td><strong>High Side Out</strong></td>
+<td><strong>Output High Side MOSFET</strong></td>
+</tr>
+<tr>
+<td>23</td>
+<td>CLT</td>
+<td>Suhu coolant</td>
+</tr>
+<tr>
+<td>24</td>
+<td>TPS</td>
+<td>Sensor posisi throttle</td>
+</tr>
+<tr>
+<td>25</td>
+<td>O2</td>
+<td>Sensor oksigen</td>
+</tr>
+<tr>
+<td>26</td>
+<td>MAP</td>
+<td>Tekanan absolut manifold</td>
+</tr>
+<tr>
+<td>27</td>
+<td>IAT</td>
+<td>Suhu udara masuk</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Spare Analog</td>
+<td>Input analog cadangan</td>
+</tr>
+<tr>
+<td>29</td>
+<td>CMP</td>
+<td>Sensor posisi camshaft (Trigger 2)</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Knock Sensor</td>
+<td>Input sensor knock dengan IC conditioning</td>
+</tr>
+<tr>
+<td>31</td>
+<td>AC Switch</td>
+<td>Input switch AC (aktif ground)</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Clutch</td>
+<td>Input posisi kopling</td>
+</tr>
+<tr>
+<td>33</td>
+<td>VSS</td>
+<td>Sensor kecepatan kendaraan</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pin-mapping-mcu">Pin Mapping MCU</h3>
+<p>Untuk pengguna lanjutan dan pengembangan firmware, berikut adalah pin assignment STM32F407VGT6 untuk v2.2:</p>
+<table>
+<thead>
+<tr>
+<th>Fungsi</th>
+<th>Pin MCU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output Pengapian 1</td>
+<td>PE15</td>
+</tr>
+<tr>
+<td>Output Pengapian 2</td>
+<td>PE14</td>
+</tr>
+<tr>
+<td>Output Pengapian 3</td>
+<td>PD13</td>
+</tr>
+<tr>
+<td>Output Pengapian 4</td>
+<td>PE5</td>
+</tr>
+<tr>
+<td>Output Injeksi 1</td>
+<td>PD8</td>
+</tr>
+<tr>
+<td>Output Injeksi 2</td>
+<td>PB15</td>
+</tr>
+<tr>
+<td>Output Injeksi 3</td>
+<td>PB14</td>
+</tr>
+<tr>
+<td>Output Injeksi 4</td>
+<td>PB13</td>
+</tr>
+<tr>
+<td><strong>High Side Output</strong></td>
+<td><strong>PA8</strong></td>
+</tr>
+<tr>
+<td>Sensor MAP</td>
+<td>PA0</td>
+</tr>
+<tr>
+<td>TPS</td>
+<td>PA3</td>
+</tr>
+<tr>
+<td>Sensor IAT</td>
+<td>PA5</td>
+</tr>
+<tr>
+<td>Sensor CLT</td>
+<td>PA4</td>
+</tr>
+<tr>
+<td>Sensor O2</td>
+<td>PA1</td>
+</tr>
+<tr>
+<td>Battery/Voltage Ref</td>
+<td>PA2</td>
+</tr>
+<tr>
+<td>Input Analog Cadangan 1</td>
+<td>PB1</td>
+</tr>
+<tr>
+<td><strong>Knock Sensor</strong></td>
+<td><strong>PA6</strong></td>
+</tr>
+<tr>
+<td>Input AC</td>
+<td>PB0</td>
+</tr>
+<tr>
+<td>Input Clutch</td>
+<td>PE13</td>
+</tr>
+<tr>
+<td>VSS</td>
+<td>PD7</td>
+</tr>
+<tr>
+<td>CKP</td>
+<td>PD3</td>
+</tr>
+<tr>
+<td>CMP</td>
+<td>PD4</td>
+</tr>
+<tr>
+<td>Tacho</td>
+<td>PC9</td>
+</tr>
+<tr>
+<td>Relay Pompa Bahan Bakar</td>
+<td>PC8</td>
+</tr>
+<tr>
+<td>Relay FAN</td>
+<td>PA15</td>
+</tr>
+<tr>
+<td>Relay Kompresor AC</td>
+<td>PC7</td>
+</tr>
+<tr>
+<td>Relay Utama</td>
+<td>PE8</td>
+</tr>
+<tr>
+<td>Idle 1</td>
+<td>PD9</td>
+</tr>
+<tr>
+<td>Idle 2</td>
+<td>PD10</td>
+</tr>
+<tr>
+<td>TXD1</td>
+<td>PA9</td>
+</tr>
+<tr>
+<td>RXD1</td>
+<td>PA10</td>
+</tr>
+<tr>
+<td>TXD3</td>
+<td>PB10</td>
+</tr>
+<tr>
+<td>RXD3</td>
+<td>PB11</td>
+</tr>
+<tr>
+<td>TXCAN</td>
+<td>PD1</td>
+</tr>
+<tr>
+<td>RXCAN</td>
+<td>PD0</td>
+</tr>
+<tr>
+<td>SD CS</td>
+<td>PD2</td>
+</tr>
+<tr>
+<td>SPI3 CLK</td>
+<td>PC10</td>
+</tr>
+<tr>
+<td>SPI3 MISO</td>
+<td>PC11</td>
+</tr>
+<tr>
+<td>SPI3 MOSI</td>
+<td>PC12</td>
+</tr>
+<tr>
+<td>Launch Control Input</td>
+<td>PE13</td>
+</tr>
+<tr>
+<td>Clutch Input</td>
+<td>PE12</td>
+</tr>
+<tr>
+<td>VSS</td>
+<td>PD7</td>
+</tr>
+<tr>
+<td>CKP</td>
+<td>PD3</td>
+</tr>
+<tr>
+<td>CMP</td>
+<td>PD4</td>
+</tr>
+<tr>
+<td>Tacho</td>
+<td>PC9</td>
+</tr>
+<tr>
+<td>Fuel Pump Relay</td>
+<td>PC8</td>
+</tr>
+<tr>
+<td>FAN Relay</td>
+<td>PA15</td>
+</tr>
+<tr>
+<td>AC Compressor Relay</td>
+<td>PC7</td>
+</tr>
+<tr>
+<td>Main Relay</td>
+<td>PC5</td>
+</tr>
+<tr>
+<td>Idle 1</td>
+<td>PD10</td>
+</tr>
+<tr>
+<td>Idle 2</td>
+<td>PE9</td>
+</tr>
+<tr>
+<td>Stepper DIR</td>
+<td>PD12</td>
+</tr>
+<tr>
+<td>Stepper ENBL</td>
+<td>PD14</td>
+</tr>
+<tr>
+<td>Stepper STEP</td>
+<td>PD15</td>
+</tr>
+<tr>
+<td>TXD1</td>
+<td>PA9</td>
+</tr>
+<tr>
+<td>RXD1</td>
+<td>PA10</td>
+</tr>
+<tr>
+<td>TXD3</td>
+<td>PB10</td>
+</tr>
+<tr>
+<td>RXD3</td>
+<td>PB11</td>
+</tr>
+<tr>
+<td>TXCAN</td>
+<td>PD1</td>
+</tr>
+<tr>
+<td>RXCAN</td>
+<td>PD0</td>
+</tr>
+<tr>
+<td>SD CS</td>
+<td>PD2</td>
+</tr>
+<tr>
+<td>SPI3 CLK</td>
+<td>PC10</td>
+</tr>
+<tr>
+<td>SPI3 MISO</td>
+<td>PC11</td>
+</tr>
+<tr>
+<td>SPI3 MOSI</td>
+<td>PC12</td>
+</tr>
+</tbody>
+</table>
+<h2 id="high-side-switching-fitur-utama-v22">High Side Switching (Fitur Utama v2.2)</h2>
+<h3 id="spesifikasi-high-side-output">🔌 Spesifikasi High Side Output</h3>
+<h4 id="karakteristik-teknis">Karakteristik Teknis</h4>
+<ul>
+<li><strong>MCU Pin</strong>: PA8 (STM32F407VGT6)</li>
+<li><strong>Connector Pin</strong>: Pin 22</li>
+<li><strong>Output Type</strong>: High-side P-channel MOSFET</li>
+<li><strong>Voltage Rating</strong>: 12V automotive grade</li>
+<li><strong>Current Capability</strong>: High current untuk beban berat</li>
+<li><strong>Control</strong>: PWM dan digital switching support</li>
+<li><strong>Protection</strong>: Overcurrent dan thermal protection</li>
+</ul>
+<h4 id="aplikasi-utama">Aplikasi Utama</h4>
+<h5 id="kontrol-alternator">🔧 Kontrol Alternator</h5>
+<ul>
+<li><strong>Field Control</strong>: Mengatur output alternator dengan presisi</li>
+<li><strong>Voltage Regulation</strong>: Kontrol tegangan charging system</li>
+<li><strong>Load Management</strong>: Optimasi beban electrical system</li>
+<li><strong>Battery Protection</strong>: Mencegah overcharging</li>
+</ul>
+<h5 id="variable-valve-timing-vvt">⚙️ Variable Valve Timing (VVT)</h5>
+<ul>
+<li><strong>VVT Solenoid Control</strong>: Kontrol timing valve yang presisi</li>
+<li><strong>Oil Pressure Control</strong>: Mengatur tekanan oli untuk VVT</li>
+<li><strong>Performance Optimization</strong>: Tuning performa mesin</li>
+<li><strong>Fuel Economy</strong>: Optimasi konsumsi bahan bakar</li>
+</ul>
+<h5 id="12v-switching-applications">🔌 12V Switching Applications</h5>
+<ul>
+<li><strong>Auxiliary Systems</strong>: Kontrol sistem tambahan</li>
+<li><strong>High Current Loads</strong>: Beban arus tinggi lainnya</li>
+<li><strong>Relay Control</strong>: Alternatif untuk relay mekanis</li>
+<li><strong>Custom Applications</strong>: Fungsi kustomisasi lanjutan</li>
+</ul>
+<h3 id="konfigurasi-software">💡 Konfigurasi Software</h3>
+<h4 id="tunerstudio-configuration">TunerStudio Configuration</h4>
+<pre><code>Output Pin: High Side (Pin 22)
+MCU Assignment: PA8
+Function: PWM/Digital Output
+Voltage: 12V
+Mode: High Side Switching
+</code></pre>
+<h4 id="firmware-support">Firmware Support</h4>
+<ul>
+<li><strong>rusEFI</strong>: Dukungan penuh untuk high side switching</li>
+<li><strong>Speeduino</strong>: Kompatibilitas dengan auxiliary output</li>
+<li><strong>Pin Assignment</strong>: PA8 terintegrasi dalam pin mapping</li>
+<li><strong>PWM Control</strong>: Frekuensi dan duty cycle adjustable</li>
+</ul>
+<h3 id="panduan-instalasi">🔧 Panduan Instalasi</h3>
+<h4 id="wiring-high-side-output">Wiring High Side Output</h4>
+<ol>
+<li><strong>Identifikasi Pin 22</strong>: High Side Output pada konektor</li>
+<li><strong>Load Connection</strong>: Hubungkan beban ke pin 22</li>
+<li><strong>Ground Connection</strong>: Pastikan ground beban ke chassis</li>
+<li><strong>Fuse Protection</strong>: Gunakan fuse sesuai rating beban</li>
+<li><strong>Wire Gauge</strong>: Pilih kabel sesuai arus beban</li>
+</ol>
+<h4 id="contoh-wiring-alternator">Contoh Wiring Alternator</h4>
+<pre><code>Pin 22 (High Side) → Alternator Field Terminal
+Alternator Case → Vehicle Ground
+ECU Ground → Vehicle Ground
+Fuse: 10A (sesuai alternator spec)
+</code></pre>
+<h4 id="contoh-wiring-vvt">Contoh Wiring VVT</h4>
+<pre><code>Pin 22 (High Side) → VVT Solenoid (+)
+VVT Solenoid (-) → Vehicle Ground  
+ECU Ground → Vehicle Ground
+Fuse: 5A (sesuai solenoid spec)
+</code></pre>
+<h3 id="perhatian-keamanan">⚠️ Perhatian Keamanan</h3>
+<h4 id="electrical-safety">Electrical Safety</h4>
+<ul>
+<li><strong>Fuse Protection</strong>: Selalu gunakan fuse yang sesuai</li>
+<li><strong>Wire Rating</strong>: Pastikan kabel mampu menangani arus</li>
+<li><strong>Ground Quality</strong>: Koneksi ground yang solid penting</li>
+<li><strong>Voltage Check</strong>: Verifikasi tegangan sebelum koneksi</li>
+</ul>
+<h4 id="installation-safety">Installation Safety</h4>
+<ul>
+<li><strong>Power Off</strong>: Matikan power saat wiring</li>
+<li><strong>Double Check</strong>: Verifikasi koneksi sebelum power-on</li>
+<li><strong>Load Verification</strong>: Pastikan beban sesuai rating</li>
+<li><strong>Professional Install</strong>: Konsultasi teknisi jika perlu</li>
+</ul>
+<h2 id="dukungan-dan-sumber-daya">Dukungan dan Sumber Daya</h2>
+<h3 id="dokumentasi">Dokumentasi</h3>
+<ul>
+<li><strong>Datasheet STM32F407VGT6</strong>: Informasi lengkap tentang MCU</li>
+<li><strong>Manual Referensi v2.2</strong>: Dokumentasi pin mapping dan high side switching</li>
+<li><strong>Wiring Diagram</strong>: Diagram lengkap untuk instalasi dengan fitur v2.2</li>
+<li><strong>TunerStudio Configuration</strong>: File konfigurasi siap pakai untuk rusEFI</li>
+</ul>
+<h3 id="file-firmware-konfigurasi">File Firmware &amp; Konfigurasi</h3>
+<ul>
+<li><strong><a href="../downloads/">Halaman Download</a></strong> - Dapatkan firmware rusEFI terbaru dan file konfigurasi TunerStudio</li>
+<li>Dukungan penuh 4-channel dengan High Side Switching v2.2</li>
+<li>Konfigurasi pin mapping khusus untuk v2.2 sudah disertakan</li>
+<li>Kompatibel dengan firmware rusEFI</li>
+<li><strong>Dukungan High Side</strong>: Konfigurasi khusus untuk PA8 high side output</li>
+</ul>
+<h2 id="catatan-penting">Catatan Penting</h2>
+<h3 id="persyaratan-sistem-pengapian">Persyaratan Sistem Pengapian</h3>
+<ul>
+<li><strong>Smart Coils</strong>: Koneksi langsung didukung</li>
+<li><strong>Dump Coils</strong>: IGBT eksternal diperlukan untuk operasi yang tepat</li>
+<li><strong>Pemilihan Coil</strong>: Pilih jenis coil yang sesuai untuk aplikasi Anda</li>
+<li><strong>Keamanan</strong>: Driver eksternal yang tepat penting untuk sistem dump coil</li>
+</ul>
+<h3 id="high-side-switching-v22_1">High Side Switching (v2.2)</h3>
+<ul>
+<li><strong>Load Compatibility</strong>: Pastikan beban kompatibel dengan 12V switching</li>
+<li><strong>Current Rating</strong>: Verifikasi rating arus sesuai dengan beban</li>
+<li><strong>Thermal Management</strong>: Perhatikan thermal management untuk beban tinggi</li>
+<li><strong>Protection</strong>: Gunakan fuse dan protection yang memadai</li>
+</ul>
+<h3 id="upgrade-dari-v21">Upgrade dari v2.1</h3>
+<ul>
+<li><strong>Pin 22 Change</strong>: Pin 22 sekarang untuk High Side Output</li>
+<li><strong>TunerStudio Configuration</strong>: Konfigurasi pin PA8 sebagai high side output di TunerStudio</li>
+<li><strong>Wiring Modification</strong>: Sesuaikan wiring jika upgrade dari v2.1</li>
+<li><strong>Pin Assignment</strong>: Set PA8 untuk high side function di software TunerStudio</li>
+</ul>
+<h3 id="fitur-khusus-v22">Fitur Khusus v2.2</h3>
+<h4 id="konektor-yamaha-33-pin">Konektor Yamaha 33-pin</h4>
+<ul>
+<li><strong>Upgrade Konektor</strong>: Konektor otomotif grade profesional dengan keandalan tinggi</li>
+<li><strong>Ground yang Lebih Baik</strong>: Multiple ground pins (11, 20, 21) untuk integritas sinyal</li>
+<li><strong>Pin Layout Optimal</strong>: Pin assignment yang terorganisir untuk instalasi mudah</li>
+</ul>
+<h4 id="knock-sensor-support">Knock Sensor Support</h4>
+<ul>
+<li><strong>Pin 30</strong>: Input khusus untuk sensor knock</li>
+<li><strong>IC Conditioning</strong>: Sirkuit khusus untuk memproses sinyal knock sensor</li>
+<li><strong>MCU Pin PA6</strong>: Pin khusus untuk input knock sensor</li>
+<li><strong>Aplikasi</strong>: Deteksi ketukan mesin untuk perlindungan dan optimasi timing</li>
+</ul>
+<h4 id="enhanced-high-current-outputs">Enhanced High Current Outputs</h4>
+<ul>
+<li><strong>6 MOSFET High Current</strong>: Total 6 output arus tinggi 3A (4 injektor + 2 idle)</li>
+<li><strong>Dual Idle Control</strong>: Idle 1 dan Idle 2 untuk kontrol idle yang presisi</li>
+<li><strong>Flexible Applications</strong>: Idle 2 dapat digunakan untuk boost control, VVT, atau kontrol PWM lainnya</li>
+</ul>
+<h4 id="solder-jumper">Solder Jumper</h4>
+<p>PCB termasuk solder jumper di bagian belakang untuk konfigurasi:
+- <strong>Input/Output Selection</strong>: Konfigurasi pin untuk berbagai fungsi
+- <strong>Pemilihan tegangan pengapian</strong>: Pilih tegangan yang sesuai untuk koil pengapian
+- <strong>Knock Sensor Enable</strong>: Aktivasi input knock sensor</p>
+<h2 id="perbandingan-versi">Perbandingan Versi</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>v2.1</th>
+<th>v2.2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core MCU</td>
+<td>STM32F407VGT6</td>
+<td>STM32F407VGT6</td>
+</tr>
+<tr>
+<td>Ignition Outputs</td>
+<td>4x</td>
+<td>4x</td>
+</tr>
+<tr>
+<td>Injection Outputs</td>
+<td>4x</td>
+<td>4x</td>
+</tr>
+<tr>
+<td>Low Side Outputs</td>
+<td>5x</td>
+<td>5x</td>
+</tr>
+<tr>
+<td><strong>High Side Output</strong></td>
+<td><strong>❌</strong></td>
+<td><strong>✅ Pin 22</strong></td>
+</tr>
+<tr>
+<td><strong>MCU Pin PA8</strong></td>
+<td><strong>Unused</strong></td>
+<td><strong>High Side Control</strong></td>
+</tr>
+<tr>
+<td>CAN Bus</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>USB Type-C</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>SD Card</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Knock Sensor</td>
+<td>✅ Pin 30</td>
+<td>✅ Pin 30</td>
+</tr>
+<tr>
+<td>High Current MOSFET</td>
+<td>6 (4 injektor + 2 idle)</td>
+<td>6 (4 injektor + 2 idle)</td>
+</tr>
+<tr>
+<td>Stepper Support</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Update v2.2</strong>: Menambahkan High Side Switching untuk kontrol alternator, VVT, dan aplikasi 12V switching lainnya melalui pin 22 konektor dan pin PA8 MCU.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../mazduino-compact-4ch-v2.1/" class="btn btn-neutral float-left" title="v2.1"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../mazduino-mini-6ch-v1.0-v1.2/" class="btn btn-neutral float-right" title="v1.0-v1.2">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../mazduino-compact-4ch-v2.1/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../mazduino-mini-6ch-v1.0-v1.2/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

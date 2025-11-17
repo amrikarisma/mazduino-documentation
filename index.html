@@ -57,8 +57,14 @@
     <li class="toctree-l2"><a class="reference internal" href="#memulai">Memulai</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#bagian-dokumentasi">Bagian Dokumentasi</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#hardware-documentation">Hardware Documentation</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#dukungan">Dukungan</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pcb-design-technical-resources">PCB Design &amp; Technical Resources</a>
     </li>
     </ul>
                 </li>
@@ -68,6 +74,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="mazduino-compact-4ch-v1/">v1</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="mazduino-compact-4ch-v2.1/">v2.1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="mazduino-compact-4ch-v2.2/">v2.2</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Mini 6 Channel</span></p>
@@ -114,31 +122,40 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="dokumentasi-ecu-mazduino">Dokumentasi ECU Mazduino</h1>
-<p>Selamat datang di dokumentasi resmi untuk ECU Mazduino - unit kontrol mesin standalone open-source yang didukung oleh mikrokontroler STM32 dan kompatibel dengan firmware rusEFI dan Speeduino.</p>
+<p>Selamat datang di dokumentasi resmi untuk ECU Mazduino - Engine Control Unit standalone open-source yang didukung oleh mikrokontroler STM32 dan kompatibel dengan firmware rusEFI dan Speeduino.</p>
 <h2 id="produk-saat-ini">Produk Saat Ini</h2>
 <h3 id="mazduino-compact-4ch">Mazduino Compact 4ch</h3>
-<p>Unit kontrol mesin 4-channel yang kompak dirancang untuk mesin yang lebih kecil dan aplikasi dengan keterbatasan ruang.</p>
+<p>Engine Control Unit 4-channel yang kompak dirancang untuk mesin yang lebih kecil dan aplikasi dengan keterbatasan ruang.</p>
 <p><img alt="Mazduino Compact 4ch" src="img/mazduino-compact-4ch.jpg" /></p>
-<p><strong>Fitur Umum:</strong>
-- 4 channel injeksi
-- Faktor bentuk kompak
-- MCU STM32F407VGT6
-- Kompatibel dengan rusEFI &amp; Speeduino</p>
-<p><strong>Versi yang Tersedia:</strong>
-- <strong><a href="mazduino-compact-4ch-v1/">v1</a></strong> - Konektor Microfit 30-pin (2x12 + 2x3)
-- <strong><a href="mazduino-compact-4ch-v2.1/">v2.1</a></strong> - Konektor Yamaha 33-pin + Knock Sensor</p>
+<p><strong>Fitur Umum:</strong></p>
+<ul>
+<li>4 channel injeksi</li>
+<li>Faktor bentuk kompak</li>
+<li>MCU STM32F407VGT6</li>
+<li>Kompatibel dengan rusEFI &amp; Speeduino</li>
+</ul>
+<p><strong>Versi yang Tersedia:</strong></p>
+<ul>
+<li><strong><a href="mazduino-compact-4ch-v1/">v1</a></strong> - Konektor Microfit 30-pin (2x12 + 2x3)</li>
+<li><strong><a href="mazduino-compact-4ch-v2.1/">v2.1</a></strong> - Konektor Yamaha 33-pin + Knock Sensor</li>
+<li><strong><a href="mazduino-compact-4ch-v2.2/">v2.2</a></strong> - High Side Switching untuk alternator/VVT control</li>
+</ul>
 <h3 id="mazduino-mini-6ch">Mazduino Mini 6ch</h3>
-<p>Unit kontrol mesin 6-channel berfitur lengkap untuk kontrol injeksi sequential penuh.</p>
+<p>Engine Control Unit 6-channel berfitur lengkap untuk kontrol injeksi sequential penuh.</p>
 <p><img alt="Mazduino Mini 6ch" src="img/mazduino-mini-6ch.jpg" /></p>
-<p><strong>Fitur Umum:</strong>
-- 6 channel injeksi
-- Operasi sequential penuh
-- MCU STM32F407VGT6
-- Kemampuan I/O yang diperluas
-- Kompatibel dengan rusEFI &amp; Speeduino</p>
-<p><strong>Versi yang Tersedia:</strong>
-- <strong><a href="mazduino-mini-6ch-v1.0-v1.2/">v1.0-v1.2</a></strong> - Versi standar dengan fitur dasar
-- <strong><a href="mazduino-mini-6ch-v1.3/">v1.3</a></strong> - Dengan Knock Input dan Electronic Throttle Body (ETB)</p>
+<p><strong>Fitur Umum:</strong></p>
+<ul>
+<li>6 channel injeksi</li>
+<li>Operasi sequential penuh</li>
+<li>MCU STM32F407VGT6</li>
+<li>Kemampuan I/O yang diperluas</li>
+<li>Kompatibel dengan rusEFI &amp; Speeduino</li>
+</ul>
+<p><strong>Versi yang Tersedia:</strong></p>
+<ul>
+<li><strong><a href="mazduino-mini-6ch-v1.0-v1.2/">v1.0-v1.2</a></strong> - Versi standar dengan fitur dasar</li>
+<li><strong><a href="mazduino-mini-6ch-v1.3/">v1.3</a></strong> - Dengan Knock Input dan Electronic Throttle Body (ETB)</li>
+</ul>
 <h2 id="memulai">Memulai</h2>
 <ol>
 <li><strong>Pilih Model Anda</strong> - Pilih antara Compact 4ch atau Mini 6ch berdasarkan kebutuhan mesin Anda</li>
@@ -148,14 +165,32 @@
 </ol>
 <h2 id="bagian-dokumentasi">Bagian Dokumentasi</h2>
 <ul>
+<li><strong><a href="downloads/">Downloads</a></strong> - Firmware rusEFI terbaru dan file konfigurasi TunerStudio</li>
+<li><strong><a href="tunerstudio-manual/">Manual TunerStudio</a></strong> - Panduan lengkap tuning dan konfigurasi ECU</li>
 <li><strong><a href="about/">Tentang</a></strong> - Pelajari lebih lanjut tentang proyek ECU Mazduino</li>
-<li><strong>Panduan Hardware</strong> - Spesifikasi detail dan diagram wiring</li>
-<li><strong>Instalasi Firmware</strong> - Petunjuk langkah demi langkah flashing firmware</li>
-<li><strong>Konfigurasi</strong> - Setup mesin dan konfigurasi parameter</li>
-<li><strong>Panduan Tuning</strong> - Optimisasi performa dan pemecahan masalah</li>
+</ul>
+<h3 id="hardware-documentation">Hardware Documentation</h3>
+<ul>
+<li><strong><a href="mazduino-compact-4ch-v1/">Compact 4CH v1</a></strong> - Spesifikasi dan wiring untuk v1</li>
+<li><strong><a href="mazduino-compact-4ch-v2.1/">Compact 4CH v2.1</a></strong> - Dengan knock sensor dan konektor Yamaha</li>
+<li><strong><a href="mazduino-compact-4ch-v2.2/">Compact 4CH v2.2</a></strong> - Dengan high side switching</li>
+<li><strong><a href="mazduino-mini-6ch-v1.0-v1.2/">Mini 6CH v1.0-v1.2</a></strong> - Versi standar dengan fitur dasar</li>
+<li><strong><a href="mazduino-mini-6ch-v1.3/">Mini 6CH v1.3</a></strong> - Dengan knock input dan ETB support</li>
 </ul>
 <h2 id="dukungan">Dukungan</h2>
 <p>Untuk dukungan teknis, pertanyaan, atau kontribusi, silakan kunjungi forum komunitas kami atau repositori GitHub.</p>
+<h2 id="pcb-design-technical-resources">PCB Design &amp; Technical Resources</h2>
+<p>Untuk informasi detail mengenai PCB design, schematic, dan Bill of Materials (BOM) untuk semua versi ECU Mazduino, silakan kunjungi:</p>
+<p><strong><a href="https://github.com/amrikarisma/Mazduino/wiki">Mazduino Wiki</a></strong></p>
+<p>Wiki ini berisi:</p>
+<ul>
+<li><strong>Schematic lengkap</strong> untuk semua versi</li>
+<li><strong>PCB layout</strong> dan routing details  </li>
+<li><strong>Bill of Materials (BOM)</strong> dengan part numbers</li>
+<li><strong>Assembly notes</strong> dan manufacturing guidelines</li>
+<li><strong>Design considerations</strong> dan engineering decisions</li>
+<li><strong>Revision history</strong> dan changelog detail</li>
+</ul>
               
             </div>
           </div><footer>
@@ -207,5 +242,5 @@
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-09-28 17:19:46.851846+00:00
+Build Date UTC : 2025-11-17 19:15:12.119221+00:00
 -->
