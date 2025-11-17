@@ -1,4 +1,5 @@
 site_name: Mazduino Documentation
+site_url: https://wiki.mazduino.com
 nav:
   - Downloads: downloads.md
   - Quick Start: index.md
