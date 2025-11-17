@@ -2,7 +2,7 @@
 
 ## Gambaran Umum
 
-ECU Mazduino Compact v1 adalah unit kontrol mesin standalone 4-channel yang dirancang untuk aplikasi manajemen mesin yang serbaguna. Dibuat khusus untuk firmware rusEFI dan Speeduino, memberikan kontrol mesin komprehensif dalam paket kompak yang cocok untuk operasi 4-silinder sequential penuh atau 8-silinder paired.
+ECU Mazduino Compact v1 adalah Engine Control Unit standalone 4-channel yang dirancang untuk aplikasi manajemen mesin yang serbaguna. Dibuat khusus untuk firmware rusEFI dan Speeduino, memberikan engine control komprehensif dalam paket kompak yang cocok untuk operasi 4-silinder sequential penuh atau 8-silinder paired.
 
 ![Mazduino Compact 4ch](img/mazduino-compact-4ch.jpg)
 
