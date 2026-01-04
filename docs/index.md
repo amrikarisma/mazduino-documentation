@@ -1,12 +1,40 @@
 # Dokumentasi ECU Mazduino
 Selamat datang di dokumentasi resmi untuk ECU Mazduino - Engine Control Unit standalone open-source yang didukung oleh mikrokontroler STM32 dan kompatibel dengan firmware rusEFI dan Speeduino.
 
-## Produk Saat Ini
+## Produk Terbaru
+
+### 🆕 Mazduino LITE
+Solusi ECU compact terbaru untuk engine 4-silinder & Wasted Spark builtin IGBT dengan fitur modern.
+
+![Mazduino LITE](img/lite/mazduino-lite-with-case.jpeg)
+
+**Fitur Unggulan:**
+- 4 channel injector + 2 channel ignition
+- 168 MHz ARM Cortex-M4 processor
+- Support Hall/Optical dan VR sensors
+- 6 analog inputs + 5 digital inputs
+- CAN Bus, USB Type-C, Serial communication
+- SD card data logging
+- Konektor 30-pin Microfit (2x12 + 2x3)
+
+**Ideal untuk:**
+- Engine 4-silinder (NA, Turbo, Supercharged)
+- Street dan track applications
+- Motorcycle high-performance
+- Marine dan industrial applications
+
+**[📖 Dokumentasi Lengkap Mazduino LITE](mazduino-lite.md)**
+
+---
+
+## Produk Lainnya
 
 ### Mazduino Compact 4ch
 Engine Control Unit 4-channel yang kompak dirancang untuk mesin yang lebih kecil dan aplikasi dengan keterbatasan ruang.
 
-![Mazduino Compact 4ch](img/mazduino-compact-4ch.jpg)
+| Mazduino Compact 4ch v1 | Mazduino Compact 4ch Latest |
+|:------------------------:|:---------------------------:|
+| ![Mazduino Compact 4ch v1](img/mazduino-compact-4ch.jpg) | ![Mazduino Compact 4ch Latest](img/mazduino-compact-4ch-v2.2.jpeg) |
 
 **Fitur Umum:**
 
@@ -24,7 +52,9 @@ Engine Control Unit 4-channel yang kompak dirancang untuk mesin yang lebih kecil
 ### Mazduino Mini 6ch
 Engine Control Unit 6-channel berfitur lengkap untuk kontrol injeksi sequential penuh.
 
-![Mazduino Mini 6ch](img/mazduino-mini-6ch.jpg)
+| Mazduino Mini 6ch | Mazduino Mini 6ch New Case |
+|:-----------------:|:--------------------------:|
+| ![Mazduino Mini 6ch](img/mazduino-mini-6ch.jpg) | ![Mazduino Mini 6ch New Case](img/mazduino-mini6ch-new-case.jpeg) |
 
 **Fitur Umum:**
 

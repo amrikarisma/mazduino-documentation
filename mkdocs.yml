@@ -1,8 +1,10 @@
 site_name: Mazduino Documentation
 site_url: https://wiki.mazduino.com
 nav:
-  - Downloads: downloads.md
-  - Quick Start: index.md
+  - Unduhan: downloads.md
+  - Panduan Cepat: index.md
+  - Mazduino LITE:
+      - v0.1-v0.2:  mazduino-lite-v0.1-v0.2.md
   - Compact 4 Channel:
     - v1: mazduino-compact-4ch-v1.md
     - v2.1: mazduino-compact-4ch-v2.1.md
@@ -10,10 +12,21 @@ nav:
   - Mini 6 Channel:
     - v1.0-v1.2: mazduino-mini-6ch-v1.0-v1.2.md
     - v1.3: mazduino-mini-6ch-v1.3.md
-  - TunerStudio Manual: 
-    - 'Manual Utama': 'tunerstudio-manual.md'
-    - 'Pengaturan Output Controls': 'tunerstudio-output-controls.md'
-    - 'Pengaturan Air Conditioning (A/C)': 'tunerstudio-ac-settings.md'
-  - About: about.md
+    - v1.4: mazduino-mini-6ch-v1.4.md
+    - Manual TunerStudio:
+      - Manual Lengkap: tunerstudio-manual.md
+      - Instalasi: tunerstudio-instalasi.md
+      - Konfigurasi Project: tunerstudio-konfigurasi.md
+      - Interface Pengguna: tunerstudio-interface.md
+      - Base Engine Settings: tunerstudio-base-engine.md
+      - Limits & Protection: tunerstudio-limits-protection.md
+      - Fuel System: tunerstudio-fuel-system.md
+      - Ignition System: tunerstudio-ignition.md
+      - Sensor Configuration: tunerstudio-sensors.md
+      - CAN Bus Configuration: tunerstudio-canbus.md
+      - Controller & Diagnostics: tunerstudio-controller.md
+      - Troubleshooting: tunerstudio-troubleshooting.md
+      - Examples & Map Switching: tunerstudio-examples.md
+  - Tentang: about.md
 theme: 
   name: readthedocs

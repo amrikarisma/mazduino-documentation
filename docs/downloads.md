@@ -6,13 +6,13 @@ Halaman ini menyediakan firmware dan file konfigurasi untuk semua model ECU Mazd
 
 ### rusEFI Firmware
 
-#### Official rusEFI Firmware (Alternatif)
+#### Official rusEFI Firmware
 Gunakan build resmi dari rusEFI untuk kompatibilitas standar:
 
 - **mega100-F4** atau **F407 Discovery** builds dari [rusEFI Build Server](https://rusefi.com/build_server/)
 - **Catatan**: Pin mapping mungkin perlu disesuaikan manual untuk ECU Mazduino
 
-#### Custom Mazduino Firmware (REKOMENDASI)
+#### Custom Mazduino Firmware
 Firmware rusEFI yang dioptimalkan khusus untuk semua board Mazduino:
 
 - **Download**: [Mazduino Custom Firmware](https://github.com/amrikarisma/fw-custom-mazduino/actions/workflows/build-firmware.yaml)
