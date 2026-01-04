@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://wiki.mazduino.com/tunerstudio-controller/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Controller & Diagnostics - Mazduino Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Controller \u0026 Diagnostics";
+        var mkdocs_page_input_path = "tunerstudio-controller.md";
+        var mkdocs_page_url = "/tunerstudio-controller/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Mazduino Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../downloads/">Unduhan</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Panduan Cepat</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mazduino LITE</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-lite-v0.1-v0.2/">v0.1-v0.2</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Compact 4 Channel</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-compact-4ch-v1/">v1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-compact-4ch-v2.1/">v2.1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-compact-4ch-v2.2/">v2.2</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mini 6 Channel</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-mini-6ch-v1.0-v1.2/">v1.0-v1.2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-mini-6ch-v1.3/">v1.3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-mini-6ch-v1.4/">v1.4</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Manual TunerStudio</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-manual/">Manual Lengkap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-instalasi/">Instalasi</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-konfigurasi/">Konfigurasi Project</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-interface/">Interface Pengguna</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-base-engine/">Base Engine Settings</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-limits-protection/">Limits & Protection</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-fuel-system/">Fuel System</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-ignition/">Ignition System</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-sensors/">Sensor Configuration</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-canbus/">CAN Bus Configuration</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Controller & Diagnostics</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#pengantar">Pengantar</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#opsi-menu-controller">Opsi Menu Controller</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#1-ecu-stimulator">1. ECU Stimulator</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#2-bench-test">2. Bench Test</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#3-injector-test">3. Injector Test</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#4-popular-vehicles">4. Popular Vehicles</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#5-rusefi-console">5. rusEFI Console</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#6-sd-card-logger">6. SD Card Logger</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#7-connection">7. Connection</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#8-full-pinout-13-23-33">8. Full Pinout (1/3, 2/3, 3/3)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#9-fancy-board">9. Fancy Board</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#10-traction-control-etb-drop">10. Traction Control ETB Drop</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#11-traction-control-timing-adjustment">11. Traction Control Timing Adjustment</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#12-traction-control-skip-ignition">12. Traction Control Skip Ignition</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#13-experimental-1-2-3">13. Experimental 1, 2, 3</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#14-anti-lag-als">14. Anti-Lag ALS</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#15-rotary">15. Rotary</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#16-throttle-effective-area">16. Throttle Effective Area</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bench-test-commands">Bench Test &amp; Commands</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#grup-testing">Grup Testing</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#pengaturan-konfigurasi">Pengaturan Konfigurasi</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aplikasi-bench-test">Aplikasi Bench Test</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fancy-board-configuration">Fancy Board Configuration</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#mode-input-configuration">Mode Input Configuration</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#keuntungan-konfigurasi-fleksibel">Keuntungan Konfigurasi Fleksibel</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#traction-control-configuration">Traction Control Configuration</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#overview-tabel-traction-control">Overview Tabel Traction Control</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#strategi-traction-control">Strategi Traction Control</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#tuning-guidelines">Tuning Guidelines</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sd-card-logger">SD Card Logger</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#konfigurasi-logging">Konfigurasi Logging</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#keuntungan-sd-logging">Keuntungan SD Logging</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rusefi-console">rusEFI Console</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#interface-console">Interface Console</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#advanced-features">Advanced Features</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#connection-configuration">Connection Configuration</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#communication-settings">Communication Settings</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#connection-troubleshooting">Connection Troubleshooting</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#navigasi">Navigasi</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-troubleshooting/">Troubleshooting</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-examples/">Examples & Map Switching</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">Tentang</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Mazduino Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Mini 6 Channel</li>
+          <li class="breadcrumb-item">Manual TunerStudio</li>
+      <li class="breadcrumb-item active">Controller & Diagnostics</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="controller-diagnostics-tunerstudio">Controller &amp; Diagnostics TunerStudio</h1>
+<h2 id="pengantar">Pengantar</h2>
+<p>Menu <strong>Controller</strong> menyediakan akses ke berbagai tool diagnostik dan testing untuk ECU Mazduino. Fitur-fitur ini memungkinkan testing komprehensif, troubleshooting, dan konfigurasi lanjutan untuk memastikan operasi engine management yang optimal.</p>
+<p><img alt="Controller Menu" src="images/controller-menu.png" /></p>
+<h2 id="opsi-menu-controller">Opsi Menu Controller</h2>
+<h3 id="1-ecu-stimulator">1. ECU Stimulator</h3>
+<p>Mensimulasikan berbagai input untuk menguji fungsionalitas ECU tanpa engine yang berjalan.</p>
+<h3 id="2-bench-test">2. Bench Test</h3>
+<p>Memungkinkan testing output seperti injektor dan ignition coil untuk troubleshooting atau setup.</p>
+<h3 id="3-injector-test">3. Injector Test</h3>
+<p>Menyediakan cara terkontrol untuk menguji performa dan flow rate injektor.</p>
+<h3 id="4-popular-vehicles">4. Popular Vehicles</h3>
+<p>Konfigurasi predefined untuk kendaraan umum, menyederhanakan setup awal.</p>
+<h3 id="5-rusefi-console">5. rusEFI Console</h3>
+<p>Interface terminal untuk debugging detail dan konfigurasi lanjutan.</p>
+<h3 id="6-sd-card-logger">6. SD Card Logger</h3>
+<p>Mengelola pengaturan logging onboard untuk penyimpanan dan pengambilan data.</p>
+<h3 id="7-connection">7. Connection</h3>
+<p>Mengkonfigurasi parameter koneksi antara ECU dan software, seperti baud rate.</p>
+<h3 id="8-full-pinout-13-23-33">8. Full Pinout (1/3, 2/3, 3/3)</h3>
+<p>Menampilkan detail pinout lengkap untuk ECU wire-in sebagai referensi hardware.</p>
+<h3 id="9-fancy-board">9. Fancy Board</h3>
+<p>Tersedia di ECU wire-in, digunakan untuk mengkonfigurasi pengaturan I/O fleksibel.</p>
+<h3 id="10-traction-control-etb-drop">10. Traction Control ETB Drop</h3>
+<p>Mengurangi posisi throttle untuk mengelola wheel slip selama event traction control.</p>
+<h3 id="11-traction-control-timing-adjustment">11. Traction Control Timing Adjustment</h3>
+<p>Menyesuaikan ignition timing secara dinamis untuk kontrol wheel slip.</p>
+<h3 id="12-traction-control-skip-ignition">12. Traction Control Skip Ignition</h3>
+<p>Melewati event ignition untuk mengurangi power engine dan mengelola traksi.</p>
+<h3 id="13-experimental-1-2-3">13. Experimental 1, 2, 3</h3>
+<p>Fitur testing lanjutan untuk developer dan setup eksperimental.</p>
+<h3 id="14-anti-lag-als">14. Anti-Lag ALS</h3>
+<p>Mengkonfigurasi sistem anti-lag untuk engine turbocharged untuk mempertahankan tekanan boost.</p>
+<h3 id="15-rotary">15. Rotary</h3>
+<p>Mengaktifkan konfigurasi kontrol engine spesifik rotary.</p>
+<h3 id="16-throttle-effective-area">16. Throttle Effective Area</h3>
+<p>Mengkalibrasi area efektif throttle body untuk modeling airflow.</p>
+<h2 id="bench-test-commands">Bench Test &amp; Commands</h2>
+<p><img alt="Bench Test Commands" src="images/bench-test-commands.png" /></p>
+<p>Dialog <strong>Bench Test &amp; Commands</strong> berisi beberapa grup tombol yang memungkinkan testing output spesifik dengan membuat pulsa sesuai pengaturan yang dikonfigurasi:</p>
+<h3 id="grup-testing">Grup Testing</h3>
+<ol>
+<li><strong>Spark Test</strong>: Membuat pulsa pada output ignition</li>
+<li><strong>Injector Test</strong>: Membuat pulsa pada output injektor  </li>
+<li><strong>TCU Solenoid Test</strong>: Membuat pulsa pada solenoid kontrol transmisi (jika tersedia)</li>
+<li><strong>Lua Out Test</strong>: Membuat pulsa pada output yang dikonfigurasi Lua</li>
+<li><strong>Miscellaneous Commands</strong>: Mengaktifkan fungsi spesifik seperti testing relay A/C, idle air valve, menghentikan engine, reboot ECU, atau reset konfigurasi</li>
+</ol>
+<h3 id="pengaturan-konfigurasi">Pengaturan Konfigurasi</h3>
+<p>Pengaturan yang dapat dikonfigurasi memungkinkan kontrol presisi atas testing:</p>
+<ul>
+<li>
+<p><strong>Count</strong>: Menentukan berapa banyak pulsa yang akan dihasilkan. Misalnya, setting 3 akan menghasilkan 3 pulsa.</p>
+</li>
+<li>
+<p><strong>On Time (ms)</strong>: Menentukan berapa lama setiap output tetap aktif per pulsa. Misalnya, setting 4 ms akan mengaktifkan output selama 4 milidetik.</p>
+</li>
+<li>
+<p><strong>Off Time (ms)</strong>: Menentukan durasi tidak aktif antara pulsa. Misalnya, setting 500 ms akan menciptakan delay 500 milidetik sebelum pulsa berikutnya.</p>
+</li>
+</ul>
+<p>Kontrol ini memastikan testing output yang konsisten dan dapat diulang untuk tujuan diagnostik dan validasi.</p>
+<h3 id="aplikasi-bench-test">Aplikasi Bench Test</h3>
+<ol>
+<li><strong>Verifikasi Wiring</strong>: Memastikan koneksi yang benar untuk injektor dan coil</li>
+<li><strong>Testing Flow Rate</strong>: Menguji flow rate injektor dengan setting waktu yang presisi</li>
+<li><strong>Troubleshooting</strong>: Mendiagnosis masalah output tanpa menjalankan engine</li>
+<li><strong>Setup Validation</strong>: Memverifikasi konfigurasi sebelum start awal engine</li>
+</ol>
+<h2 id="fancy-board-configuration">Fancy Board Configuration</h2>
+<p><img alt="Fancy Board" src="images/fancy-board.png" /></p>
+<p>Fitur <strong>Fancy Board</strong> tersedia di ECU wire-in untuk konfigurasi I/O yang fleksibel:</p>
+<h3 id="mode-input-configuration">Mode Input Configuration</h3>
+<ul>
+<li>
+<p><strong>With Pull-Up</strong>: Menambah resistor pull-up internal ke sirkuit, menarik line sinyal ke voltase tinggi (biasanya 5V) ketika tidak ada sinyal aktif. Ini cocok untuk sensor atau switch yang menarik sinyal low ketika dipicu.</p>
+</li>
+<li>
+<p><strong>With Pull-Down</strong>: Menambah resistor pull-down internal, menarik line sinyal ke ground ketika tidak ada sinyal aktif. Ini ideal untuk sensor atau switch yang menggerakkan sinyal high ketika diaktifkan.</p>
+</li>
+<li>
+<p><strong>VR</strong>: Memungkinkan switching input antara mode sensor VR (Variable Reluctance) two-wire dan mode input Hall. Sensor VR menghasilkan sinyal AC dan memerlukan pemrosesan khusus, sedangkan sensor Hall menghasilkan sinyal digital on/off. Memilih mode yang benar memastikan input memproses tipe sinyal dengan akurat.</p>
+</li>
+</ul>
+<h3 id="keuntungan-konfigurasi-fleksibel">Keuntungan Konfigurasi Fleksibel</h3>
+<ol>
+<li><strong>Adaptabilitas</strong>: Satu pin dapat dikonfigurasi untuk berbagai tipe sensor</li>
+<li><strong>Cost Effective</strong>: Mengurangi kebutuhan hardware eksternal</li>
+<li><strong>Easy Reconfiguration</strong>: Perubahan dapat dilakukan melalui software</li>
+<li><strong>Signal Conditioning</strong>: Built-in conditioning untuk berbagai tipe sinyal</li>
+</ol>
+<h2 id="traction-control-configuration">Traction Control Configuration</h2>
+<p><img alt="Traction Control Tables" src="images/traction-control-tables.png" /></p>
+<h3 id="overview-tabel-traction-control">Overview Tabel Traction Control</h3>
+<ol>
+<li>
+<p><strong>Y-Axis (Slip Ratio)</strong>: Merepresentasikan jumlah wheel slip yang terdeteksi. Nilai <code>1.0</code> menunjukkan tidak ada slip, sedangkan nilai di atas <code>1.0</code> (mis. <code>1.1</code>) menunjukkan slip (mis. <code>1.1</code> merepresentasikan 10% slip).</p>
+</li>
+<li>
+<p><strong>X-Axis (Vehicle Speed)</strong>: Merepresentasikan kecepatan kendaraan dalam kilometer per jam.</p>
+</li>
+<li>
+<p><strong>Timing Drop Table</strong>: Menghilangkan ignition timing sebesar nilai positif yang ditentukan dalam tabel ketika slip terdeteksi. Semakin besar nilai, semakin banyak timing yang dikurangi.</p>
+</li>
+<li>
+<p><strong>ETB Drop Table</strong>: Memerintahkan pengurangan throttle (ETB = Electronic Throttle Body) sebesar nilai negatif yang ditentukan. Angka negatif yang lebih tinggi berarti pengurangan throttle yang lebih besar.</p>
+</li>
+<li>
+<p><strong>Ignition Skip Table</strong>: Melewati event ignition sebesar persentase yang ditentukan dalam tabel (mis. <code>50%</code> melewati setengah dari event ignition).</p>
+</li>
+<li>
+<p><strong>Consecutive Ignition Skips (Dropdown)</strong>: Memungkinkan kontrol atas melewati event ignition berturut-turut. Ketika diatur ke <code>true</code>, dua atau lebih event ignition dapat dilewati secara berurutan, yang direkomendasikan dalam sebagian besar kasus untuk traction control yang efektif. Ketika diatur ke <code>false</code>, skip berturut-turut tidak diizinkan.</p>
+</li>
+</ol>
+<h3 id="strategi-traction-control">Strategi Traction Control</h3>
+<h4 id="timing-drop-strategy">Timing Drop Strategy</h4>
+<ul>
+<li><strong>Low Speed</strong>: Pengurangan timing yang lebih agresif untuk kontrol slip yang efektif</li>
+<li><strong>High Speed</strong>: Pengurangan timing yang lebih moderat untuk stabilitas</li>
+<li><strong>Progressive Control</strong>: Pengurangan bertahap sesuai tingkat slip</li>
+</ul>
+<h4 id="throttle-control-strategy">Throttle Control Strategy</h4>
+<ul>
+<li><strong>Immediate Response</strong>: Pengurangan throttle cepat untuk kontrol slip instan</li>
+<li><strong>Smooth Operation</strong>: Transisi throttle yang halus untuk comfort pengemudi</li>
+<li><strong>Load Dependent</strong>: Pengurangan yang disesuaikan dengan kondisi beban</li>
+</ul>
+<h4 id="ignition-skip-strategy">Ignition Skip Strategy</h4>
+<ul>
+<li><strong>Severe Slip</strong>: Skip ignition untuk pengurangan power dramatis</li>
+<li><strong>Mild Slip</strong>: Skip minimal untuk kontrol halus</li>
+<li><strong>Pattern Control</strong>: Skip pattern yang dioptimasi untuk efektivitas</li>
+</ul>
+<h3 id="tuning-guidelines">Tuning Guidelines</h3>
+<ol>
+<li><strong>Start Conservative</strong>: Mulai dengan nilai rendah dan tingkatkan bertahap</li>
+<li><strong>Test Safely</strong>: Lakukan testing di lingkungan yang aman dan terkontrol</li>
+<li><strong>Monitor Effectiveness</strong>: Gunakan data logging untuk evaluasi performa</li>
+<li><strong>Vehicle Specific</strong>: Sesuaikan dengan karakteristik kendaraan spesifik</li>
+</ol>
+<h2 id="sd-card-logger">SD Card Logger</h2>
+<p><img alt="SD Card Logger" src="images/sd-card-logger.png" /></p>
+<h3 id="konfigurasi-logging">Konfigurasi Logging</h3>
+<p>SD Card Logger menyediakan kemampuan logging data onboard untuk analisis performa dan troubleshooting.</p>
+<h4 id="pengaturan-logging">Pengaturan Logging</h4>
+<ol>
+<li><strong>Enable SD Logging</strong>: Mengaktifkan/menonaktifkan fungsi logging SD card</li>
+<li><strong>Logging Period</strong>: Interval waktu antara sample data (ms)</li>
+<li><strong>Buffer Size</strong>: Ukuran buffer untuk data sebelum ditulis ke SD card</li>
+<li><strong>Auto Start</strong>: Memulai logging otomatis saat engine start</li>
+</ol>
+<h4 id="parameter-logging">Parameter Logging</h4>
+<ul>
+<li><strong>Engine Parameters</strong>: RPM, Load, TPS, MAP, IAT, CLT</li>
+<li><strong>Fuel System</strong>: Injector duty cycle, fuel pressure, AFR</li>
+<li><strong>Ignition System</strong>: Timing advance, dwell time, knock events</li>
+<li><strong>Sensor Data</strong>: Semua input sensor yang dikonfigurasi</li>
+<li><strong>Calculated Values</strong>: VE, timing corrections, lambda targets</li>
+</ul>
+<h4 id="file-management">File Management</h4>
+<ol>
+<li><strong>File Naming</strong>: Format nama file dengan timestamp</li>
+<li><strong>File Rotation</strong>: Otomatis membuat file baru setelah ukuran maksimum</li>
+<li><strong>Storage Management</strong>: Monitoring ruang tersedia di SD card</li>
+<li><strong>Data Format</strong>: Format CSV untuk kompatibilitas analisis</li>
+</ol>
+<h3 id="keuntungan-sd-logging">Keuntungan SD Logging</h3>
+<ul>
+<li><strong>Standalone Operation</strong>: Logging tanpa koneksi laptop</li>
+<li><strong>High Resolution</strong>: Sample rate tinggi untuk data detail</li>
+<li><strong>Large Capacity</strong>: Kemampuan storage besar untuk session panjang</li>
+<li><strong>Portable</strong>: Data dapat dianalisis di berbagai platform</li>
+</ul>
+<h2 id="rusefi-console">rusEFI Console</h2>
+<p><img alt="rusEFI Console" src="images/rusefi-console.png" /></p>
+<h3 id="interface-console">Interface Console</h3>
+<p>rusEFI Console menyediakan interface command-line untuk debugging dan konfigurasi lanjutan:</p>
+<h4 id="command-categories">Command Categories</h4>
+<ol>
+<li><strong>Engine Commands</strong>:</li>
+<li><code>info</code>: Informasi status engine</li>
+<li><code>status</code>: Status sistem real-time</li>
+<li><code>sensors</code>: Pembacaan sensor real-time</li>
+<li>
+<p><code>actuators</code>: Status aktuator</p>
+</li>
+<li>
+<p><strong>Calibration Commands</strong>:</p>
+</li>
+<li><code>calibrate_tps</code>: Kalibrasi TPS otomatis</li>
+<li><code>calibrate_pedal</code>: Kalibrasi pedal position</li>
+<li>
+<p><code>learn_idle</code>: Learning mode untuk idle control</p>
+</li>
+<li>
+<p><strong>Diagnostic Commands</strong>:</p>
+</li>
+<li><code>errors</code>: Menampilkan error codes aktif</li>
+<li><code>reset_errors</code>: Clear error codes</li>
+<li><code>test_injector</code>: Test injektor individual</li>
+<li>
+<p><code>test_coil</code>: Test ignition coil individual</p>
+</li>
+<li>
+<p><strong>Configuration Commands</strong>:</p>
+</li>
+<li><code>save_config</code>: Simpan konfigurasi ke flash</li>
+<li><code>load_config</code>: Load konfigurasi dari file</li>
+<li><code>factory_reset</code>: Reset ke pengaturan default</li>
+</ol>
+<h3 id="advanced-features">Advanced Features</h3>
+<h4 id="real-time-monitoring">Real-time Monitoring</h4>
+<ul>
+<li>Live data streaming dari semua sensor</li>
+<li>Calculated parameters dan internal states</li>
+<li>Error detection dan reporting</li>
+<li>Performance metrics</li>
+</ul>
+<h4 id="tuning-support">Tuning Support</h4>
+<ul>
+<li>Live table editing</li>
+<li>Parameter adjustment tanpa restart</li>
+<li>Backup dan restore konfigurasi</li>
+<li>Batch command execution</li>
+</ul>
+<h4 id="development-tools">Development Tools</h4>
+<ul>
+<li>Memory dump dan analysis</li>
+<li>Register access untuk low-level debugging</li>
+<li>Timing analysis dan profiling</li>
+<li>Custom script execution</li>
+</ul>
+<h2 id="connection-configuration">Connection Configuration</h2>
+<h3 id="communication-settings">Communication Settings</h3>
+<ol>
+<li><strong>Port Selection</strong>: Pilih port komunikasi (USB, Serial)</li>
+<li><strong>Baud Rate</strong>: Kecepatan komunikasi (115200, 256000)</li>
+<li><strong>Protocol</strong>: Format komunikasi (rusEFI, MSCAN)</li>
+<li><strong>Timeout</strong>: Waktu tunggu untuk response</li>
+</ol>
+<h3 id="connection-troubleshooting">Connection Troubleshooting</h3>
+<ol>
+<li><strong>Driver Issues</strong>: Pastikan driver USB terinstall dengan benar</li>
+<li><strong>Port Conflicts</strong>: Periksa port yang digunakan aplikasi lain</li>
+<li><strong>Cable Quality</strong>: Gunakan kabel USB berkualitas baik</li>
+<li><strong>EMI Interference</strong>: Hindari interferensi elektromagnetik</li>
+</ol>
+<h2 id="navigasi">Navigasi</h2>
+<ul>
+<li><a href="../tunerstudio-canbus/">← Kembali ke CAN Bus Configuration</a></li>
+<li><a href="../tunerstudio-troubleshooting/">Lanjut ke Troubleshooting →</a></li>
+<li><a href="../tunerstudio-manual/">Kembali ke Manual Utama</a></li>
+</ul>
+<hr />
+<p><em>Dokumentasi ini mencakup tool controller dan diagnostics lengkap untuk TunerStudio Mazduino. Penggunaan yang tepat dari tool ini akan memastikan setup, testing, dan troubleshooting yang efektif untuk sistem engine management.</em></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../tunerstudio-canbus/" class="btn btn-neutral float-left" title="CAN Bus Configuration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tunerstudio-troubleshooting/" class="btn btn-neutral float-right" title="Troubleshooting">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../tunerstudio-canbus/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../tunerstudio-troubleshooting/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
