@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://wiki.mazduino.com/mazduino-lite-v0.1-v0.2/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://wiki.mazduino.com/mazduino-lite-v0.1/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>v0.1-v0.2 - Mazduino Documentation</title>
+    <title>v0.1 - Mazduino Documentation</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "v0.1-v0.2";
-        var mkdocs_page_input_path = "mazduino-lite-v0.1-v0.2.md";
-        var mkdocs_page_url = "/mazduino-lite-v0.1-v0.2/";
+        var mkdocs_page_name = "v0.1";
+        var mkdocs_page_input_path = "mazduino-lite-v0.1.md";
+        var mkdocs_page_url = "/mazduino-lite-v0.1/";
       </script>
     
     <!--[if lt IE 9]>
@@ -49,17 +49,9 @@
               </ul>
               <p class="caption"><span class="caption-text">Mazduino LITE</span></p>
               <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">v0.1-v0.2</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">v0.1</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#pengantar">Pengantar</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#perbandingan-versi">Perbandingan Versi</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#v01-vs-v02">v0.1 vs v0.2</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#rekomendasi-penggunaan">Rekomendasi Penggunaan</a>
-    </li>
-        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#fitur-utama">Fitur Utama</a>
         <ul>
@@ -79,7 +71,7 @@
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#layout-konektor">Layout Konektor</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#pin-assignment">Pin Assignment</a>
+    <li class="toctree-l4"><a class="reference internal" href="#pin-assignment-v01">Pin Assignment v0.1</a>
     </li>
         </ul>
     </li>
@@ -97,21 +89,17 @@
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#bottom-side-board">Bottom Side Board</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#perbaikan-pada-v02">Perbaikan pada v0.2</a>
-    </li>
         </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rekomendasi-penggunaan-v01">Rekomendasi Penggunaan v0.1</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#peringatan-keselamatan">Peringatan Keselamatan</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#kesimpulan">Kesimpulan</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#rekomendasi-pemilihan-versi">Rekomendasi Pemilihan Versi</a>
-    </li>
-        </ul>
-    </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-lite-v0.2/">v0.2</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Compact 4 Channel</span></p>
@@ -181,7 +169,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Mazduino LITE</li>
-      <li class="breadcrumb-item active">v0.1-v0.2</li>
+      <li class="breadcrumb-item active">v0.1</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -190,64 +178,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="mazduino-lite">Mazduino LITE</h1>
+                <h1 id="mazduino-lite-v01">Mazduino LITE v0.1</h1>
 <h2 id="pengantar">Pengantar</h2>
-<p>Mazduino LITE adalah varian terbaru dari keluarga ECU Mazduino yang dirancang khusus untuk aplikasi engine 4-silinder dengan 4 channel injector dan 2 channel ignition. LITE menawarkan solusi ECU yang compact namun tetap powerful dengan fitur-fitur modern seperti CAN Bus, USB Type-C, dan data logging SD card.</p>
+<p>Mazduino LITE v0.1 adalah varian pertama dari keluarga ECU Mazduino LITE yang dirancang khusus untuk aplikasi engine 4-silinder dengan 4 channel injector dan 2 channel ignition. Versi ini ideal untuk setup <strong>Coil On Plug</strong> atau aplikasi dengan <strong>IGBT Eksternal</strong>.</p>
 <p><img alt="Mazduino LITE ECU" src="../img/lite/mazduino-lite-with-case.jpeg" /></p>
-<p><strong>Mazduino LITE tersedia dalam 2 versi: v0.1 dan v0.2</strong> dengan perbaikan signifikan pada v0.2.</p>
-<h2 id="perbandingan-versi">Perbandingan Versi</h2>
-<h3 id="v01-vs-v02">v0.1 vs v0.2</h3>
-<table>
-<thead>
-<tr>
-<th>Aspek</th>
-<th>v0.1</th>
-<th>v0.2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>IGBT Footprint</strong></td>
-<td>Footprint tidak umum (issue)</td>
-<td>D2Pak to 263 (umum &amp; mudah ditemukan)</td>
-</tr>
-<tr>
-<td><strong>Rekomendasi Penggunaan</strong></td>
-<td>Coil On Plug atau IGBT Eksternal</td>
-<td>Internal IGBT atau semua aplikasi</td>
-</tr>
-<tr>
-<td><strong>Barometer Internal</strong></td>
-<td>Tidak tersedia</td>
-<td>Optional (tidak terpasang default)</td>
-</tr>
-<tr>
-<td><strong>Jalur PCB</strong></td>
-<td>Standard</td>
-<td>Perbaikan jalur &amp; koreksi untuk jumper</td>
-</tr>
-<tr>
-<td><strong>IGBT Internal</strong></td>
-<td>Tidak disarankan (footprint issue)</td>
-<td>Disarankan</td>
-</tr>
-</tbody>
-</table>
-<h3 id="rekomendasi-penggunaan">Rekomendasi Penggunaan</h3>
-<p><strong>Mazduino LITE v0.1</strong>: </p>
-<ul>
-<li>Ideal untuk <strong>Coil On Plug</strong> setup</li>
-<li>Gunakan dengan <strong>IGBT Eksternal</strong> (tersedia di Toko Mazduino)</li>
-<li>Tidak disarankan untuk IGBT internal karena footprint yang tidak umum</li>
-</ul>
-<p><strong>Mazduino LITE v0.2</strong>: </p>
-<ul>
-<li><strong>Pilihan utama</strong> untuk semua aplikasi</li>
-<li><strong>IGBT internal</strong> dengan footprint D2Pak to 263 yang mudah ditemukan</li>
-<li><strong>Barometer internal optional</strong> (dapat diminta saat pembelian)</li>
-<li><strong>Jalur PCB yang diperbaiki</strong> untuk kemudahan jumper</li>
-</ul>
-<p><img alt="Mazduino LITE PCB" src="../img/lite/mazduino-lite-open.jpeg" /></p>
+<p>⚠️ <strong>Catatan Penting v0.1</strong>: 
+- IGBT footprint tidak umum - gunakan IGBT eksternal atau Coil On Plug
+- Tidak tersedia sensor barometer internal
+- Jalur PCB standar</p>
 <h2 id="fitur-utama">Fitur Utama</h2>
 <h3 id="sistem-input">Sistem Input</h3>
 <ul>
@@ -256,14 +194,12 @@
 <li><strong>Analog Inputs</strong>: 6x (0-5V) untuk MAP, TPS, IAT, CLT, O2, dan spare</li>
 <li><strong>Digital Inputs</strong>: 5x pullup untuk AC Switch, VSS, Clutch, dan launch control</li>
 <li><strong>Sensor Power</strong>: 5V regulated dengan internal fuse protection</li>
-<li><strong>Barometer Internal</strong>: Tersedia pada v0.2 (optional, tidak terpasang default kecuali diminta)</li>
 </ul>
 <h3 id="sistem-output">Sistem Output</h3>
 <ul>
 <li><strong>Injection</strong>: 4x high-current drivers untuk sequential atau batch mode</li>
-<li><strong>Ignition</strong>: 2x outputs dengan Smart Coil (5V/12V) dan IGBT support</li>
-<li><strong>v0.1</strong>: IGBT footprint tidak umum (gunakan IGBT eksternal atau COP)</li>
-<li><strong>v0.2</strong>: IGBT footprint D2Pak to 263 yang umum dan mudah ditemukan</li>
+<li><strong>Ignition</strong>: 2x outputs dengan Smart Coil (5V/12V) support</li>
+<li>⚠️ <strong>v0.1</strong>: IGBT footprint tidak umum - <strong>gunakan IGBT eksternal atau COP</strong></li>
 <li><strong>Control</strong>: 5x relay outputs untuk fuel pump, fan, AC, main relay, tachometer</li>
 <li><strong>Idle Control</strong>: 2x PWM outputs untuk ISC valve</li>
 </ul>
@@ -287,7 +223,7 @@
 22  21  20  19  18  17  16  15  14  13  12
 33  32  31  30  29  28  27  26  25  24  23
 </code></pre>
-<h4 id="pin-assignment">Pin Assignment</h4>
+<h4 id="pin-assignment-v01">Pin Assignment v0.1</h4>
 <table>
 <thead>
 <tr>
@@ -329,8 +265,8 @@
 </tr>
 <tr>
 <td>7</td>
-<td>Ignition 2</td>
-<td>Channel pengapian 2</td>
+<td><strong>Ignition 2</strong></td>
+<td><strong>Channel pengapian 2</strong></td>
 </tr>
 <tr>
 <td>8</td>
@@ -339,8 +275,8 @@
 </tr>
 <tr>
 <td>9</td>
-<td>Ground Coil</td>
-<td>Ground untuk coil</td>
+<td><strong>Ground Coil</strong></td>
+<td><strong>Ground untuk coil</strong></td>
 </tr>
 <tr>
 <td>10</td>
@@ -464,6 +400,7 @@
 </tr>
 </tbody>
 </table>
+<p>⚠️ <strong>Penting</strong>: Pin 7 dan 9 pada v0.1 adalah <strong>Ignition 2</strong> dan <strong>Ground Coil</strong></p>
 <h3 id="can-bus-konektor-4-pin">CAN Bus Konektor (4-Pin)</h3>
 <table>
 <thead>
@@ -663,50 +600,38 @@
 <h4 id="bottom-side-board">Bottom Side Board</h4>
 <ul>
 <li><strong>Tacho Signal</strong>: 5V/12V output selection (default 12V)</li>
-<li><strong>IGN1/IGN2 Mode</strong>: Smart Coil/IGBT selection (JP3/JP4)</li>
-<li><strong>v0.1</strong>: Gunakan Smart Coil atau IGBT eksternal (footprint IGBT tidak umum)</li>
-<li><strong>v0.2</strong>: IGBT internal dengan footprint D2Pak to 263 (umum &amp; mudah ditemukan)</li>
+<li><strong>IGN1/IGN2 Mode</strong>: Smart Coil selection (JP3/JP4)</li>
+<li>⚠️ <strong>v0.1</strong>: <strong>Hanya gunakan Smart Coil</strong> - IGBT footprint tidak umum</li>
 <li><strong>VR1/Hall, VR2/Hall</strong>: Input type selection</li>
 <li><strong>Digital Pullup</strong>: Enable internal pullup resistors</li>
 <li><strong>CAN Power</strong>: 12V/5V pada CAN connector</li>
 </ul>
-<h4 id="perbaikan-pada-v02">Perbaikan pada v0.2</h4>
-<ul>
-<li><strong>Jalur PCB</strong>: Perbaikan routing dan koreksi jalur untuk kemudahan jumper</li>
-<li><strong>IGBT Compatibility</strong>: Footprint yang lebih umum dan mudah ditemukan</li>
-<li><strong>Barometer Support</strong>: Mounting untuk sensor barometer internal (optional)</li>
-</ul>
+<h3 id="rekomendasi-penggunaan-v01">Rekomendasi Penggunaan v0.1</h3>
+<p>✅ <strong>Ideal untuk:</strong>
+- Setup <strong>Coil On Plug</strong>
+- Aplikasi dengan <strong>IGBT Eksternal</strong>
+- Budget terbatas</p>
+<p>❌ <strong>Tidak direkomendasikan:</strong>
+- IGBT internal (footprint tidak umum)
+- Aplikasi yang memerlukan barometer internal</p>
 <h3 id="peringatan-keselamatan">Peringatan Keselamatan</h3>
 <p>⚠️ <strong>PERINGATAN</strong>:
 - <strong>Jangan hubungkan sinyal 12V langsung ke ECU input</strong>
 - <strong>Verifikasi coil voltage jumper sebelum koneksi</strong>
 - <strong>Gunakan sensor ground terpisah dari power ground</strong>
 - <strong>Check all jumper settings sebelum first power-up</strong></p>
-<p>⚠️ <strong>PERINGATAN KHUSUS VERSI</strong>:
-- <strong>v0.1</strong>: Hindari penggunaan IGBT internal karena footprint yang tidak umum
-- <strong>v0.1</strong>: Gunakan IGBT eksternal atau setup Coil On Plug untuk reliability
-- <strong>v0.2</strong>: IGBT internal aman digunakan dengan footprint D2Pak to 263
-- <strong>v0.2</strong>: Barometer internal tersedia opsional (request saat pembelian)</p>
-<h2 id="kesimpulan">Kesimpulan</h2>
-<h3 id="rekomendasi-pemilihan-versi">Rekomendasi Pemilihan Versi</h3>
-<p><strong>Pilih v0.1 jika:</strong>
-- Menggunakan setup <strong>Coil On Plug</strong>
-- Memiliki atau berencana menggunakan <strong>IGBT Eksternal</strong>
-- Budget terbatas dan tidak membutuhkan IGBT internal</p>
-<p><strong>Pilih v0.2 jika:</strong>
-- Membutuhkan <strong>IGBT Internal</strong> dengan komponen yang mudah ditemukan
-- Memerlukan <strong>Barometer Internal</strong> (optional)
-- Menginginkan <strong>jalur PCB yang diperbaiki</strong> untuk kemudahan instalasi
-- <strong>Direkomendasikan untuk pengguna baru</strong> dan semua aplikasi umum</p>
-<p>Mazduino LITE v0.2 direkomendasikan untuk kebanyakan aplikasi karena perbaikan IGBT footprint dan jalur PCB.</p>
+<p>⚠️ <strong>PERINGATAN KHUSUS v0.1</strong>:
+- <strong>Hindari penggunaan IGBT internal</strong> karena footprint yang tidak umum
+- <strong>Gunakan IGBT eksternal atau setup Coil On Plug</strong> untuk reliability
+- <strong>Tidak tersedia sensor barometer internal</strong></p>
 <hr />
-<p><em>Mazduino LITE - Compact Power untuk Modern Engine Management</em></p>
+<p><em>Mazduino LITE v0.1 - Compact Solution untuk Coil On Plug &amp; IGBT Eksternal</em></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href=".." class="btn btn-neutral float-left" title="Panduan Cepat"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../mazduino-compact-4ch-v1/" class="btn btn-neutral float-right" title="v1">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../mazduino-lite-v0.2/" class="btn btn-neutral float-right" title="v0.2">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -732,7 +657,7 @@
       <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../mazduino-compact-4ch-v1/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../mazduino-lite-v0.2/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
