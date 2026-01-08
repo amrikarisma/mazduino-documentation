@@ -188,11 +188,12 @@
 <h2 id="pengantar">Pengantar</h2>
 <p>Mazduino LITE v0.2 adalah versi yang diperbaiki dan direkomendasikan dari keluarga ECU Mazduino LITE. Versi ini dirancang untuk aplikasi engine 4-silinder dengan 4 channel injector dan 2 channel ignition, dengan perbaikan signifikan pada IGBT footprint dan penambahan sensor barometer internal.</p>
 <p><img alt="Mazduino LITE ECU" src="../img/lite/mazduino-lite-with-case.jpeg" /></p>
-<p>✅ <strong>Keunggulan v0.2</strong>: 
-- IGBT footprint D2Pak to 263 (umum &amp; mudah ditemukan)
-- Sensor barometer internal (optional)
-- Jalur PCB yang diperbaiki
-- <strong>Pilihan utama untuk semua aplikasi</strong></p>
+<p><strong>Keunggulan v0.2</strong>: </p>
+<ul>
+<li>IGBT footprint D2Pak to 263 (umum &amp; mudah ditemukan)</li>
+<li>Sensor barometer internal (optional)</li>
+<li>Jalur PCB yang diperbaiki</li>
+</ul>
 <h2 id="fitur-utama">Fitur Utama</h2>
 <h3 id="sistem-input">Sistem Input</h3>
 <ul>
@@ -201,13 +202,13 @@
 <li><strong>Analog Inputs</strong>: 6x (0-5V) untuk MAP, TPS, IAT, CLT, O2, dan spare</li>
 <li><strong>Digital Inputs</strong>: 5x pullup untuk AC Switch, VSS, Clutch, dan launch control</li>
 <li><strong>Sensor Power</strong>: 5V regulated dengan internal fuse protection</li>
-<li><strong>Barometer Internal</strong>: ✅ <strong>Tersedia pada v0.2 (optional, tidak terpasang default kecuali diminta)</strong></li>
+<li><strong>Barometer Internal</strong>: <strong>Tersedia pada v0.2 (optional, tidak terpasang default kecuali diminta)</strong></li>
 </ul>
 <h3 id="sistem-output">Sistem Output</h3>
 <ul>
 <li><strong>Injection</strong>: 4x high-current drivers untuk sequential atau batch mode</li>
 <li><strong>Ignition</strong>: 2x outputs dengan Smart Coil (5V/12V) dan IGBT support</li>
-<li>✅ <strong>v0.2</strong>: IGBT footprint <strong>D2Pak to 263</strong> yang umum dan mudah ditemukan</li>
+<li><strong>v0.2</strong>: IGBT footprint <strong>D2Pak to 263</strong> yang umum dan mudah ditemukan</li>
 <li><strong>Control</strong>: 5x relay outputs untuk fuel pump, fan, AC, main relay, tachometer</li>
 <li><strong>Idle Control</strong>: 2x PWM outputs untuk ISC valve</li>
 </ul>
@@ -408,7 +409,7 @@
 </tr>
 </tbody>
 </table>
-<p>🔄 <strong>Perbedaan Penting v0.2</strong>: Pin 7 dan 9 <strong>ditukar</strong> - Pin 7 adalah <strong>Ground Coil</strong>, Pin 9 adalah <strong>Ignition 2</strong></p>
+<p><strong>Perbedaan Penting v0.2</strong>: Pin 7 dan 9 <strong>ditukar</strong> - Pin 7 adalah <strong>Ground Coil</strong>, Pin 9 adalah <strong>Ignition 2</strong></p>
 <h3 id="can-bus-konektor-4-pin">CAN Bus Konektor (4-Pin)</h3>
 <table>
 <thead>
@@ -604,12 +605,14 @@
 </tr>
 </tbody>
 </table>
-<p>🆕 <strong>Tambahan v0.2</strong>: Pin mapping untuk <strong>Barometric Pressure Sensor</strong>
-- <strong>BARO SCL</strong>: PB10 (shared dengan TXD3)
-- <strong>BARO SDA</strong>: PB11 (shared dengan RXD3)</p>
+<p><strong>Tambahan v0.2</strong>: Pin mapping untuk <strong>Barometric Pressure Sensor</strong></p>
+<ul>
+<li><strong>BARO SCL</strong>: PB10 (shared dengan TXD3)</li>
+<li><strong>BARO SDA</strong>: PB11 (shared dengan RXD3)</li>
+</ul>
 <h2 id="konfigurasi-hardware">Konfigurasi Hardware</h2>
 <h3 id="pengaturan-jumper-kritis">Pengaturan Jumper Kritis</h3>
-<p>⚠️ <strong>PENTING</strong>: Konfigurasi jumper harus benar sebelum power-up!</p>
+<p><strong>PENTING</strong>: Konfigurasi jumper harus benar sebelum power-up!</p>
 <h4 id="top-side-board">Top Side Board</h4>
 <ul>
 <li><strong>Coil Voltage</strong>: 12V/5V selection (default berdasarkan coil type)</li>
@@ -620,49 +623,61 @@
 <ul>
 <li><strong>Tacho Signal</strong>: 5V/12V output selection (default 12V)</li>
 <li><strong>IGN1/IGN2 Mode</strong>: Smart Coil/IGBT selection (JP3/JP4)</li>
-<li>✅ <strong>v0.2</strong>: IGBT internal dengan footprint <strong>D2Pak to 263</strong> (umum &amp; mudah ditemukan)</li>
+<li><strong>v0.2</strong>: IGBT internal dengan footprint <strong>D2Pak to 263</strong> (umum &amp; mudah ditemukan)</li>
 <li><strong>VR1/Hall, VR2/Hall</strong>: Input type selection</li>
 <li><strong>Digital Pullup</strong>: Enable internal pullup resistors</li>
 <li><strong>CAN Power</strong>: 12V/5V pada CAN connector</li>
 </ul>
 <h3 id="perbaikan-pada-v02">Perbaikan pada v0.2</h3>
-<p>✅ <strong>Perbaikan Utama:</strong>
-- <strong>Jalur PCB</strong>: Perbaikan routing dan koreksi jalur untuk kemudahan jumper
-- <strong>IGBT Compatibility</strong>: Footprint yang lebih umum dan mudah ditemukan
-- <strong>Barometer Support</strong>: Mounting untuk sensor barometer internal (optional)
-- <strong>Pin Assignment</strong>: Optimasi pin assignment untuk konektor 33-pin</p>
+<p><strong>Perbaikan Utama:</strong></p>
+<ul>
+<li><strong>Jalur PCB</strong>: Perbaikan routing dan koreksi jalur untuk kemudahan jumper</li>
+<li><strong>IGBT Compatibility</strong>: Footprint yang lebih umum dan mudah ditemukan</li>
+<li><strong>Barometer Support</strong>: Mounting untuk sensor barometer internal (optional)</li>
+<li><strong>Pin Assignment</strong>: Optimasi pin assignment untuk konektor 33-pin</li>
+</ul>
 <h3 id="sensor-barometer-internal-optional">Sensor Barometer Internal (Optional)</h3>
-<p>🆕 <strong>Fitur Baru v0.2</strong>: Sensor barometer internal tersedia sebagai opsi</p>
-<p><strong>Spesifikasi:</strong>
-- <strong>Sensor Type</strong>: Barometric Pressure Sensor
-- <strong>Interface</strong>: I2C
-- <strong>Pin MCU</strong>: BARO SCL (PB10), BARO SDA (PB11)
-- <strong>Ketersediaan</strong>: Optional - tidak terpasang default, dapat diminta saat pembelian
-- <strong>Fungsi</strong>: Koreksi altitude dan referensi tekanan atmosfer</p>
+<p><strong>Fitur Baru v0.2</strong>: Sensor barometer internal tersedia sebagai opsi</p>
+<p><strong>Spesifikasi:</strong></p>
+<ul>
+<li><strong>Sensor Type</strong>: Barometric Pressure Sensor</li>
+<li><strong>Interface</strong>: I2C</li>
+<li><strong>Pin MCU</strong>: BARO SCL (PB10), BARO SDA (PB11)</li>
+<li><strong>Ketersediaan</strong>: Optional - tidak terpasang default, dapat diminta saat pembelian</li>
+<li><strong>Fungsi</strong>: Koreksi altitude dan referensi tekanan atmosfer</li>
+</ul>
 <p><strong>Cara Pemesanan:</strong>
 Hubungi tim Mazduino dan sebutkan kebutuhan "barometer internal" saat pembelian LITE v0.2</p>
 <h3 id="rekomendasi-penggunaan-v02">Rekomendasi Penggunaan v0.2</h3>
-<p>✅ <strong>Ideal untuk:</strong>
-- <strong>Semua aplikasi</strong> engine management
-- Setup dengan <strong>IGBT Internal</strong>
-- Aplikasi yang memerlukan <strong>barometer internal</strong>
-- <strong>Pengguna baru</strong> dan instalasi yang mudah
-- Project dengan komponen yang mudah ditemukan</p>
-<p>✅ <strong>Keunggulan:</strong>
-- IGBT footprint umum (D2Pak to 263)
-- Jalur PCB yang diperbaiki
-- Optional barometer internal
-- Reliability yang lebih baik</p>
+<p><strong>Ideal untuk:</strong></p>
+<ul>
+<li><strong>Semua aplikasi</strong> engine management</li>
+<li>Setup dengan <strong>IGBT Internal</strong></li>
+<li>Aplikasi yang memerlukan <strong>barometer internal</strong></li>
+<li><strong>Pengguna baru</strong> dan instalasi yang mudah</li>
+<li>Project dengan komponen yang mudah ditemukan</li>
+</ul>
+<p><strong>Keunggulan:</strong></p>
+<ul>
+<li>IGBT footprint umum (D2Pak to 263)</li>
+<li>Jalur PCB yang diperbaiki</li>
+<li>Optional barometer internal</li>
+<li>Reliability yang lebih baik</li>
+</ul>
 <h3 id="peringatan-keselamatan">Peringatan Keselamatan</h3>
-<p>⚠️ <strong>PERINGATAN</strong>:
-- <strong>Jangan hubungkan sinyal 12V langsung ke ECU input</strong>
-- <strong>Verifikasi coil voltage jumper sebelum koneksi</strong>
-- <strong>Gunakan sensor ground terpisah dari power ground</strong>
-- <strong>Check all jumper settings sebelum first power-up</strong></p>
-<p>⚠️ <strong>CATATAN PINOUT v0.2</strong>:
-- <strong>Pin 7</strong>: Ground Coil (berbeda dengan v0.1)
-- <strong>Pin 9</strong>: Ignition 2 (berbeda dengan v0.1)
-- <strong>Periksa kembali koneksi saat upgrade dari v0.1</strong></p>
+<p><strong>PERINGATAN</strong>:</p>
+<ul>
+<li><strong>Jangan hubungkan sinyal 12V langsung ke ECU input</strong></li>
+<li><strong>Verifikasi coil voltage jumper sebelum koneksi</strong></li>
+<li><strong>Gunakan sensor ground terpisah dari power ground</strong></li>
+<li><strong>Check all jumper settings sebelum first power-up</strong></li>
+</ul>
+<p><strong>CATATAN PINOUT v0.2</strong>:</p>
+<ul>
+<li><strong>Pin 7</strong>: Ground Coil (berbeda dengan v0.1)</li>
+<li><strong>Pin 9</strong>: Ignition 2 (berbeda dengan v0.1)</li>
+<li><strong>Periksa kembali koneksi saat upgrade dari v0.1</strong></li>
+</ul>
 <h2 id="perbandingan-dengan-v01">Perbandingan dengan v0.1</h2>
 <table>
 <thead>
@@ -676,37 +691,36 @@ Hubungi tim Mazduino dan sebutkan kebutuhan "barometer internal" saat pembelian 
 <tr>
 <td><strong>IGBT Footprint</strong></td>
 <td>Tidak umum (issue)</td>
-<td>✅ D2Pak to 263 (umum)</td>
+<td>D2Pak to 263 (umum)</td>
 </tr>
 <tr>
 <td><strong>Pin 7</strong></td>
 <td>Ignition 2</td>
-<td>✅ Ground Coil</td>
+<td>Ground Coil</td>
 </tr>
 <tr>
 <td><strong>Pin 9</strong></td>
 <td>Ground Coil</td>
-<td>✅ Ignition 2</td>
+<td>Ignition 2</td>
 </tr>
 <tr>
 <td><strong>Barometer Internal</strong></td>
-<td>❌ Tidak tersedia</td>
-<td>✅ Optional</td>
+<td>Tidak tersedia</td>
+<td>Optional</td>
 </tr>
 <tr>
 <td><strong>Jalur PCB</strong></td>
 <td>Standard</td>
-<td>✅ Diperbaiki</td>
+<td>Diperbaiki</td>
 </tr>
 <tr>
 <td><strong>Rekomendasi</strong></td>
 <td>COP/IGBT Eksternal</td>
-<td>✅ Semua aplikasi</td>
+<td>Semua aplikasi</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<p><em>Mazduino LITE v0.2 - Enhanced Performance dengan Perbaikan Komprehensif</em></p>
               
             </div>
           </div><footer>

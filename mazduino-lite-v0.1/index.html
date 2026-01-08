@@ -91,8 +91,6 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#rekomendasi-penggunaan-v01">Rekomendasi Penggunaan v0.1</a>
-    </li>
     <li class="toctree-l3"><a class="reference internal" href="#peringatan-keselamatan">Peringatan Keselamatan</a>
     </li>
         </ul>
@@ -182,10 +180,10 @@
 <h2 id="pengantar">Pengantar</h2>
 <p>Mazduino LITE v0.1 adalah varian pertama dari keluarga ECU Mazduino LITE yang dirancang khusus untuk aplikasi engine 4-silinder dengan 4 channel injector dan 2 channel ignition. Versi ini ideal untuk setup <strong>Coil On Plug</strong> atau aplikasi dengan <strong>IGBT Eksternal</strong>.</p>
 <p><img alt="Mazduino LITE ECU" src="../img/lite/mazduino-lite-with-case.jpeg" /></p>
-<p>⚠️ <strong>Catatan Penting v0.1</strong>: 
-- IGBT footprint tidak umum - gunakan IGBT eksternal atau Coil On Plug
-- Tidak tersedia sensor barometer internal
-- Jalur PCB standar</p>
+<p><strong>Catatan Penting v0.1</strong>: </p>
+<ul>
+<li>IGBT footprint tidak umum - gunakan IGBT eksternal atau Coil On Plug</li>
+</ul>
 <h2 id="fitur-utama">Fitur Utama</h2>
 <h3 id="sistem-input">Sistem Input</h3>
 <ul>
@@ -199,7 +197,7 @@
 <ul>
 <li><strong>Injection</strong>: 4x high-current drivers untuk sequential atau batch mode</li>
 <li><strong>Ignition</strong>: 2x outputs dengan Smart Coil (5V/12V) support</li>
-<li>⚠️ <strong>v0.1</strong>: IGBT footprint tidak umum - <strong>gunakan IGBT eksternal atau COP</strong></li>
+<li><strong>v0.1</strong>: IGBT footprint tidak umum - <strong>gunakan IGBT eksternal atau COP</strong></li>
 <li><strong>Control</strong>: 5x relay outputs untuk fuel pump, fan, AC, main relay, tachometer</li>
 <li><strong>Idle Control</strong>: 2x PWM outputs untuk ISC valve</li>
 </ul>
@@ -400,7 +398,7 @@
 </tr>
 </tbody>
 </table>
-<p>⚠️ <strong>Penting</strong>: Pin 7 dan 9 pada v0.1 adalah <strong>Ignition 2</strong> dan <strong>Ground Coil</strong></p>
+<p><strong>Penting</strong>: Pin 7 dan 9 pada v0.1 adalah <strong>Ignition 2</strong> dan <strong>Ground Coil</strong></p>
 <h3 id="can-bus-konektor-4-pin">CAN Bus Konektor (4-Pin)</h3>
 <table>
 <thead>
@@ -590,7 +588,7 @@
 </table>
 <h2 id="konfigurasi-hardware">Konfigurasi Hardware</h2>
 <h3 id="pengaturan-jumper-kritis">Pengaturan Jumper Kritis</h3>
-<p>⚠️ <strong>PENTING</strong>: Konfigurasi jumper harus benar sebelum power-up!</p>
+<p><strong>PENTING</strong>: Konfigurasi jumper harus benar sebelum power-up!</p>
 <h4 id="top-side-board">Top Side Board</h4>
 <ul>
 <li><strong>Coil Voltage</strong>: 12V/5V selection (default berdasarkan coil type)</li>
@@ -601,31 +599,20 @@
 <ul>
 <li><strong>Tacho Signal</strong>: 5V/12V output selection (default 12V)</li>
 <li><strong>IGN1/IGN2 Mode</strong>: Smart Coil selection (JP3/JP4)</li>
-<li>⚠️ <strong>v0.1</strong>: <strong>Hanya gunakan Smart Coil</strong> - IGBT footprint tidak umum</li>
+<li><strong>v0.1</strong>: <strong>Hanya gunakan Smart Coil</strong> - IGBT footprint tidak umum</li>
 <li><strong>VR1/Hall, VR2/Hall</strong>: Input type selection</li>
 <li><strong>Digital Pullup</strong>: Enable internal pullup resistors</li>
 <li><strong>CAN Power</strong>: 12V/5V pada CAN connector</li>
 </ul>
-<h3 id="rekomendasi-penggunaan-v01">Rekomendasi Penggunaan v0.1</h3>
-<p>✅ <strong>Ideal untuk:</strong>
-- Setup <strong>Coil On Plug</strong>
-- Aplikasi dengan <strong>IGBT Eksternal</strong>
-- Budget terbatas</p>
-<p>❌ <strong>Tidak direkomendasikan:</strong>
-- IGBT internal (footprint tidak umum)
-- Aplikasi yang memerlukan barometer internal</p>
 <h3 id="peringatan-keselamatan">Peringatan Keselamatan</h3>
-<p>⚠️ <strong>PERINGATAN</strong>:
-- <strong>Jangan hubungkan sinyal 12V langsung ke ECU input</strong>
-- <strong>Verifikasi coil voltage jumper sebelum koneksi</strong>
-- <strong>Gunakan sensor ground terpisah dari power ground</strong>
-- <strong>Check all jumper settings sebelum first power-up</strong></p>
-<p>⚠️ <strong>PERINGATAN KHUSUS v0.1</strong>:
-- <strong>Hindari penggunaan IGBT internal</strong> karena footprint yang tidak umum
-- <strong>Gunakan IGBT eksternal atau setup Coil On Plug</strong> untuk reliability
-- <strong>Tidak tersedia sensor barometer internal</strong></p>
+<p><strong>PERINGATAN</strong>:</p>
+<ul>
+<li><strong>Jangan hubungkan sinyal 12V langsung ke ECU input</strong></li>
+<li><strong>Verifikasi coil voltage jumper sebelum koneksi</strong></li>
+<li><strong>Gunakan sensor ground terpisah dari power ground</strong></li>
+<li><strong>Check all jumper settings sebelum first power-up</strong></li>
+</ul>
 <hr />
-<p><em>Mazduino LITE v0.1 - Compact Solution untuk Coil On Plug &amp; IGBT Eksternal</em></p>
               
             </div>
           </div><footer>
