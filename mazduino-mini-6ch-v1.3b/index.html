@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://wiki.mazduino.com/mazduino-mini-6ch-v1.3/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://wiki.mazduino.com/mazduino-mini-6ch-v1.3b/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>v1.3 - Mazduino Documentation</title>
+    <title>v1.3B - Mazduino Documentation</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "v1.3";
-        var mkdocs_page_input_path = "mazduino-mini-6ch-v1.3.md";
-        var mkdocs_page_url = "/mazduino-mini-6ch-v1.3/";
+        var mkdocs_page_name = "v1.3B";
+        var mkdocs_page_input_path = "mazduino-mini-6ch-v1.3b.md";
+        var mkdocs_page_url = "/mazduino-mini-6ch-v1.3b/";
       </script>
     
     <!--[if lt IE 9]>
@@ -67,7 +67,9 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../mazduino-mini-6ch-v1.0-v1.2/">v1.0-v1.2</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">v1.3</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-mini-6ch-v1.3/">v1.3</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">v1.3B</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#gambaran-umum">Gambaran Umum</a>
     </li>
@@ -95,8 +97,6 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#zona-konfigurasi-kiri">🌐 Zona Konfigurasi Kiri</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#jp10-can-bus-controller">JP10 - CAN Bus Controller</a>
-    </li>
     <li class="toctree-l4"><a class="reference internal" href="#jp6-stepper-motor-enable">JP6 - Stepper Motor Enable</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#jp7-jp8-knock-sensor-filter-bypass">JP7 &amp; JP8 - Knock Sensor Filter Bypass</a>
@@ -121,17 +121,19 @@
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#layout-konektor">Layout Konektor</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#pin-assignment">Pin Assignment</a>
+    <li class="toctree-l4"><a class="reference internal" href="#pin-assignment-v13b">Pin Assignment (v1.3B)</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#pin-mapping-mcu">Pin Mapping MCU</a>
+    <li class="toctree-l3"><a class="reference internal" href="#pin-mapping-mcu-v13b">Pin Mapping MCU (v1.3B)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#fitur-khusus-v13">Fitur Khusus v1.3</a>
+    <li class="toctree-l3"><a class="reference internal" href="#fitur-khusus-v13b">Fitur Khusus v1.3B</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#knock-input-baru-di-v13">Knock Input (Baru di v1.3)</a>
+    <li class="toctree-l4"><a class="reference internal" href="#knock-input-diperbaiki-di-v13b">Knock Input (Diperbaiki di v1.3B)</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#electronic-throttle-body-baru-di-v13">Electronic Throttle Body (Baru di v1.3)</a>
+    <li class="toctree-l4"><a class="reference internal" href="#electronic-throttle-body-dioptimalkan-di-v13b">Electronic Throttle Body (Dioptimalkan di v1.3B)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#perbaikan-hardware-v13b">Perbaikan Hardware v1.3B</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#dukungan-vr-conditioner">Dukungan VR Conditioner</a>
     </li>
@@ -143,7 +145,37 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#panduan-instalasi">Panduan Instalasi</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#catatan-wiring">Catatan Wiring</a>
+    <li class="toctree-l3"><a class="reference internal" href="#catatan-wiring-v13b">Catatan Wiring v1.3B</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#perbedaan-dari-v13">Perbedaan dari v1.3</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#hardware-improvements">Hardware Improvements:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#functional-improvements">Functional Improvements:</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#informasi-hardware">Informasi Hardware</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#software-tuning">Software Tuning</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#download-software">Download Software</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#konfigurasi-khusus-v13b">Konfigurasi Khusus v1.3B</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#firmware-support">Firmware Support</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#wiring-diagram">Wiring Diagram</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#wiring-sensor">Wiring Sensor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#injector-wiring">Injector Wiring</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ignition-wiring">Ignition Wiring</a>
     </li>
         </ul>
     </li>
@@ -153,29 +185,25 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#file-firmware-konfigurasi">File Firmware &amp; Konfigurasi</a>
     </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#dukungan-modul">Dukungan Modul</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#modul-vr-conditioner">Modul VR-Conditioner</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#modul-stepper-motor">Modul Stepper Motor</a>
+    <li class="toctree-l3"><a class="reference internal" href="#informasi-tambahan">Informasi Tambahan</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#catatan-penting">Catatan Penting</a>
+    <li class="toctree-l2"><a class="reference internal" href="#catatan-penting-v13b">Catatan Penting v1.3B</a>
         <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#perbedaan-utama-dari-v13">Perbedaan Utama dari v1.3</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#migrasi-dari-v13">Migrasi dari v1.3</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#persyaratan-sistem-pengapian">Persyaratan Sistem Pengapian</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#knock-detection-v13">Knock Detection (v1.3)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#electronic-throttle-body-v13b">Electronic Throttle Body (v1.3B)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#electronic-throttle-body-v13">Electronic Throttle Body (v1.3)</a>
+    <li class="toctree-l3"><a class="reference internal" href="#knock-detection-v13b">Knock Detection (v1.3B)</a>
     </li>
         </ul>
     </li>
     </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-mini-6ch-v1.3b/">v1.3B</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../mazduino-mini-6ch-v1.4/">v1.4</a>
                   </li>
@@ -229,7 +257,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Mini 6 Channel</li>
-      <li class="breadcrumb-item active">v1.3</li>
+      <li class="breadcrumb-item active">v1.3B</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -238,36 +266,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="mazduino-mini-6ch-v13">Mazduino Mini 6CH (v1.3)</h1>
+                <h1 id="mazduino-mini-6ch-v13b">Mazduino Mini 6CH (v1.3B)</h1>
 <h2 id="gambaran-umum">Gambaran Umum</h2>
-<p>Mazduino Mini 6CH v1.3 adalah Engine Control Unit 6-channel yang kompak dirancang untuk digunakan dengan firmware rusEFI dan Speeduino. Dibangun di sekitar prosesor STM32F407VGT6 ARM 32-bit yang powerful, memberikan manajemen mesin komprehensif dalam faktor bentuk kompak yang cocok untuk mesin 6-silinder atau mesin 4-silinder dengan output arus tinggi tambahan.</p>
-<p><strong>Fitur Baru v1.3:</strong>
-- <strong>Knock Input</strong>: Dukungan sensor knock untuk deteksi ketukan mesin
-- <strong>ETB (Electronic Throttle Body)</strong>: Kontrol throttle elektronik terintegrasi</p>
-<p><img alt="Mazduino Mini 6ch" src="../img/mazduino-mini-6ch-v1.3.jpeg" /></p>
+<p>Mazduino Mini 6CH v1.3B adalah perbaikan dan peningkatan dari versi v1.3, dirancang sebagai Engine Control Unit 6-channel yang lebih optimal. Dibangun di sekitar prosesor <strong>STM32F427VGT6</strong> ARM 32-bit yang lebih powerful, memberikan manajemen mesin komprehensif dalam faktor bentuk kompak yang cocok untuk mesin 6-silinder atau mesin 4-silinder dengan output arus tinggi tambahan.</p>
+<p><strong>Perbaikan v1.3B dari v1.3:</strong>
+- <strong>Upgrade MCU</strong>: Menggunakan STM32F427VGT6 (180MHz) yang lebih powerful menggantikan STM32F407VGT6 (168MHz)
+- <strong>Penambahan Input Analog</strong>: Menambahkan 1 spare input analog khusus untuk sensor TPS2 yang dibutuhkan untuk ETB
+- <strong>Optimisasi Hardware</strong>: Menghapus dan mengoptimalkan komponen yang tidak digunakan untuk efisiensi yang lebih baik
+- <strong>Layout Komponen</strong>: Menata ulang layout komponen untuk kinerja dan manufaktur yang lebih optimal
+- <strong>Dukungan ETB yang Diperbaiki</strong>: Electronic Throttle Body support dengan input analog TPS2 yang dedicated
+- <strong>Efisiensi Desain</strong>: Desain yang lebih streamlined dengan fokus pada fungsionalitas yang diperlukan</p>
+<p><img alt="Mazduino Mini 6ch" src="../img/mazduino-mini-6ch-v1.3B.jpeg" /></p>
 <h2 id="fitur-utama">Fitur Utama</h2>
 <ul>
 <li>Input trigger utama untuk sensor CKP VR, hall atau optical</li>
 <li>Input trigger kedua untuk sensor CMP VR, hall atau optical</li>
-<li>7 input analog (0-5V) untuk MAP, TPS, IAT, CLT, O2, dan 2 cadangan yang dapat digunakan untuk sensor tekanan bahan bakar atau sensor lainnya</li>
+<li>8 input analog (0-5V) untuk MAP, TPS, IAT, CLT, O2, dan 3 cadangan termasuk input analog khusus untuk TPS2/ETB yang dapat digunakan untuk sensor tekanan bahan bakar atau sensor lainnya</li>
 <li>Catu daya 5V untuk sensor dengan perlindungan fuse internal</li>
 <li>4 input digital pullup untuk AC Switch, VSS, Clutch, Launch Control</li>
 <li>8x driver low-side arus tinggi 3A untuk injektor high-impedance, idle PWM (ISC), Boost, VVT dan lainnya</li>
 <li>5x driver low-side arus rendah untuk relay utama, pompa bahan bakar, kompresor AC, kipas, dan kontrol tachometer</li>
 <li>6x output 12V atau 5V untuk sinyal koil pengapian</li>
-<li><strong>Knock Input (v1.3)</strong>: Input sensor knock untuk deteksi ketukan mesin</li>
-<li><strong>ETB Support (v1.3)</strong>: Kontrol Electronic Throttle Body dengan TPS1 dan TPS2</li>
+<li><strong>Knock Input (v1.3B)</strong>: Input sensor knock yang diperbaiki untuk deteksi ketukan mesin</li>
+<li><strong>ETB Support (v1.3B)</strong>: Kontrol Electronic Throttle Body yang dioptimalkan dengan TPS1 dan TPS2</li>
 <li>Dukungan untuk Modul VR Conditioner tambahan</li>
 <li>Dukungan untuk Modul Stepper Idle tambahan</li>
-<li>Prosesor 168 MHz ARM Cortex-M4</li>
+<li><strong>Prosesor 180 MHz ARM Cortex-M4 (STM32F427VGT6)</strong> - <strong>Upgrade dari v1.3</strong></li>
 <li>Komunikasi data via CANbus</li>
 <li>Komunikasi data via USB Type-C</li>
 <li>Komunikasi Serial RX/TX</li>
 <li>Konektor otomotif 48-pin</li>
 <li>Kartu SD untuk data logging</li>
 </ul>
+<p><img alt="Mazduino Mini 6ch" src="../img/mazduino-mini6ch-new-case.jpeg" /></p>
 <h2 id="konfigurasi-jumper">⚙️ Konfigurasi Jumper</h2>
-<p>Mazduino Mini 6CH v1.3 dilengkapi dengan sistem jumper solder yang memungkinkan kustomisasi fungsi sesuai kebutuhan aplikasi Anda. Jumper ini memberikan fleksibilitas konfigurasi tanpa perlu mengubah firmware, memastikan kompatibilitas optimal dengan berbagai setup mesin.</p>
+<p>Mazduino Mini 6CH v1.3B dilengkapi dengan sistem jumper solder yang memungkinkan kustomisasi fungsi sesuai kebutuhan aplikasi Anda. Jumper ini memberikan fleksibilitas konfigurasi tanpa perlu mengubah firmware, memastikan kompatibilitas optimal dengan berbagai setup mesin.</p>
 <p><img alt="Mazduino Mini 6ch" src="../img/mini6ch/IMG_6232.jpeg" /></p>
 <h3 id="zona-konfigurasi-atas-kanan">🔌 Zona Konfigurasi Atas (Kanan)</h3>
 <h4 id="jp11-tachometer-pullup">JP11 - Tachometer Pullup</h4>
@@ -287,9 +320,9 @@
 <ul>
 <li><strong>Mode Knock</strong>: Input sensor knock untuk deteksi ketukan mesin (default)</li>
 <li><strong>Mode PC13</strong>: Akses langsung ke pin MCU untuk fungsi custom</li>
-<li><strong>Fitur Baru v1.3</strong>: Dukungan deteksi knock terintegrasi</li>
+<li><strong>Perbaikan v1.3B</strong>: Deteksi knock yang lebih stabil dan akurat</li>
 </ul>
-<p><img alt="Mazduino Mini 6ch" src="../img/mini6ch/IMG_6229.jpeg" /></p>
+<p><img alt="Mazduino Mini 6ch" src="../img/mini6ch/mazduino-mini-6ch-v1.3B-jumper.jpeg" /></p>
 <h3 id="zona-konfigurasi-tengah">🎛️ Zona Konfigurasi Tengah</h3>
 <h4 id="jp5-jp4-sensor-pullup-configuration">JP5 &amp; JP4 - Sensor Pullup Configuration</h4>
 <ul>
@@ -305,12 +338,6 @@
 </ul>
 <p><img alt="Mazduino Mini 6ch" src="../img/mini6ch/IMG_6230.jpeg" /></p>
 <h3 id="zona-konfigurasi-kiri">🌐 Zona Konfigurasi Kiri</h3>
-<h4 id="jp10-can-bus-controller">JP10 - CAN Bus Controller</h4>
-<ul>
-<li><strong>Fungsi</strong>: Mengaktifkan IC CAN bus TJA1051T/3</li>
-<li><strong>Aplikasi</strong>: Komunikasi data high-speed dengan perangkat lain</li>
-<li><strong>Protocol</strong>: Mendukung standar automotive CAN 2.0</li>
-</ul>
 <h4 id="jp6-stepper-motor-enable">JP6 - Stepper Motor Enable</h4>
 <ul>
 <li><strong>Fungsi</strong>: Kontrol aktivasi driver stepper motor</li>
@@ -319,12 +346,13 @@
 </ul>
 <h4 id="jp7-jp8-knock-sensor-filter-bypass">JP7 &amp; JP8 - Knock Sensor Filter Bypass</h4>
 <ul>
-<li><strong>Fungsi</strong>: Bypass filter untuk sensor knock</li>
-<li><strong>JP7</strong>: Bypass filter knock channel 1</li>
-<li><strong>JP8</strong>: Bypass filter knock channel 2</li>
-<li><strong>Advanced Feature</strong>: Fine-tuning sensitivitas deteksi knock</li>
+<li><strong>Fungsi</strong>: Bypass filter internal untuk sensor knock</li>
+<li><strong>JP7</strong>: Bypass filter internal knock stage 1</li>
+<li><strong>JP8</strong>: Bypass filter internal knock stage 2</li>
+<li><strong>v1.3B Improvement</strong>: Filter yang dioptimalkan untuk sensitivitas deteksi knock</li>
+<li><strong>Note</strong>: Untuk satu input knock di konektor ECU (pin 8)</li>
 </ul>
-<p><img alt="Mazduino Mini 6ch" src="../img/mini6ch/IMG_6231.jpeg" /></p>
+<p><img alt="Mazduino Mini 6ch" src="../img/mini6ch/mazduino-mini-6ch-v1.3B-jumper2.jpeg" /></p>
 <h3 id="tips-konfigurasi-jumper">💡 Tips Konfigurasi Jumper</h3>
 <h4 id="pengaturan-optimal">⚡ Pengaturan Optimal:</h4>
 <ul>
@@ -350,14 +378,14 @@
 </ul>
 <h2 id="wiring-dan-instalasi">Wiring dan Instalasi</h2>
 <h3 id="pin-mapping-konektor">Pin Mapping Konektor</h3>
-<p>Mazduino Mini 6CH v1.3 menggunakan konektor ECU Yamaha 48-pin dengan pin assignment sebagai berikut:</p>
+<p>Mazduino Mini 6CH v1.3B menggunakan konektor ECU Yamaha 48-pin dengan pin assignment yang diperbaiki sebagai berikut:</p>
 <p><img alt="Mazduino Mini 48-pin Connector" src="../img/mazduino-48p-connector.jpeg" /></p>
 <h4 id="layout-konektor">Layout Konektor</h4>
 <pre><code> 1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
 17  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32
 33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48
 </code></pre>
-<h4 id="pin-assignment">Pin Assignment</h4>
+<h4 id="pin-assignment-v13b">Pin Assignment (v1.3B)</h4>
 <table>
 <thead>
 <tr>
@@ -394,12 +422,12 @@
 </tr>
 <tr>
 <td>6</td>
-<td>AC Compressor</td>
+<td>AC-OUT / AC COMPRESOR</td>
 <td>Kontrol kompresor AC</td>
 </tr>
 <tr>
 <td>7</td>
-<td>Fuel Pump</td>
+<td>FUEL PUMP</td>
 <td>Kontrol relay pompa bahan bakar</td>
 </tr>
 <tr>
@@ -409,13 +437,13 @@
 </tr>
 <tr>
 <td>9</td>
-<td>VR-1</td>
-<td>Input VR conditioner 1</td>
+<td>VR1-</td>
+<td>Input VR conditioner 1 negatif</td>
 </tr>
 <tr>
 <td>10</td>
-<td>VR-2</td>
-<td>Input VR conditioner 2</td>
+<td>VR2-</td>
+<td>Input VR conditioner 2 negatif</td>
 </tr>
 <tr>
 <td>11</td>
@@ -454,18 +482,18 @@
 </tr>
 <tr>
 <td>18</td>
-<td><strong>Spare Analog 1/PPS1</strong></td>
-<td>Input analog cadangan 1 atau Pedal Position Sensor 1</td>
+<td><strong>Spare Analog Input 1 / PPS1</strong></td>
+<td>Input analog cadangan 1 atau Pedal Position Sensor 1 untuk ETB</td>
 </tr>
 <tr>
 <td>19</td>
 <td>VSS</td>
-<td>Sensor kecepatan kendaraan</td>
+<td>Vehicle Speed Sensor</td>
 </tr>
 <tr>
 <td>20</td>
-<td>AC Switch</td>
-<td>Input switch AC</td>
+<td><strong>AC-IN / AC Switch</strong></td>
+<td>Input switch AC (Hanya menerima <strong>GROUND</strong> sebagai sinyal ON)</td>
 </tr>
 <tr>
 <td>21</td>
@@ -474,12 +502,12 @@
 </tr>
 <tr>
 <td>22</td>
-<td>GND</td>
+<td><strong>GND</strong></td>
 <td>Ground ECU</td>
 </tr>
 <tr>
 <td>23</td>
-<td>Fan</td>
+<td>FAN</td>
 <td>Kontrol relay kipas</td>
 </tr>
 <tr>
@@ -539,8 +567,8 @@
 </tr>
 <tr>
 <td>35</td>
-<td><strong>Spare Analog 2/PPS2</strong></td>
-<td>Input analog cadangan 2 atau Pedal Position Sensor 2</td>
+<td><strong>Spare Analog Input 2 / PPS2</strong></td>
+<td>Input analog cadangan 2 atau Pedal Position Sensor 2 untuk ETB</td>
 </tr>
 <tr>
 <td>36</td>
@@ -549,23 +577,23 @@
 </tr>
 <tr>
 <td>37</td>
-<td>GND Sensor</td>
+<td><strong>GND Sensor</strong></td>
 <td>Ground sensor</td>
 </tr>
 <tr>
 <td>38</td>
-<td>GND Sensor</td>
+<td><strong>GND Sensor</strong></td>
 <td>Ground sensor</td>
 </tr>
 <tr>
 <td>39</td>
-<td>Tacho</td>
+<td><strong>RPM / Tacho</strong></td>
 <td>Output tachometer</td>
 </tr>
 <tr>
 <td>40</td>
-<td>Launch Control</td>
-<td>Input launch control</td>
+<td><strong>Spare Input 3 / TPS2</strong></td>
+<td>Input cadangan 3 atau TPS2 untuk ETB</td>
 </tr>
 <tr>
 <td>41</td>
@@ -579,8 +607,8 @@
 </tr>
 <tr>
 <td>43</td>
-<td><strong>O2/TPS2</strong></td>
-<td>Sensor oksigen (1-5V dari kontroler wideband) atau TPS2 untuk ETB</td>
+<td><strong>O2</strong></td>
+<td>Sensor oksigen (analog 5V, dari wideband controller analog output 1-5V)</td>
 </tr>
 <tr>
 <td>44</td>
@@ -609,8 +637,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="pin-mapping-mcu">Pin Mapping MCU</h3>
-<p>Untuk pengguna lanjutan dan pengembangan firmware, berikut adalah pin assignment STM32F407VGT6 untuk v1.3:</p>
+<h3 id="pin-mapping-mcu-v13b">Pin Mapping MCU (v1.3B)</h3>
+<p>Pin assignment <strong>STM32F427VGT6</strong> yang telah diperbaiki untuk v1.3B:</p>
 <table>
 <thead>
 <tr>
@@ -688,8 +716,8 @@
 <td>PA1</td>
 </tr>
 <tr>
-<td>Battery/Voltage Ref</td>
-<td>PA2</td>
+<td>Battery/Voltage Reff</td>
+<td>PA6</td>
 </tr>
 <tr>
 <td>Analog Spare Input 1</td>
@@ -700,12 +728,12 @@
 <td>PB1</td>
 </tr>
 <tr>
-<td>AC Input</td>
-<td>PB5</td>
+<td><strong>Analog Spare Input 3</strong></td>
+<td><strong>PA2</strong></td>
 </tr>
 <tr>
-<td>Launch Control Input</td>
-<td>PE13</td>
+<td>AC Input</td>
+<td>PB5</td>
 </tr>
 <tr>
 <td>Clutch Input</td>
@@ -724,31 +752,11 @@
 <td>PD4</td>
 </tr>
 <tr>
-<td><strong>Knock1</strong></td>
-<td><strong>PC0</strong></td>
-</tr>
-<tr>
-<td><strong>Knock2</strong></td>
-<td><strong>PC1</strong></td>
-</tr>
-<tr>
-<td><strong>ETB-DIR</strong></td>
-<td><strong>PB8</strong></td>
-</tr>
-<tr>
-<td><strong>ETB-DIS</strong></td>
-<td><strong>PB9</strong></td>
-</tr>
-<tr>
-<td><strong>ETB-PWM</strong></td>
-<td><strong>PA8</strong></td>
-</tr>
-<tr>
 <td>Tacho</td>
 <td>PC9</td>
 </tr>
 <tr>
-<td>Fuel Pump Relay</td>
+<td>Fuelpump Relay</td>
 <td>PC8</td>
 </tr>
 <tr>
@@ -756,7 +764,7 @@
 <td>PA15</td>
 </tr>
 <tr>
-<td>AC Compressor Relay</td>
+<td>AC Compresor Relay</td>
 <td>PC7</td>
 </tr>
 <tr>
@@ -782,6 +790,26 @@
 <tr>
 <td>Stepper STEP</td>
 <td>PD15</td>
+</tr>
+<tr>
+<td><strong>Knock1</strong></td>
+<td><strong>PC0</strong></td>
+</tr>
+<tr>
+<td><strong>Knock2</strong></td>
+<td><strong>PC1</strong></td>
+</tr>
+<tr>
+<td><strong>ETB-DIR</strong></td>
+<td><strong>PB8</strong></td>
+</tr>
+<tr>
+<td><strong>ETB-DIS</strong></td>
+<td><strong>PB9</strong></td>
+</tr>
+<tr>
+<td><strong>ETB-PWM</strong></td>
+<td><strong>PA8</strong></td>
 </tr>
 <tr>
 <td>TXD1</td>
@@ -825,24 +853,34 @@
 </tr>
 </tbody>
 </table>
-<h3 id="fitur-khusus-v13">Fitur Khusus v1.3</h3>
-<h4 id="knock-input-baru-di-v13">Knock Input (Baru di v1.3)</h4>
+<h3 id="fitur-khusus-v13b">Fitur Khusus v1.3B</h3>
+<h4 id="knock-input-diperbaiki-di-v13b">Knock Input (Diperbaiki di v1.3B)</h4>
 <ul>
-<li><strong>Pin 8 (Knock/PC13)</strong>: Input sensor knock dengan solder jumper default untuk deteksi ketukan</li>
-<li><strong>Dual Knock Support</strong>: Knock1 (PC0) dan Knock2 (PC1) untuk monitoring multi-silinder</li>
-<li><strong>Aplikasi</strong>: Deteksi ketukan mesin untuk perlindungan dan optimasi timing pengapian</li>
+<li><strong>Pin 8 (Knock/PC13)</strong>: Input sensor knock dengan solder jumper default untuk deteksi ketukan yang lebih akurat</li>
+<li><strong>Single Knock Input</strong>: Satu input knock (PC0) di konektor ECU untuk monitoring ketukan mesin</li>
+<li><strong>Aplikasi</strong>: Deteksi ketukan mesin yang lebih sensitif untuk perlindungan dan optimasi timing pengapian</li>
+<li><strong>Perbaikan</strong>: Filter dan sensitivitas yang dioptimalkan</li>
 </ul>
-<h4 id="electronic-throttle-body-baru-di-v13">Electronic Throttle Body (Baru di v1.3)</h4>
+<h4 id="electronic-throttle-body-dioptimalkan-di-v13b">Electronic Throttle Body (Dioptimalkan di v1.3B)</h4>
 <ul>
 <li><strong>Pin 33 (ETB-)</strong>: Output negatif untuk kontrol ETB</li>
 <li><strong>Pin 34 (ETB+)</strong>: Output positif untuk kontrol ETB</li>
-<li><strong>Pin 43 (TPS2)</strong>: Sensor posisi throttle kedua untuk ETB (dual TPS)</li>
+<li><strong>Pin 40 (TPS2)</strong>: Input analog khusus untuk sensor TPS2 yang dedicated untuk ETB - <strong>Fitur baru v1.3B</strong></li>
 <li><strong>Pin 18/35 (PPS1/PPS2)</strong>: Dual Pedal Position Sensor untuk kontrol ETB</li>
 <li><strong>ETB Control</strong>: PWM (PA8), Direction (PB8), Disable (PB9)</li>
+<li><strong>Perbaikan v1.3B</strong>: Penambahan input analog dedicated untuk TPS2 dan optimisasi hardware ETB</li>
+</ul>
+<h4 id="perbaikan-hardware-v13b">Perbaikan Hardware v1.3B</h4>
+<ul>
+<li><strong>Input Analog Tambahan</strong>: Penambahan 1 input analog khusus untuk sensor TPS2/ETB pada pin 40</li>
+<li><strong>Optimisasi Komponen</strong>: Penghapusan komponen yang tidak digunakan untuk efisiensi desain</li>
+<li><strong>Layout Komponen</strong>: Penataan ulang layout untuk manufaktur dan kinerja yang lebih optimal</li>
+<li><strong>Pin 43</strong>: Khusus untuk O2 sensor dengan path analog yang dioptimalkan</li>
+<li><strong>AC Switch</strong>: Clarification bahwa hanya menerima sinyal GROUND untuk ON</li>
 </ul>
 <h4 id="dukungan-vr-conditioner">Dukungan VR Conditioner</h4>
 <ul>
-<li><strong>VR-1 &amp; VR-2</strong>: Pin input untuk modul VR conditioner (DIP 8)</li>
+<li><strong>VR1- &amp; VR2-</strong>: Pin input untuk modul VR conditioner (DIP 8) - negatif</li>
 <li><strong>VR1+ &amp; VR2+</strong>: Input sensor VR positif</li>
 </ul>
 <h4 id="kontrol-stepper-motor">Kontrol Stepper Motor</h4>
@@ -862,82 +900,153 @@
 <li><strong>Ground Sensor</strong>: Gunakan beberapa pin ground sensor (37, 38) untuk sinyal yang bersih</li>
 <li><strong>Sensor Posisi Mesin</strong>: Hubungkan sensor CKP/CMP atau gunakan input VR sesuai kebutuhan</li>
 <li><strong>Knock Sensor</strong>: Hubungkan sensor knock ke pin 8 (default konfigurasi)</li>
-<li><strong>ETB Setup</strong>: Hubungkan ETB ke pin 33/34 dan TPS2 ke pin 43 jika menggunakan throttle elektronik</li>
+<li><strong>ETB Setup</strong>: Hubungkan ETB ke pin 33/34 dan TPS2 ke pin 40 (diperbaiki dari v1.3) jika menggunakan throttle elektronik</li>
+<li><strong>AC Switch</strong>: Pastikan switch AC hanya memberikan sinyal GROUND untuk kondisi ON</li>
 <li><strong>Instalasi Modul</strong>: Pasang modul VR-Conditioner dan/atau Stepper jika diperlukan</li>
 <li><strong>Verifikasi</strong>: Test semua koneksi sebelum startup awal</li>
 </ol>
-<h3 id="catatan-wiring">Catatan Wiring</h3>
+<h3 id="catatan-wiring-v13b">Catatan Wiring v1.3B</h3>
 <ul>
 <li><strong>Multiple Ground</strong>: Gunakan semua pin ground yang tersedia untuk integritas sinyal optimal</li>
 <li><strong>Referensi 5V</strong>: Pin 5 menyediakan referensi 5V untuk sensor yang memerlukannya</li>
-<li><strong>Sensor O2/TPS2</strong>: Pin 43 dapat digunakan untuk O2 sensor atau TPS2 untuk ETB</li>
+<li><strong>O2 Sensor</strong>: Pin 43 khusus untuk O2 sensor dengan path analog yang dioptimalkan (1-5V dari wideband controller)</li>
+<li><strong>TPS2 Dedicated</strong>: Pin 40 adalah input analog tambahan khusus untuk sensor TPS2/ETB - <strong>fitur baru v1.3B</strong></li>
+<li><strong>Layout Optimization</strong>: Penataan komponen yang lebih baik menghasilkan sinyal yang lebih bersih</li>
+<li><strong>AC Switch Logic</strong>: Pin 20 hanya menerima GROUND sebagai sinyal ON - jangan hubungkan 12V langsung</li>
 <li><strong>Sensor VR</strong>: Dapat menggunakan input digital atau input modul VR conditioner</li>
-<li><strong>Knock Sensor</strong>: Pin 8 dikonfigurasi default untuk knock input via solder jumper</li>
-<li><strong>ETB Wiring</strong>: ETB memerlukan koneksi dual (pin 33/34) dan dual TPS (pin 30/43)</li>
+<li><strong>Knock Sensor</strong>: Pin 8 dikonfigurasi default untuk knock input dengan filter yang diperbaiki</li>
+<li><strong>ETB Wiring</strong>: ETB memerlukan koneksi dual (pin 33/34) dan dual TPS (pin 30/40)</li>
 <li><strong>Konektor Yamaha</strong>: Konektor 48-pin grade otomotif profesional</li>
 <li><strong>Kompatibilitas Wiring</strong>: Kompatibel dengan standar wiring Speeduino</li>
 <li><strong>Referensi</strong>: Informasi wiring sensor tambahan di <a href="https://wiki.speeduino.com/en/wiring/system">Speeduino Wiki</a></li>
 </ul>
+<h3 id="perbedaan-dari-v13">Perbedaan dari v1.3</h3>
+<h4 id="hardware-improvements">Hardware Improvements:</h4>
+<ul>
+<li><strong>MCU Upgrade</strong>: Upgrade dari STM32F407VGT6 (168MHz) ke <strong>STM32F427VGT6 (180MHz)</strong> untuk performa lebih tinggi</li>
+<li><strong>Input Analog Tambahan</strong>: Penambahan 1 spare input analog khusus untuk TPS2/ETB pada pin 40</li>
+<li><strong>Optimisasi Komponen</strong>: Penghapusan dan optimisasi komponen yang tidak digunakan untuk efisiensi</li>
+<li><strong>Layout Redesign</strong>: Penataan ulang layout komponen untuk manufaktur dan performa yang lebih baik</li>
+<li><strong>Pin 43</strong>: Sekarang khusus O2 sensor dengan path yang dioptimalkan</li>
+</ul>
+<h4 id="functional-improvements">Functional Improvements:</h4>
+<ul>
+<li><strong>ETB Support</strong>: Dukungan ETB yang lebih baik dengan input analog TPS2 yang dedicated</li>
+<li><strong>Hardware Efficiency</strong>: Desain yang lebih streamlined dengan fokus pada komponen yang diperlukan</li>
+<li><strong>Manufacturing</strong>: Layout yang lebih optimal untuk proses produksi</li>
+</ul>
+<h2 id="informasi-hardware">Informasi Hardware</h2>
+<p>Mazduino Mini 6CH v1.3B didesain dengan <strong>STM32F427VGT6</strong> sebagai MCU utama, memberikan performa yang lebih tinggi dibanding v1.3. Mendukung beberapa module tambahan seperti VR Conditioner Module dan Idle Stepper Module. Secara bawaan Mazduino Mini 6CH v1.3B hanya mendukung sinyal CKP dan CMP dalam bentuk digital, seperti sensor hall dan optical. Untuk kendaraan yang masih menggunakan VR sensor perlu menambahkan VR Module (atau bisa custom sensor ke hall).</p>
+<p><img alt="VR Module" src="img/mini6ch/vr-module.jpeg" /></p>
+<p>Kemudian untuk bagian Idle, Mazduino Mini 6CH v1.3B sudah support Idle PWM, terdapat 2 output dari low side mosfet yang dapat digunakan untuk kontrol IDLE PWM.</p>
+<p>Untuk jenis Idle Control yang menggunakan stepper motor diperlukan module tambahan yaitu Idle Stepper Motor Module. Disini bisa menggunakan driver DRV8825.</p>
+<p><img alt="Stepper Module" src="img/mini6ch/stepper-module.jpeg" /></p>
+<p>Selain itu terdapat solder jumper di bagian belakang seperti Tach Pullup, Ignition Vdrive, opsi knock / MCU PC13. Kemudian ada JP4, JP5, JP2, JP3, JP6, JP7 dan JP8 yang sudah dijelaskan di bagian konfigurasi jumper.</p>
+<p><strong>Solder Jumper v1.3B:</strong>
+- <strong>Tach Pullup:</strong> Pullup untuk tachometer/RPM Speedometer menggunakan 12V atau 5V
+- <strong>Ignition Vdrive:</strong> Tegangan yang digunakan untuk mengirimkan sinyal ke Coil On Plug (12V atau 5V)
+- <strong>Knock/MCU PC13:</strong> Opsi input Knock sensor atau langsung ke pin MCU PC13 (default untuk Knock)
+- <strong>JP4:</strong> Pullup trigger CKP/Primary
+- <strong>JP5:</strong> Pullup trigger CMP/Secondary
+- <strong>JP2:</strong> Opsi VR atau Hall untuk CKP/Primary
+- <strong>JP3:</strong> Opsi VR atau Hall untuk CMP/Secondary
+- <strong>JP6:</strong> Bypass Idle Stepper
+- <strong>JP7 &amp; JP8:</strong> Bypass filter knock (diperbaiki di v1.3B)
+- <strong>Pullup Launch:</strong> Digunakan untuk pullup pada pin spare input 3 jika digunakan untuk tombol aktivasi launch control/input lainnya yang membutuhkan pullup</p>
+<h2 id="software-tuning">Software Tuning</h2>
+<h3 id="download-software">Download Software</h3>
+<p>Download software TunerStudio: <a href="https://www.tunerstudio.com/index.php/downloads">https://www.tunerstudio.com/index.php/downloads</a></p>
+<p><img alt="TunerStudio" src="img/manual/tunerstudio-download.png" /></p>
+<h3 id="konfigurasi-khusus-v13b">Konfigurasi Khusus v1.3B</h3>
+<ul>
+<li><strong>Knock Detection</strong>: Gunakan konfigurasi knock sensor yang dioptimalkan untuk v1.3B</li>
+<li><strong>ETB Setup</strong>: Konfigurasi TPS2 pada pin 40 (bukan pin 43 seperti v1.3)</li>
+<li><strong>AC Switch Logic</strong>: Pastikan konfigurasi AC switch menggunakan logic GROUND untuk ON</li>
+<li><strong>Pin Mapping</strong>: Gunakan file konfigurasi pin mapping khusus v1.3B</li>
+</ul>
+<h3 id="firmware-support">Firmware Support</h3>
+<ul>
+<li><strong>rusEFI</strong>: Dukungan penuh untuk v1.3B dengan pin mapping yang diperbaiki</li>
+<li><strong>Speeduino</strong>: Kompatibel dengan konfigurasi pin mapping terbaru</li>
+<li><strong>File Konfigurasi</strong>: Tersedia di <a href="../downloads/">halaman download</a></li>
+</ul>
+<h2 id="wiring-diagram">Wiring Diagram</h2>
+<h3 id="wiring-sensor">Wiring Sensor</h3>
+<p><img alt="Sensor Wiring" src="../img/sensor-wiring.png" /></p>
+<p><em>Catatan: Pastikan AC Switch hanya menggunakan sinyal GROUND untuk kondisi ON</em></p>
+<h3 id="injector-wiring">Injector Wiring</h3>
+<p><img alt="Injector Wiring" src="../img/injector-wiring.png" /></p>
+<h3 id="ignition-wiring">Ignition Wiring</h3>
+<p><img alt="Ignition Wiring" src="../img/ignition-wiring.png" /></p>
 <h2 id="dukungan-dan-sumber-daya">Dukungan dan Sumber Daya</h2>
 <h3 id="dokumentasi">Dokumentasi</h3>
 <ul>
-<li><strong>Datasheet STM32F407VGT6</strong>: Informasi lengkap tentang MCU</li>
-<li><strong>Manual Referensi v1.3</strong>: Dokumentasi pin mapping dan konfigurasi khusus untuk v1.3</li>
-<li><strong>Wiring Diagram</strong>: Diagram lengkap untuk instalasi dengan fitur baru v1.3</li>
-<li><strong>TunerStudio Configuration</strong>: File konfigurasi siap pakai untuk Speeduino dan rusEFI</li>
+<li><strong>Datasheet STM32F427VGT6</strong>: Informasi lengkap tentang MCU yang diupgrade untuk performa lebih tinggi</li>
+<li><strong>Manual v1.3B</strong>: Dokumentasi lengkap pin mapping dan perbaikan dari v1.3</li>
+<li><strong>Wiring Diagram</strong>: Diagram lengkap untuk instalasi dengan perbaikan v1.3B</li>
+<li><strong>TunerStudio Configuration</strong>: File konfigurasi siap pakai untuk Speeduino dan rusEFI khusus v1.3B</li>
+<li><strong>Migration Guide</strong>: Panduan migrasi dari v1.3 ke v1.3B</li>
 </ul>
 <h3 id="file-firmware-konfigurasi">File Firmware &amp; Konfigurasi</h3>
 <ul>
-<li><strong><a href="../downloads/">Halaman Download</a></strong> - Dapatkan firmware rusEFI terbaru dan file konfigurasi TunerStudio</li>
-<li>Dukungan penuh 6-channel dengan fitur-fitur canggih</li>
-<li>Konfigurasi pin mapping khusus untuk v1.3 sudah disertakan</li>
+<li><strong><a href="../downloads/">Halaman Download</a></strong> - Dapatkan firmware rusEFI terbaru dan file konfigurasi TunerStudio untuk v1.3B</li>
+<li>Dukungan penuh 6-channel dengan fitur-fitur yang diperbaiki</li>
+<li>Konfigurasi pin mapping khusus untuk v1.3B sudah disertakan</li>
 <li>Kompatibel dengan firmware rusEFI dan Speeduino</li>
-<li><strong>Dukungan Knock</strong>: Konfigurasi khusus untuk sensor knock</li>
-<li><strong>Dukungan ETB</strong>: Konfigurasi siap pakai untuk Electronic Throttle Body</li>
+<li><strong>Dukungan Knock yang Diperbaiki</strong>: Konfigurasi khusus untuk sensor knock yang lebih akurat</li>
+<li><strong>Dukungan ETB yang Dioptimalkan</strong>: Konfigurasi siap pakai untuk Electronic Throttle Body</li>
 </ul>
-<h2 id="dukungan-modul">Dukungan Modul</h2>
-<h3 id="modul-vr-conditioner">Modul VR-Conditioner</h3>
+<h3 id="informasi-tambahan">Informasi Tambahan</h3>
 <ul>
-<li><strong>Package DIP 8</strong>: Instalasi dan penggantian yang mudah</li>
-<li><strong>Dukungan Sensor VR</strong>: Mengkonversi sinyal VR ke digital (pin 9, 10)</li>
-<li><strong>Signal Conditioning</strong>: Sinyal trigger yang bersih dan andal</li>
-<li><strong>Kompatibilitas</strong>: Bekerja dengan berbagai jenis sensor VR</li>
+<li><strong>Info Firmware rusEFI</strong>: <a href="https://wiki.rusefi.com">https://wiki.rusefi.com</a></li>
+<li><strong>Info Mazduino ECU</strong>: <a href="https://www.mazduino.com">https://www.mazduino.com</a></li>
+<li><strong>Dokumentasi Mazduino</strong>: <a href="https://wiki.mazduino.com">https://wiki.mazduino.com</a></li>
 </ul>
-<h3 id="modul-stepper-motor">Modul Stepper Motor</h3>
-<ul>
-<li><strong>Driver DRV8825</strong>: Kontrol stepper berperforma tinggi</li>
-<li><strong>Idle Air Control</strong>: Manajemen kecepatan idle yang presisi (pin 11-14)</li>
-<li><strong>Integrasi Mudah</strong>: Desain modul plug-and-play</li>
-<li><strong>Operasi Andal</strong>: Komponen grade otomotif</li>
-</ul>
-<h2 id="catatan-penting">Catatan Penting</h2>
+<h2 id="catatan-penting-v13b">Catatan Penting v1.3B</h2>
+<h3 id="perbedaan-utama-dari-v13">Perbedaan Utama dari v1.3</h3>
+<ol>
+<li><strong>Upgrade MCU</strong>: Menggunakan <strong>STM32F427VGT6 (180MHz)</strong> menggantikan STM32F407VGT6 (168MHz) - <strong>Performa lebih tinggi</strong></li>
+<li><strong>Input Analog Tambahan</strong>: Penambahan 1 spare input analog khusus untuk TPS2/ETB pada pin 40 - <strong>Fitur baru</strong></li>
+<li><strong>Optimisasi Hardware</strong>: Penghapusan komponen yang tidak digunakan untuk efisiensi desain yang lebih baik</li>
+<li><strong>Layout Redesign</strong>: Penataan ulang layout komponen untuk manufaktur dan performa optimal</li>
+<li><strong>Pin 43</strong>: Sekarang khusus untuk O2 sensor dengan path yang dioptimalkan</li>
+<li><strong>Hardware Efficiency</strong>: Desain yang lebih streamlined dan cost-effective</li>
+</ol>
+<h3 id="migrasi-dari-v13">Migrasi dari v1.3</h3>
+<p>Jika melakukan upgrade dari v1.3 ke v1.3B:
+1. <strong>MCU Performance</strong>: Nikmati peningkatan performa dengan STM32F427VGT6 (180MHz)
+2. <strong>Manfaatkan Input Analog Baru</strong>: Gunakan pin 40 sebagai input analog dedicated untuk TPS2/ETB
+3. <strong>Update firmware</strong>: Gunakan firmware yang mendukung v1.3B dengan optimisasi hardware baru
+4. <strong>Update konfigurasi</strong>: Gunakan file konfigurasi TunerStudio untuk v1.3B
+5. <strong>Hardware Benefits</strong>: Nikmati efisiensi desain yang lebih baik dan layout yang dioptimalkan
+6. <strong>Verifikasi connections</strong>: Pastikan semua koneksi sesuai dengan pin assignment v1.3B</p>
 <h3 id="persyaratan-sistem-pengapian">Persyaratan Sistem Pengapian</h3>
 <ul>
-<li><strong>Smart Coils</strong>: Koneksi langsung didukung</li>
-<li><strong>Dump Coils</strong>: IGBT eksternal diperlukan untuk operasi yang tepat</li>
+<li><strong>Smart Coils</strong>: Koneksi langsung didukung dengan VDrive yang tepat</li>
+<li><strong>Dump Coils</strong>: IGBT eksternal diperlukan untuk operasi yang aman</li>
 <li><strong>Pemilihan Coil</strong>: Pilih jenis coil yang sesuai untuk aplikasi Anda</li>
-<li><strong>Keamanan</strong>: Driver eksternal yang tepat penting untuk sistem dump coil</li>
 </ul>
-<h3 id="knock-detection-v13">Knock Detection (v1.3)</h3>
+<h3 id="electronic-throttle-body-v13b">Electronic Throttle Body (v1.3B)</h3>
 <ul>
-<li><strong>Sensor Knock</strong>: Gunakan sensor knock yang kompatibel dengan input analog</li>
-<li><strong>Solder Jumper</strong>: Pin 8 dikonfigurasi default untuk knock input</li>
-<li><strong>Dual Channel</strong>: Dukungan untuk dua sensor knock (Knock1/Knock2)</li>
-<li><strong>Aplikasi</strong>: Perlindungan mesin dan optimasi timing pengapian</li>
-</ul>
-<h3 id="electronic-throttle-body-v13">Electronic Throttle Body (v1.3)</h3>
-<ul>
-<li><strong>Dual TPS</strong>: Menggunakan TPS1 (pin 30) dan TPS2 (pin 43) untuk redundansi</li>
+<li><strong>Dual TPS</strong>: Menggunakan TPS1 (pin 30) dan TPS2 (pin 40) untuk redundansi</li>
 <li><strong>Dual PPS</strong>: Pedal Position Sensor 1 &amp; 2 untuk input pedal gas</li>
 <li><strong>H-Bridge Control</strong>: Driver ETB terintegrasi dengan kontrol PWM, Direction, dan Disable</li>
 <li><strong>Safety</strong>: Sistem failsafe dengan dual sensor untuk keamanan operasi</li>
+<li><strong>Perbaikan Mapping</strong>: Pin assignment yang lebih optimal</li>
+</ul>
+<h3 id="knock-detection-v13b">Knock Detection (v1.3B)</h3>
+<ul>
+<li><strong>Sensor Knock</strong>: Gunakan sensor knock yang kompatibel dengan input analog</li>
+<li><strong>Filter yang Diperbaiki</strong>: Deteksi knock yang lebih akurat dan stabil</li>
+<li><strong>Single Channel</strong>: Satu input knock di konektor ECU (pin 8) untuk deteksi ketukan</li>
+<li><strong>Aplikasi</strong>: Perlindungan mesin dan optimasi timing pengapian yang lebih baik</li>
 </ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../mazduino-mini-6ch-v1.0-v1.2/" class="btn btn-neutral float-left" title="v1.0-v1.2"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../mazduino-mini-6ch-v1.3b/" class="btn btn-neutral float-right" title="v1.3B">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../mazduino-mini-6ch-v1.3/" class="btn btn-neutral float-left" title="v1.3"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../mazduino-mini-6ch-v1.4/" class="btn btn-neutral float-right" title="v1.4">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -960,10 +1069,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../mazduino-mini-6ch-v1.0-v1.2/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../mazduino-mini-6ch-v1.3/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../mazduino-mini-6ch-v1.3b/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../mazduino-mini-6ch-v1.4/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
