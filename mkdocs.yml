@@ -4,7 +4,8 @@ nav:
   - Unduhan: downloads.md
   - Panduan Cepat: index.md
   - Mazduino LITE:
-      - v0.1-v0.2:  mazduino-lite-v0.1-v0.2.md
+      - v0.1: mazduino-lite-v0.1.md
+      - v0.2: mazduino-lite-v0.2.md
   - Compact 4 Channel:
     - v1: mazduino-compact-4ch-v1.md
     - v2.1: mazduino-compact-4ch-v2.1.md
@@ -12,6 +13,7 @@ nav:
   - Mini 6 Channel:
     - v1.0-v1.2: mazduino-mini-6ch-v1.0-v1.2.md
     - v1.3: mazduino-mini-6ch-v1.3.md
+    - v1.3B: mazduino-mini-6ch-v1.3b.md
     - v1.4: mazduino-mini-6ch-v1.4.md
     - Manual TunerStudio:
       - Manual Lengkap: tunerstudio-manual.md

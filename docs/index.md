@@ -23,7 +23,9 @@ Solusi ECU compact terbaru untuk engine 4-silinder & Wasted Spark builtin IGBT d
 - Motorcycle high-performance
 - Marine dan industrial applications
 
-**[📖 Dokumentasi Lengkap Mazduino LITE](mazduino-lite.md)**
+**[📖 Dokumentasi Mazduino LITE v0.1](mazduino-lite-v0.1.md)**
+
+**[📖 Dokumentasi Mazduino LITE v0.2](mazduino-lite-v0.2.md)** 
 
 ---
 
@@ -68,6 +70,7 @@ Engine Control Unit 6-channel berfitur lengkap untuk kontrol injeksi sequential 
 
 - **[v1.0-v1.2](mazduino-mini-6ch-v1.0-v1.2.md)** - Versi standar dengan fitur dasar
 - **[v1.3](mazduino-mini-6ch-v1.3.md)** - Dengan Knock Input dan Electronic Throttle Body (ETB)
+- **[v1.3B](mazduino-mini-6ch-v1.3b.md)** - MCU STM32F427VGT6, input analog TPS2 tambahan, dan optimisasi hardware
 
 ## Memulai
 
@@ -88,6 +91,7 @@ Engine Control Unit 6-channel berfitur lengkap untuk kontrol injeksi sequential 
 - **[Compact 4CH v2.2](mazduino-compact-4ch-v2.2.md)** - Dengan high side switching
 - **[Mini 6CH v1.0-v1.2](mazduino-mini-6ch-v1.0-v1.2.md)** - Versi standar dengan fitur dasar
 - **[Mini 6CH v1.3](mazduino-mini-6ch-v1.3.md)** - Dengan knock input dan ETB support
+- **[Mini 6CH v1.3B](mazduino-mini-6ch-v1.3b.md)** - MCU upgrade, optimisasi hardware dan input analog tambahan
 
 ## Dukungan
 
