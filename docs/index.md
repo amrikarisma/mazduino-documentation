@@ -50,6 +50,7 @@ Engine Control Unit 4-channel yang kompak dirancang untuk mesin yang lebih kecil
 - **[v1](mazduino-compact-4ch-v1.md)** - Konektor Microfit 30-pin (2x12 + 2x3)
 - **[v2.1](mazduino-compact-4ch-v2.1.md)** - Konektor Yamaha 33-pin + Knock Sensor
 - **[v2.2](mazduino-compact-4ch-v2.2.md)** - High Side Switching untuk alternator/VVT control
+- **[v2.3](mazduino-compact-4ch-v2.3.md)** - Pin mapping yang dioptimalkan, perbaikan knock sensor, dan RTC battery support
 
 ### Mazduino Mini 6ch
 Engine Control Unit 6-channel berfitur lengkap untuk kontrol injeksi sequential penuh.
@@ -89,6 +90,7 @@ Engine Control Unit 6-channel berfitur lengkap untuk kontrol injeksi sequential 
 - **[Compact 4CH v1](mazduino-compact-4ch-v1.md)** - Spesifikasi dan wiring untuk v1
 - **[Compact 4CH v2.1](mazduino-compact-4ch-v2.1.md)** - Dengan knock sensor dan konektor Yamaha
 - **[Compact 4CH v2.2](mazduino-compact-4ch-v2.2.md)** - Dengan high side switching
+- **[Compact 4CH v2.3](mazduino-compact-4ch-v2.3.md)** - Pin mapping dioptimalkan, knock sensor diperbaiki, RTC battery
 - **[Mini 6CH v1.0-v1.2](mazduino-mini-6ch-v1.0-v1.2.md)** - Versi standar dengan fitur dasar
 - **[Mini 6CH v1.3](mazduino-mini-6ch-v1.3.md)** - Dengan knock input dan ETB support
 - **[Mini 6CH v1.3B](mazduino-mini-6ch-v1.3b.md)** - MCU upgrade, optimisasi hardware dan input analog tambahan
