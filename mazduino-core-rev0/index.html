@@ -92,6 +92,10 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#pin-header-jumper-tanpa-solder">Pin Header Jumper Tanpa Solder</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pin-header-tambahan-prototype">Pin Header Tambahan (Prototype)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#jumper-ignition-volt-drive-12v-5v">Jumper Ignition Volt Drive (12V / 5V)</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#opsi-jumper-penting">Opsi Jumper Penting</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#catatan-konfigurasi">Catatan Konfigurasi</a>
@@ -212,6 +216,37 @@
 <h3 id="pin-header-jumper-tanpa-solder">Pin Header Jumper Tanpa Solder</h3>
 <p><img alt="Pin header jumper tanpa solder" src="../img/core/Picture2.png" /></p>
 <p>Pin header jumper tanpa solder sesuai permintaan saat awal pesanan atau dapat dipindahkan sendiri sesuai kebutuhan. konektor ECU akan mengeluarkan CANL atau VR2-, Digital 4 atau VR1-, CANH atau VR2+, Digital 3 atau VR1+.</p>
+<h3 id="pin-header-tambahan-prototype">Pin Header Tambahan (Prototype)</h3>
+<p>Untuk kebutuhan prototype, tersedia 4 buah pin header 6 pin yang bisa menggunakan konektor <strong>JST XH 2.54</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Pinout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>J2</td>
+<td>5V, Analog Temp 4, Analog Volt 2, Analog Volt 3, GND, GND</td>
+</tr>
+<tr>
+<td>J5</td>
+<td>12V, CANL1, CANH1, CANL2, CANH2, GND</td>
+</tr>
+<tr>
+<td>J6</td>
+<td>5V, 5V, 5V, USB D-, USB D+, GND</td>
+</tr>
+<tr>
+<td>J7</td>
+<td>3.3V, 3.3V, 3.3V, 3.3V, GND</td>
+</tr>
+</tbody>
+</table>
+<h3 id="jumper-ignition-volt-drive-12v-5v">Jumper Ignition Volt Drive (12V / 5V)</h3>
+<p>Jumper <strong>Ignition Volt Drive</strong> digunakan untuk memilih level tegangan trigger sinyal coil, yaitu <strong>12V</strong> atau <strong>5V</strong>.</p>
+<p>Harap berhati-hati dan pastikan tegangan sinyal coil sesuai. Jika level tegangan tidak sesuai, coil dapat rusak dan tidak dapat digunakan lagi.</p>
 <h3 id="opsi-jumper-penting">Opsi Jumper Penting</h3>
 <ul>
 <li><strong>JP3 (Pin 4)</strong>: pilih <strong>AVS2 (Analog Volt 5)</strong> atau <strong>Ignition 6</strong></li>
@@ -614,6 +649,7 @@
 <li>Output ignition ditujukan untuk <strong>smart coil</strong>. Untuk dumb coil wajib menggunakan driver/IGBT eksternal.</li>
 <li>Jalur output low current dipakai untuk relay atau beban ringan, bukan beban motor langsung.</li>
 <li><strong>HS1 dan HS2</strong> dapat digunakan sebagai output <strong>12V switching</strong>, misalnya untuk <strong>alternator control</strong>.</li>
+<li>Pastikan setting <strong>Ignition Volt Drive</strong> (12V/5V) sesuai spesifikasi coil sebelum menyalakan sistem.</li>
 <li>Semua perubahan jumper harus dilakukan saat ECU <strong>tanpa daya</strong>.</li>
 <li>Untuk pemanfaatan <strong>CAN2</strong>, ikuti skema hardware dan konfigurasi firmware yang sesuai revisi board.</li>
 </ul>
