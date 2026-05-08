@@ -31,7 +31,8 @@ nav:
       - Controller & Diagnostics: tunerstudio-controller.md
       - Troubleshooting: tunerstudio-troubleshooting.md
       - Examples & Map Switching: tunerstudio-examples.md
-  - Mazduino Core: mazduino-core.md
+  - Mazduino Core: 
+    - rev0: mazduino-core-rev0.md
   - Tentang: about.md
 theme: 
   name: readthedocs
