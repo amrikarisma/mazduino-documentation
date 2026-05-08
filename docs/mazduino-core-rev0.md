@@ -23,8 +23,9 @@ Dokumentasi ini disusun berdasarkan spesifikasi produk Mazduino Core dan referen
 - **2x CAN bus** (tergantung konfigurasi jalur/jumper)
 - **2x input VR** untuk CKP/CMP tipe variable reluctor
 - **2x ETB output** (ETB1 dan ETB2)
+- **Dual IC ETB (ETB1 dan ETB2)** dapat juga digunakan untuk kontrol **Idle Stepper**
 - Komunikasi USB, Serial, dan CAN
-- Dukungan firmware rusEFI / Speeduino (sesuai paket firmware)
+- Dukungan firmware **rusEFI based** saja (official atau custom firmware dengan MCU F4)
 
 ## Konfigurasi Hardware dan Jumper
 
@@ -62,6 +63,10 @@ Untuk kebutuhan prototype, tersedia 4 buah pin header 6 pin yang bisa menggunaka
 Jumper **Ignition Volt Drive** digunakan untuk memilih level tegangan trigger sinyal coil, yaitu **12V** atau **5V**.
 
 Harap berhati-hati dan pastikan tegangan sinyal coil sesuai. Jika level tegangan tidak sesuai, coil dapat rusak dan tidak dapat digunakan lagi.
+
+### Catatan ETB dan Idle Stepper
+
+Karena terdapat dual IC untuk kontrol **ETB1** dan **ETB2**, jalur driver tersebut juga dapat dimanfaatkan untuk kontrol **Idle Stepper** sesuai konfigurasi firmware dan wiring.
 
 ### Opsi Jumper Penting
 
@@ -179,6 +184,7 @@ Berikut mapping fungsi umum untuk setup firmware. Assignment dapat disesuaikan d
 - **MCU**: STM32F427
 - ETB control lines pada firmware biasanya dipetakan ke pin MCU khusus (DIR/DIS/PWM) sesuai package firmware.
 - Gunakan file konfigurasi firmware yang memang ditujukan untuk **Mazduino Core** agar semua pin berfungsi sesuai desain board.
+- Firmware untuk board ini hanya untuk **rusEFI based** (baik official maupun custom firmware dengan MCU F4).
 
 ## Panduan Instalasi Singkat
 
