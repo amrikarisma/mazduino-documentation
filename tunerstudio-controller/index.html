@@ -68,7 +68,7 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Mini 6 Channel</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../mazduino-mini-6ch-v1.0-v1.2/">v1.0-v1.2</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../mazduino-mini-6ch-v1.3/">v1.3</a>
@@ -77,134 +77,162 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../mazduino-mini-6ch-v1.4/">v1.4</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" >Manual TunerStudio</a>
-    <ul class="current">
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-manual/">Manual Lengkap</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-instalasi/">Instalasi</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-konfigurasi/">Konfigurasi Project</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-interface/">Interface Pengguna</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-base-engine/">Base Engine Settings</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-limits-protection/">Limits & Protection</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-fuel-system/">Fuel System</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-ignition/">Ignition System</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-sensors/">Sensor Configuration</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-canbus/">CAN Bus Configuration</a>
-                </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">Controller & Diagnostics</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#pengantar">Pengantar</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#opsi-menu-controller">Opsi Menu Controller</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#1-ecu-stimulator">1. ECU Stimulator</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#2-bench-test">2. Bench Test</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#3-injector-test">3. Injector Test</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#4-popular-vehicles">4. Popular Vehicles</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#5-rusefi-console">5. rusEFI Console</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#6-sd-card-logger">6. SD Card Logger</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#7-connection">7. Connection</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#8-full-pinout-13-23-33">8. Full Pinout (1/3, 2/3, 3/3)</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#9-fancy-board">9. Fancy Board</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#10-traction-control-etb-drop">10. Traction Control ETB Drop</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#11-traction-control-timing-adjustment">11. Traction Control Timing Adjustment</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#12-traction-control-skip-ignition">12. Traction Control Skip Ignition</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#13-experimental-1-2-3">13. Experimental 1, 2, 3</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#14-anti-lag-als">14. Anti-Lag ALS</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#15-rotary">15. Rotary</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#16-throttle-effective-area">16. Throttle Effective Area</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#bench-test-commands">Bench Test &amp; Commands</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#grup-testing">Grup Testing</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#pengaturan-konfigurasi">Pengaturan Konfigurasi</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#aplikasi-bench-test">Aplikasi Bench Test</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#fancy-board-configuration">Fancy Board Configuration</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#mode-input-configuration">Mode Input Configuration</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#keuntungan-konfigurasi-fleksibel">Keuntungan Konfigurasi Fleksibel</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#traction-control-configuration">Traction Control Configuration</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#overview-tabel-traction-control">Overview Tabel Traction Control</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#strategi-traction-control">Strategi Traction Control</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#tuning-guidelines">Tuning Guidelines</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#sd-card-logger">SD Card Logger</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#konfigurasi-logging">Konfigurasi Logging</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#keuntungan-sd-logging">Keuntungan SD Logging</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#rusefi-console">rusEFI Console</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#interface-console">Interface Console</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#advanced-features">Advanced Features</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#connection-configuration">Connection Configuration</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#communication-settings">Communication Settings</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#connection-troubleshooting">Connection Troubleshooting</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#navigasi">Navigasi</a>
-    </li>
-    </ul>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-troubleshooting/">Troubleshooting</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-examples/">Examples & Map Switching</a>
-                </li>
-    </ul>
+              </ul>
+              <p class="caption"><span class="caption-text">Mazduino Core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-core-rev0/">rev0</a>
                   </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../mazduino-core/">Mazduino Core</a>
-                </li>
+              <p class="caption"><span class="caption-text">Manual TunerStudio</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-manual/">Manual Lengkap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-instalasi/">Instalasi</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-konfigurasi/">Konfigurasi Project</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-interface/">Interface Pengguna</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-base-engine/">Base Engine Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-limits-protection/">Limits & Protection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-fuel-system/">Fuel System</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-ignition/">Ignition System</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-sensors/">Sensor Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-canbus/">CAN Bus Configuration</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Controller & Diagnostics</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#pengantar">Pengantar</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#opsi-menu-controller">Opsi Menu Controller</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-ecu-stimulator">1. ECU Stimulator</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-bench-test">2. Bench Test</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-injector-test">3. Injector Test</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-popular-vehicles">4. Popular Vehicles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-rusefi-console">5. rusEFI Console</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-sd-card-logger">6. SD Card Logger</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#7-connection">7. Connection</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#8-full-pinout-13-23-33">8. Full Pinout (1/3, 2/3, 3/3)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#9-fancy-board">9. Fancy Board</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#10-traction-control-etb-drop">10. Traction Control ETB Drop</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#11-traction-control-timing-adjustment">11. Traction Control Timing Adjustment</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#12-traction-control-skip-ignition">12. Traction Control Skip Ignition</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#13-experimental-1-2-3">13. Experimental 1, 2, 3</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#14-anti-lag-als">14. Anti-Lag ALS</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#15-rotary">15. Rotary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#16-throttle-effective-area">16. Throttle Effective Area</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bench-test-commands">Bench Test &amp; Commands</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#grup-testing">Grup Testing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pengaturan-konfigurasi">Pengaturan Konfigurasi</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aplikasi-bench-test">Aplikasi Bench Test</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#fancy-board-configuration">Fancy Board Configuration</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#mode-input-configuration">Mode Input Configuration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#keuntungan-konfigurasi-fleksibel">Keuntungan Konfigurasi Fleksibel</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#traction-control-configuration">Traction Control Configuration</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#overview-tabel-traction-control">Overview Tabel Traction Control</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#strategi-traction-control">Strategi Traction Control</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#timing-drop-strategy">Timing Drop Strategy</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#throttle-control-strategy">Throttle Control Strategy</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#ignition-skip-strategy">Ignition Skip Strategy</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tuning-guidelines">Tuning Guidelines</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sd-card-logger">SD Card Logger</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#konfigurasi-logging">Konfigurasi Logging</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#pengaturan-logging">Pengaturan Logging</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameter-logging">Parameter Logging</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#file-management">File Management</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#keuntungan-sd-logging">Keuntungan SD Logging</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rusefi-console">rusEFI Console</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#interface-console">Interface Console</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#command-categories">Command Categories</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#advanced-features">Advanced Features</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#real-time-monitoring">Real-time Monitoring</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#tuning-support">Tuning Support</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#development-tools">Development Tools</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#connection-configuration">Connection Configuration</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#communication-settings">Communication Settings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#connection-troubleshooting">Connection Troubleshooting</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#navigasi">Navigasi</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-troubleshooting/">Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-examples/">Examples & Map Switching</a>
+                  </li>
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../about/">Tentang</a>
@@ -224,7 +252,6 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Mini 6 Channel</li>
           <li class="breadcrumb-item">Manual TunerStudio</li>
       <li class="breadcrumb-item active">Controller & Diagnostics</li>
     <li class="wy-breadcrumbs-aside">

@@ -68,7 +68,7 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Mini 6 Channel</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../mazduino-mini-6ch-v1.0-v1.2/">v1.0-v1.2</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../mazduino-mini-6ch-v1.3/">v1.3</a>
@@ -77,120 +77,126 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../mazduino-mini-6ch-v1.4/">v1.4</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" >Manual TunerStudio</a>
-    <ul class="current">
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-manual/">Manual Lengkap</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-instalasi/">Instalasi</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-konfigurasi/">Konfigurasi Project</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-interface/">Interface Pengguna</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-base-engine/">Base Engine Settings</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-limits-protection/">Limits & Protection</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-fuel-system/">Fuel System</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-ignition/">Ignition System</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-sensors/">Sensor Configuration</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-canbus/">CAN Bus Configuration</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-controller/">Controller & Diagnostics</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../tunerstudio-troubleshooting/">Troubleshooting</a>
-                </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">Examples & Map Switching</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#pengantar">Pengantar</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#map-switching">Map Switching</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#konsep-dasar-map-switching">Konsep Dasar Map Switching</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#implementasi-map-switching">Implementasi Map Switching</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#1-wiring-switch">1. Wiring Switch</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#2-konfigurasi-blend-table">2. Konfigurasi Blend Table</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#3-cara-kerja-bias-table">3. Cara Kerja Bias Table</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#contoh-aplikasi-map-switching">Contoh Aplikasi Map Switching</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#1-street-vs-track-mode">1. Street vs Track Mode</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#2-fuel-quality-switching">2. Fuel Quality Switching</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#3-progressive-tuning">3. Progressive Tuning</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#advanced-map-switching-techniques">Advanced Map Switching Techniques</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#1-multi-parameter-switching">1. Multi-Parameter Switching</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#2-automatic-switching">2. Automatic Switching</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#3-safety-switching">3. Safety Switching</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#troubleshooting-map-switching">Troubleshooting Map Switching</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#common-issues">Common Issues</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#diagnostic-steps">Diagnostic Steps</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#best-practices">Best Practices</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#design-guidelines">Design Guidelines</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#tuning-recommendations">Tuning Recommendations</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#maintenance">Maintenance</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#integration-dengan-fitur-lain">Integration dengan Fitur Lain</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#launch-control-integration">Launch Control Integration</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#traction-control-integration">Traction Control Integration</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#boost-control-integration">Boost Control Integration</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#warranty-considerations">Warranty Considerations</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#approved-uses">Approved Uses</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#restricted-uses">Restricted Uses</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#kesimpulan">Kesimpulan</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#navigasi">Navigasi</a>
-    </li>
-    </ul>
-                </li>
-    </ul>
+              </ul>
+              <p class="caption"><span class="caption-text">Mazduino Core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../mazduino-core-rev0/">rev0</a>
                   </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../mazduino-core/">Mazduino Core</a>
-                </li>
+              <p class="caption"><span class="caption-text">Manual TunerStudio</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-manual/">Manual Lengkap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-instalasi/">Instalasi</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-konfigurasi/">Konfigurasi Project</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-interface/">Interface Pengguna</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-base-engine/">Base Engine Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-limits-protection/">Limits & Protection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-fuel-system/">Fuel System</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-ignition/">Ignition System</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-sensors/">Sensor Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-canbus/">CAN Bus Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-controller/">Controller & Diagnostics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-troubleshooting/">Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Examples & Map Switching</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#pengantar">Pengantar</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#map-switching">Map Switching</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#konsep-dasar-map-switching">Konsep Dasar Map Switching</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#implementasi-map-switching">Implementasi Map Switching</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-wiring-switch">1. Wiring Switch</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-konfigurasi-blend-table">2. Konfigurasi Blend Table</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#memilih-blend-table">Memilih Blend Table</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#pengaturan-blend-parameter-source">Pengaturan Blend Parameter Source</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-cara-kerja-bias-table">3. Cara Kerja Bias Table</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#contoh-aplikasi-map-switching">Contoh Aplikasi Map Switching</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-street-vs-track-mode">1. Street vs Track Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-fuel-quality-switching">2. Fuel Quality Switching</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-progressive-tuning">3. Progressive Tuning</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#advanced-map-switching-techniques">Advanced Map Switching Techniques</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-multi-parameter-switching">1. Multi-Parameter Switching</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-automatic-switching">2. Automatic Switching</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-safety-switching">3. Safety Switching</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#troubleshooting-map-switching">Troubleshooting Map Switching</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#common-issues">Common Issues</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#diagnostic-steps">Diagnostic Steps</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#best-practices">Best Practices</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#design-guidelines">Design Guidelines</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tuning-recommendations">Tuning Recommendations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#maintenance">Maintenance</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#integration-dengan-fitur-lain">Integration dengan Fitur Lain</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#launch-control-integration">Launch Control Integration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#traction-control-integration">Traction Control Integration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#boost-control-integration">Boost Control Integration</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#warranty-considerations">Warranty Considerations</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#approved-uses">Approved Uses</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#restricted-uses">Restricted Uses</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#kesimpulan">Kesimpulan</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#navigasi">Navigasi</a>
+    </li>
+    </ul>
+                  </li>
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../about/">Tentang</a>
@@ -210,7 +216,6 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Mini 6 Channel</li>
           <li class="breadcrumb-item">Manual TunerStudio</li>
       <li class="breadcrumb-item active">Examples & Map Switching</li>
     <li class="wy-breadcrumbs-aside">
@@ -452,7 +457,7 @@ Blend Map: Increased boost dengan supporting fuel/timing
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../tunerstudio-troubleshooting/" class="btn btn-neutral float-left" title="Troubleshooting"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../mazduino-core/" class="btn btn-neutral float-right" title="Mazduino Core">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../about/" class="btn btn-neutral float-right" title="Tentang">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -478,7 +483,7 @@ Blend Map: Increased boost dengan supporting fuel/timing
       <span><a href="../tunerstudio-troubleshooting/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../mazduino-core/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../about/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
