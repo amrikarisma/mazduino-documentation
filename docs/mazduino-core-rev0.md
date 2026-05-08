@@ -46,6 +46,23 @@ Solder Jumper 2 pin ke tengah untuk meneruskan ke konektor ECU pada JP3, JP4 dan
 
 Pin header jumper tanpa solder sesuai permintaan saat awal pesanan atau dapat dipindahkan sendiri sesuai kebutuhan. konektor ECU akan mengeluarkan CANL atau VR2-, Digital 4 atau VR1-, CANH atau VR2+, Digital 3 atau VR1+.
 
+### Pin Header Tambahan (Prototype)
+
+Untuk kebutuhan prototype, tersedia 4 buah pin header 6 pin yang bisa menggunakan konektor **JST XH 2.54**.
+
+| Header | Pinout |
+|--------|--------|
+| J2 | 5V, Analog Temp 4, Analog Volt 2, Analog Volt 3, GND, GND |
+| J5 | 12V, CANL1, CANH1, CANL2, CANH2, GND |
+| J6 | 5V, 5V, 5V, USB D-, USB D+, GND |
+| J7 | 3.3V, 3.3V, 3.3V, 3.3V, GND |
+
+### Jumper Ignition Volt Drive (12V / 5V)
+
+Jumper **Ignition Volt Drive** digunakan untuk memilih level tegangan trigger sinyal coil, yaitu **12V** atau **5V**.
+
+Harap berhati-hati dan pastikan tegangan sinyal coil sesuai. Jika level tegangan tidak sesuai, coil dapat rusak dan tidak dapat digunakan lagi.
+
 ### Opsi Jumper Penting
 
 - **JP3 (Pin 4)**: pilih **AVS2 (Analog Volt 5)** atau **Ignition 6**
@@ -178,6 +195,7 @@ Berikut mapping fungsi umum untuk setup firmware. Assignment dapat disesuaikan d
 - Output ignition ditujukan untuk **smart coil**. Untuk dumb coil wajib menggunakan driver/IGBT eksternal.
 - Jalur output low current dipakai untuk relay atau beban ringan, bukan beban motor langsung.
 - **HS1 dan HS2** dapat digunakan sebagai output **12V switching**, misalnya untuk **alternator control**.
+- Pastikan setting **Ignition Volt Drive** (12V/5V) sesuai spesifikasi coil sebelum menyalakan sistem.
 - Semua perubahan jumper harus dilakukan saat ECU **tanpa daya**.
 - Untuk pemanfaatan **CAN2**, ikuti skema hardware dan konfigurasi firmware yang sesuai revisi board.
 
