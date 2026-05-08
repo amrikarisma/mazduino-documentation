@@ -96,6 +96,8 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#jumper-ignition-volt-drive-12v-5v">Jumper Ignition Volt Drive (12V / 5V)</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#catatan-etb-dan-idle-stepper">Catatan ETB dan Idle Stepper</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#opsi-jumper-penting">Opsi Jumper Penting</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#catatan-konfigurasi">Catatan Konfigurasi</a>
@@ -203,8 +205,9 @@
 <li><strong>2x CAN bus</strong> (tergantung konfigurasi jalur/jumper)</li>
 <li><strong>2x input VR</strong> untuk CKP/CMP tipe variable reluctor</li>
 <li><strong>2x ETB output</strong> (ETB1 dan ETB2)</li>
+<li><strong>Dual IC ETB (ETB1 dan ETB2)</strong> dapat juga digunakan untuk kontrol <strong>Idle Stepper</strong></li>
 <li>Komunikasi USB, Serial, dan CAN</li>
-<li>Dukungan firmware rusEFI / Speeduino (sesuai paket firmware)</li>
+<li>Dukungan firmware <strong>rusEFI based</strong> saja (official atau custom firmware dengan MCU F4)</li>
 </ul>
 <h2 id="konfigurasi-hardware-dan-jumper">Konfigurasi Hardware dan Jumper</h2>
 <p>Mazduino Core memiliki beberapa pin yang dapat dialihkan fungsinya melalui jumper solder. Konsep ini memberi fleksibilitas agar satu board bisa dipakai untuk berbagai konfigurasi mesin.</p>
@@ -247,6 +250,8 @@
 <h3 id="jumper-ignition-volt-drive-12v-5v">Jumper Ignition Volt Drive (12V / 5V)</h3>
 <p>Jumper <strong>Ignition Volt Drive</strong> digunakan untuk memilih level tegangan trigger sinyal coil, yaitu <strong>12V</strong> atau <strong>5V</strong>.</p>
 <p>Harap berhati-hati dan pastikan tegangan sinyal coil sesuai. Jika level tegangan tidak sesuai, coil dapat rusak dan tidak dapat digunakan lagi.</p>
+<h3 id="catatan-etb-dan-idle-stepper">Catatan ETB dan Idle Stepper</h3>
+<p>Karena terdapat dual IC untuk kontrol <strong>ETB1</strong> dan <strong>ETB2</strong>, jalur driver tersebut juga dapat dimanfaatkan untuk kontrol <strong>Idle Stepper</strong> sesuai konfigurasi firmware dan wiring.</p>
 <h3 id="opsi-jumper-penting">Opsi Jumper Penting</h3>
 <ul>
 <li><strong>JP3 (Pin 4)</strong>: pilih <strong>AVS2 (Analog Volt 5)</strong> atau <strong>Ignition 6</strong></li>
@@ -633,6 +638,7 @@
 <li><strong>MCU</strong>: STM32F427</li>
 <li>ETB control lines pada firmware biasanya dipetakan ke pin MCU khusus (DIR/DIS/PWM) sesuai package firmware.</li>
 <li>Gunakan file konfigurasi firmware yang memang ditujukan untuk <strong>Mazduino Core</strong> agar semua pin berfungsi sesuai desain board.</li>
+<li>Firmware untuk board ini hanya untuk <strong>rusEFI based</strong> (baik official maupun custom firmware dengan MCU F4).</li>
 </ul>
 <h2 id="panduan-instalasi-singkat">Panduan Instalasi Singkat</h2>
 <ol>
