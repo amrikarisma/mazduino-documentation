@@ -17,22 +17,22 @@ nav:
     - v1.3: mazduino-mini-6ch-v1.3.md
     - v1.3B: mazduino-mini-6ch-v1.3b.md
     - v1.4: mazduino-mini-6ch-v1.4.md
-    - Manual TunerStudio:
-      - Manual Lengkap: tunerstudio-manual.md
-      - Instalasi: tunerstudio-instalasi.md
-      - Konfigurasi Project: tunerstudio-konfigurasi.md
-      - Interface Pengguna: tunerstudio-interface.md
-      - Base Engine Settings: tunerstudio-base-engine.md
-      - Limits & Protection: tunerstudio-limits-protection.md
-      - Fuel System: tunerstudio-fuel-system.md
-      - Ignition System: tunerstudio-ignition.md
-      - Sensor Configuration: tunerstudio-sensors.md
-      - CAN Bus Configuration: tunerstudio-canbus.md
-      - Controller & Diagnostics: tunerstudio-controller.md
-      - Troubleshooting: tunerstudio-troubleshooting.md
-      - Examples & Map Switching: tunerstudio-examples.md
   - Mazduino Core: 
     - rev0: mazduino-core-rev0.md
+  - Manual TunerStudio:
+    - Manual Lengkap: tunerstudio-manual.md
+    - Instalasi: tunerstudio-instalasi.md
+    - Konfigurasi Project: tunerstudio-konfigurasi.md
+    - Interface Pengguna: tunerstudio-interface.md
+    - Base Engine Settings: tunerstudio-base-engine.md
+    - Limits & Protection: tunerstudio-limits-protection.md
+    - Fuel System: tunerstudio-fuel-system.md
+    - Ignition System: tunerstudio-ignition.md
+    - Sensor Configuration: tunerstudio-sensors.md
+    - CAN Bus Configuration: tunerstudio-canbus.md
+    - Controller & Diagnostics: tunerstudio-controller.md
+    - Troubleshooting: tunerstudio-troubleshooting.md
+    - Examples & Map Switching: tunerstudio-examples.md
   - Tentang: about.md
 theme: 
   name: readthedocs
