@@ -179,7 +179,7 @@ Sebelum menginstal TunerStudio, pastikan sistem Anda memenuhi persyaratan beriku
 [image1]: img/manual/docs-overview.png "Mazduino Homepage"
 [image2]: img/manual/downloads-overview.png "Menu Downloads"
 [image3]: # "TunerStudio Download Link"
-[image4]: img/manual/ts-downloaf-page-overview.png "TunerStudio Download Page"
+[image4]: img/manual/ts-download-page-overview.png "TunerStudio Download Page"
 [image5]: # "Download Options"
 [image6]: # "License Agreement"
 [image7]: # "Installation Path"

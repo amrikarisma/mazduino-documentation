@@ -31,6 +31,8 @@ nav:
       - Mazduino Racedash:
           - 3.5" & 4": mazduino-racedash.md
           - Pro / M4, M5, M7 (4.3", 5" & 7"): mazduino-racedash-pro.md
+  - Aksesori:
+      - WBO CAN Controller: wbo-can-controller.md
   - Sensor dan Wiring: 
     - Persiapan: persiapan-sensor-wiring.md
     - Rekomendasi Ukuran Kabel: rekomendasi-ukuran-kabel.md
