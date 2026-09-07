@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://wiki.mazduino.com/wbo-can-controller/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>WBO CAN Controller - Mazduino Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/print.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "WBO CAN Controller";
+        var mkdocs_page_input_path = "wbo-can-controller.md";
+        var mkdocs_page_url = "/wbo-can-controller/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Mazduino Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../downloads/">Unduhan</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Panduan Cepat</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">ECU</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Mazduino LITE</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../mazduino-lite-v0.1/">v0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mazduino-lite-v0.2/">v0.2</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Compact 4 Channel</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../mazduino-compact-4ch-v1/">v1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mazduino-compact-4ch-v2.1/">v2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mazduino-compact-4ch-v2.2/">v2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mazduino-compact-4ch-v2.3/">v2.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mazduino-compact-4ch-v2.5/">v2.5</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Mini 6 Channel</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../mazduino-mini-6ch-v1.0-v1.2/">v1.0-v1.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mazduino-mini-6ch-v1.3/">v1.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mazduino-mini-6ch-v1.3b/">v1.3B</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mazduino-mini-6ch-v1.3c/">v1.3C</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mazduino-mini-6ch-v1.4/">v1.4</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Mazduino Core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../mazduino-core-rev0/">rev0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mazduino-core-rev1/">rev1</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Mazduino X600</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../mazduino-x600/">X600 (4.3")</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Dash Display</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Mazduino Racedash</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../mazduino-racedash/">3.5" & 4"</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mazduino-racedash-pro/">Pro / M4, M5, M7 (4.3", 5" & 7")</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Aksesori</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">WBO CAN Controller</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#gambaran-umum">Gambaran Umum</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pinout-konektor">Pinout Konektor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#wiring-sensor-lsu-49">Wiring Sensor LSU 4.9</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#wiring-daya-dan-can">Wiring Daya dan CAN</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#menghubungkan-ke-ecu-dan-dash">Menghubungkan ke ECU dan Dash</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#setelan-di-ecu">Setelan di ECU</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#catatan-penting-sensor-wideband">Catatan Penting Sensor Wideband</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sensor dan Wiring</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../persiapan-sensor-wiring/">Persiapan</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rekomendasi-ukuran-kabel/">Rekomendasi Ukuran Kabel</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Manual TunerStudio</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-manual/">Manual Lengkap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-instalasi/">Instalasi</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-konfigurasi/">Konfigurasi Project</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-interface/">Interface Pengguna</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-base-engine/">Base Engine Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-limits-protection/">Limits & Protection</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-fuel-system/">Fuel System</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-ignition/">Ignition System</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-sensors/">Sensor Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-canbus/">CAN Bus Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-controller/">Controller & Diagnostics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-troubleshooting/">Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tunerstudio-examples/">Examples & Map Switching</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Custom Firmware</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../firmware/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >CAN Input</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../firmware/can-sensor-input/">CAN Sensor Input</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../firmware/can-analog-input/">CAN Analog Input</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../firmware/can-virtual-input/">CAN Virtual Input (Digital)</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firmware/can-output/">CAN Output</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firmware/math-channels/">Math Channels</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firmware/user-tables/">User Tables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firmware/logic-outputs/">Logic Outputs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firmware/fuel-spark-cut/">Spark Cut & Fuel Cut</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firmware/fuel-consumption/">Konsumsi Bahan Bakar</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">Tentang</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Mazduino Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Aksesori</li>
+      <li class="breadcrumb-item active">WBO CAN Controller</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+  <p><em>Terakhir diperbarui: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="7 September 2026 16:14:39 UTC">7 September 2026</span></em></p>
+  <h1 id="wbo-can-controller">WBO CAN Controller<a class="headerlink" href="#wbo-can-controller" title="Permanent link">&para;</a></h1>
+<h2 id="gambaran-umum">Gambaran Umum<a class="headerlink" href="#gambaran-umum" title="Permanent link">&para;</a></h2>
+<p><img alt="Mazduino WBO CAN Controller" src="../img/wbo/wbo-can-controller.png" /></p>
+<p>WBO CAN Controller adalah <strong>wideband oxygen controller</strong> untuk sensor Bosch
+<strong>LSU 4.9</strong>. Modul ini membaca sensor, menghitung nilai lambda/AFR, lalu
+mengirimkannya ke bus CAN — sehingga ECU membacanya tanpa memerlukan input
+analog khusus.</p>
+<p>Modul memakai <strong>protokol wideband rusEFI</strong>, jadi hanya bisa dipasangkan dengan
+<strong>ECU berbasis rusEFI</strong>, termasuk seluruh lini Mazduino.</p>
+<p>Kegunaannya ada dua:</p>
+<ul>
+<li><strong>Menghemat pin ECU.</strong> Sensor wideband butuh enam kabel dan rangkaian
+  pengendali pemanas tersendiri. Dengan modul ini, ECU cukup terhubung ke bus
+  CAN yang mungkin sudah terpasang.</li>
+<li><strong>Menambah sensor kedua.</strong> Untuk mesin dengan dua bank, dua modul bisa
+  dipasang di bus yang sama.</li>
+</ul>
+<p>Modul memakai konektor <strong>Molex 2x6 (12 pin)</strong> yang membawa daya, CAN, dan
+seluruh enam kabel sensor dalam satu konektor.</p>
+<hr />
+<h2 id="pinout-konektor">Pinout Konektor<a class="headerlink" href="#pinout-konektor" title="Permanent link">&para;</a></h2>
+<p>Konektor Molex 2x6, dilihat dari sisi kabel:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Baris</th>
+<th style="text-align: left;">Pin 1</th>
+<th style="text-align: left;">Pin 2</th>
+<th style="text-align: left;">Pin 3</th>
+<th style="text-align: left;">Pin 4</th>
+<th style="text-align: left;">Pin 5</th>
+<th style="text-align: left;">Pin 6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Baris 1 (atas)</strong></td>
+<td style="text-align: left;">Heater+</td>
+<td style="text-align: left;">CANH</td>
+<td style="text-align: left;">LSU_Un</td>
+<td style="text-align: left;">LSU_Rtrim</td>
+<td style="text-align: left;">LSU_Vm</td>
+<td style="text-align: left;"><em>kosong</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Baris 2 (bawah)</strong></td>
+<td style="text-align: left;">+12V</td>
+<td style="text-align: left;">CANL</td>
+<td style="text-align: left;"><em>kosong</em></td>
+<td style="text-align: left;">Heater-</td>
+<td style="text-align: left;">LSU_Ip</td>
+<td style="text-align: left;">GND</td>
+</tr>
+</tbody>
+</table>
+<p>Ringkasnya per fungsi:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Fungsi</th>
+<th style="text-align: left;">Pin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Daya</td>
+<td style="text-align: left;">+12V (Baris 2, Pin 1) dan GND (Baris 2, Pin 6)</td>
+</tr>
+<tr>
+<td style="text-align: left;">CAN</td>
+<td style="text-align: left;">CANH (Baris 1, Pin 2) dan CANL (Baris 2, Pin 2)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pemanas sensor</td>
+<td style="text-align: left;">Heater+ (Baris 1, Pin 1) dan Heater- (Baris 2, Pin 4)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sinyal sensor</td>
+<td style="text-align: left;">LSU_Un, LSU_Rtrim, LSU_Vm, LSU_Ip</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Perhatikan Heater+ dan +12V.</strong> Keduanya sama-sama Pin 1, hanya beda baris.
+Tertukar berarti pemanas sensor tersambung langsung ke 12V tanpa kendali
+modul, dan sensor akan rusak karena kepanasan. Pastikan baris konektornya
+benar sebelum menyalakan daya.</p>
+</blockquote>
+<hr />
+<h2 id="wiring-sensor-lsu-49">Wiring Sensor LSU 4.9<a class="headerlink" href="#wiring-sensor-lsu-49" title="Permanent link">&para;</a></h2>
+<p><img alt="Konektor LSU 4.9" src="../img/wbo/lsu49-connector.png" /></p>
+<p>Warna kabel di bawah adalah warna standar Bosch LSU 4.9, jadi berlaku untuk
+sensor asli maupun konektor penggantinya.</p>
+<p>Tabel ini menyambungkan dua konektor yang berbeda, jadi perhatikan kolomnya:
+<strong>Pin Sensor</strong> adalah nomor pin di konektor LSU 4.9 milik sensor, sedangkan
+<strong>Posisi di Konektor Modul</strong> adalah tujuannya di konektor Molex 2x6 milik WBO
+CAN Controller.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pin Sensor (LSU)</th>
+<th style="text-align: left;">Warna Kabel</th>
+<th style="text-align: left;">Sinyal</th>
+<th style="text-align: left;">Posisi di Konektor Modul</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Merah</td>
+<td style="text-align: left;">LSU_Ip</td>
+<td style="text-align: left;">Baris 2, Pin 5</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Kuning</td>
+<td style="text-align: left;">LSU_Vm</td>
+<td style="text-align: left;">Baris 1, Pin 5</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Putih</td>
+<td style="text-align: left;">Heater-</td>
+<td style="text-align: left;">Baris 2, Pin 4</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Abu-abu</td>
+<td style="text-align: left;">Heater+</td>
+<td style="text-align: left;">Baris 1, Pin 1</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Hijau</td>
+<td style="text-align: left;">LSU_Rtrim</td>
+<td style="text-align: left;">Baris 1, Pin 4</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">Hitam</td>
+<td style="text-align: left;">LSU_Un</td>
+<td style="text-align: left;">Baris 1, Pin 3</td>
+</tr>
+</tbody>
+</table>
+<p>Nomor pin di kedua sisi tidak berurutan satu sama lain — Pin 1 sensor tidak
+menuju Pin 1 modul. Ikuti <strong>warna kabelnya</strong>, jangan mencocokkan nomor pin.</p>
+<hr />
+<h2 id="wiring-daya-dan-can">Wiring Daya dan CAN<a class="headerlink" href="#wiring-daya-dan-can" title="Permanent link">&para;</a></h2>
+<p><strong>Daya.</strong> Ambil +12V dari jalur yang <strong>ikut mati saat kunci kontak off</strong>,
+jangan langsung dari aki. Pemanas sensor menarik arus cukup besar dan akan
+mengosongkan aki kalau modul tetap menyala saat mesin mati.</p>
+<p><strong>Ground.</strong> Sambungkan GND ke titik ground yang sama dengan ECU. Ground yang
+berbeda antara modul dan ECU membuat pembacaan bergeser dan bisa mengganggu
+komunikasi CAN.</p>
+<p><strong>CAN.</strong> CANH dan CANL harus berupa <strong>kabel berpilin (twisted pair)</strong>, dan bus
+memerlukan resistor terminasi <strong>120 Ω di kedua ujung</strong> — bukan di setiap
+perangkat. Kalau modul ini berada di ujung bus, salah satu terminasi ada di
+sini; kalau di tengah, tidak perlu terminasi sama sekali.</p>
+<p>Kesalahan paling umum: memasang terminasi di setiap perangkat. Tiga resistor
+120 Ω paralel membuat impedansi bus terlalu rendah dan komunikasi berhenti
+total.</p>
+<hr />
+<h2 id="menghubungkan-ke-ecu-dan-dash">Menghubungkan ke ECU dan Dash<a class="headerlink" href="#menghubungkan-ke-ecu-dan-dash" title="Permanent link">&para;</a></h2>
+<p>Alur datanya bertingkat, satu arah:</p>
+<pre><code>Sensor LSU 4.9  →  WBO CAN Controller  →  bus CAN  →  ECU Mazduino  →  Dash
+</code></pre>
+<p><strong>Dash tidak membaca modul ini secara langsung.</strong> Yang ditampilkan dash adalah
+nilai AFR yang sudah diolah ECU, dikirim lewat protokol ECU seperti data mesin
+lainnya. Jadi tidak ada yang perlu dikonfigurasi di sisi dash — begitu ECU
+membaca lambda dengan benar, angkanya ikut muncul.</p>
+<h3 id="setelan-di-ecu">Setelan di ECU<a class="headerlink" href="#setelan-di-ecu" title="Permanent link">&para;</a></h3>
+<p><strong>Bitrate bus CAN modul ini 500 kbps</strong>, dan bus di sisi ECU harus diset sama.
+Bitrate yang berbeda tidak membuat data "sebagian masuk" — sama sekali tidak ada
+yang terbaca.</p>
+<p>Lalu di bagian konfigurasi lambda sensor:</p>
+<ul>
+<li><strong>Wideband mode</strong> — pilih mode wideband internal rusEFI, bukan <em>Analog</em> dan
+  bukan <em>AEM X-Series</em></li>
+<li><strong>Sensor index</strong> — <code>0</code> untuk modul pertama, <code>1</code> untuk modul kedua</li>
+</ul>
+<p>Dua modul dalam satu bus wajib memakai index yang berbeda. Kalau index-nya sama,
+keduanya saling menimpa dan pembacaannya kacau.</p>
+<hr />
+<h2 id="catatan-penting-sensor-wideband">Catatan Penting Sensor Wideband<a class="headerlink" href="#catatan-penting-sensor-wideband" title="Permanent link">&para;</a></h2>
+<p>Sensor LSU 4.9 adalah komponen habis pakai, dan sebagian besar kerusakannya
+berasal dari pemasangan, bukan dari umur.</p>
+<p><strong>Posisi pemasangan.</strong> Pasang sensor <strong>minimal 10° di atas garis horizontal</strong>,
+dengan ujung sensor mengarah sedikit ke atas. Kalau dipasang mendatar atau
+menghadap ke bawah, air hasil kondensasi knalpot akan menggenang di ujung
+sensor. Saat pemanas menyala, air itu mendidih seketika dan meretakkan keramik
+di dalamnya.</p>
+<p><strong>Jangan menyalakan modul tanpa sensor terpasang di knalpot.</strong> Pemanas yang
+menyala di udara terbuka membuat sensor kepanasan karena tidak ada aliran gas
+yang mendinginkannya.</p>
+<p><strong>Bahan bakar bertimbal (leaded) merusak sensor.</strong> Timbal melapisi elemen
+sensor secara permanen. Untuk mesin balap yang memakai avgas atau bensin
+bertimbal, sensor ini tidak cocok dipakai permanen.</p>
+<p><strong>Hindari silikon.</strong> Uap dari sealant RTV, sebagian cairan pembersih, dan
+beberapa jenis spray bisa meracuni sensor. Kalau memakai sealant di sistem
+knalpot atau intake, pastikan jenisnya <em>sensor-safe</em>.</p>
+<p><strong>Pembacaan baru valid setelah sensor panas.</strong> Beberapa detik pertama setelah
+modul menyala, angkanya belum bisa dipercaya. Ini normal dan bukan tanda
+kerusakan.</p>
+<hr />
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<p><strong>Tidak ada data di bus CAN</strong></p>
+<ul>
+<li>Periksa CANH dan CANL tidak tertukar</li>
+<li>Pastikan terminasi 120 Ω ada di <strong>kedua ujung</strong> bus, bukan di tiap perangkat</li>
+<li>Pastikan bus CAN di ECU diset <strong>500 kbps</strong></li>
+<li>Pastikan ECU memakai mode wideband rusEFI, dan sensor index-nya cocok</li>
+<li>Ukur tegangan di pin +12V dan GND langsung di konektor modul</li>
+</ul>
+<p><strong>AFR terbaca tapi angkanya tidak masuk akal</strong></p>
+<ul>
+<li>Cek seluruh enam kabel sensor terpasang di posisi yang benar</li>
+<li>Cek ground modul dan ECU berada di titik yang sama</li>
+<li>Cek tidak ada kebocoran knalpot sebelum posisi sensor; udara luar yang masuk
+  membuat pembacaan tampak jauh lebih miskin (lean) dari sebenarnya</li>
+</ul>
+<p><strong>AFR selalu menunjukkan sangat miskin (lean)</strong></p>
+<ul>
+<li>Kebocoran knalpot di antara mesin dan sensor adalah penyebab paling umum</li>
+<li>Pada mesin yang baru dihidupkan, tunggu sampai sensor mencapai suhu kerja</li>
+</ul>
+<p><strong>Sensor cepat rusak berulang kali</strong></p>
+<ul>
+<li>Periksa sudut pemasangan; kondensasi adalah penyebab paling sering</li>
+<li>Periksa jenis bahan bakar yang dipakai</li>
+</ul>
+
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../mazduino-racedash-pro/" class="btn btn-neutral float-left" title="Pro / M4, M5, M7 (4.3", 5" & 7")"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../persiapan-sensor-wiring/" class="btn btn-neutral float-right" title="Persiapan">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../mazduino-racedash-pro/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../persiapan-sensor-wiring/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../js/external-links.js"></script>
+      <script src="../js/print-details.js"></script>
+      <script src="../js/print-source.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
