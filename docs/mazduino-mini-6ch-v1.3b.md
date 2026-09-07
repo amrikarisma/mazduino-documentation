@@ -353,13 +353,13 @@ Untuk mesin 4-silinder:
 
 Mazduino Mini 6CH v1.3B didesain dengan **ARM Cortex-M4 180 MHz** sebagai MCU utama, memberikan performa yang lebih tinggi dibanding v1.3. Mendukung beberapa module tambahan seperti VR Conditioner Module dan Idle Stepper Module. Secara bawaan Mazduino Mini 6CH v1.3B hanya mendukung sinyal CKP dan CMP dalam bentuk digital, seperti sensor hall dan optical. Untuk kendaraan yang masih menggunakan VR sensor perlu menambahkan VR Module (atau bisa custom sensor ke hall).
 
-![VR Module](img/mini6ch/vr-module.jpeg)
+![VR Module](img/mini6ch/vr-conditioner-module.jpeg)
 
 Kemudian untuk bagian Idle, Mazduino Mini 6CH v1.3B sudah support Idle PWM, terdapat 2 output dari low side mosfet yang dapat digunakan untuk kontrol IDLE PWM.
 
 Untuk jenis Idle Control yang menggunakan stepper motor diperlukan module tambahan yaitu Idle Stepper Motor Module. Disini bisa menggunakan driver DRV8825.
 
-![Stepper Module](img/mini6ch/stepper-module.jpeg)
+![Stepper Module](img/mini6ch/drv8825-stepper.jpeg)
 
 Selain itu terdapat solder jumper di bagian belakang seperti Tach Pullup, Ignition Vdrive, opsi knock / MCU PC13. Kemudian ada JP4, JP5, JP2, JP3, JP6, JP7 dan JP8 yang sudah dijelaskan di bagian konfigurasi jumper.
 
@@ -390,7 +390,7 @@ Selain itu terdapat solder jumper di bagian belakang seperti Tach Pullup, Igniti
 ### Download Software
 Download software TunerStudio: [TunerStudio Downloads][tunerstudio-dl]
 
-![TunerStudio](img/manual/tunerstudio-download.png)
+![TunerStudio](img/manual/ts-download-page-overview.png)
 
 ### Konfigurasi Khusus v1.3B
 - **Knock Detection**: Gunakan konfigurasi knock sensor yang dioptimalkan untuk v1.3B

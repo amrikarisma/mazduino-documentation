@@ -399,13 +399,13 @@ Pin assignment **STM32F427VGT6** yang telah dioptimalkan untuk v1.3C:
 
 Mazduino Mini 6CH v1.3C didesain dengan **ARM Cortex-M4 180 MHz** sebagai MCU utama, memberikan performa tinggi dengan clock 180MHz. Mendukung beberapa module tambahan seperti VR Conditioner Module dan Idle Stepper Module. Secara bawaan Mazduino Mini 6CH v1.3C hanya mendukung sinyal CKP dan CMP dalam bentuk digital, seperti sensor hall dan optical. Untuk kendaraan yang masih menggunakan VR sensor perlu menambahkan VR Module (atau bisa custom sensor ke hall).
 
-![VR Module](img/mini6ch/vr-module.jpeg)
+![VR Module](img/mini6ch/vr-conditioner-module.jpeg)
 
 Kemudian untuk bagian Idle, Mazduino Mini 6CH v1.3C sudah support Idle PWM, terdapat 2 output dari low side mosfet yang dapat digunakan untuk kontrol IDLE PWM.
 
 Untuk jenis Idle Control yang menggunakan stepper motor diperlukan module tambahan yaitu Idle Stepper Motor Module. Disini bisa menggunakan driver DRV8825.
 
-![Stepper Module](img/mini6ch/stepper-module.jpeg)
+![Stepper Module](img/mini6ch/drv8825-stepper.jpeg)
 
 Terdapat solder jumper di bagian belakang PCB:
 
@@ -438,7 +438,7 @@ Terdapat solder jumper di bagian belakang PCB:
 ### Download Software
 Download software TunerStudio: [TunerStudio Downloads][tunerstudio-dl]
 
-![TunerStudio](img/manual/tunerstudio-download.png)
+![TunerStudio](img/manual/ts-download-page-overview.png)
 
 ### Konfigurasi Khusus v1.3C
 - **TPS Pin**: Pastikan konfigurasi TPS menggunakan **PA6** (bukan PA3 seperti v1.3B)
