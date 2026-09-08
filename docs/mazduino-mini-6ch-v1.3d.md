@@ -6,9 +6,7 @@ Mazduino Mini 6CH v1.3D adalah **versi produksi terakhir** dari lini Mini 6CH. S
 
 **Perubahan v1.3D dari v1.3C:**
 
-- **Referensi ADC Presisi**: Tegangan referensi ADC kini berasal dari IC referensi presisi **REF3333** (U12), menggantikan pembagi resistor 470R/910R dari rail 5V yang dipakai v1.3C. Pembacaan analog tidak lagi ikut bergeser mengikuti rail 5V
-
-- **Filter Suplai Analog (VDDA)**: Suplai analog MCU dipisahkan dari rail 3.3V digital lewat **ferrite bead** (FB1) dengan kapasitor 4.7 µF + 100 nF, menggantikan sambungan langsung ke 3.3V pada v1.3C
+- **Pembacaan Sensor Analog Lebih Stabil**: Tegangan acuan untuk pembacaan analog kini punya sumber sendiri, tidak lagi diturunkan dari rail 5V seperti pada v1.3C. Bagian analog juga disuplai lewat jalur terpisah dari bagian digital
 
 - **Terminasi CAN Onboard**: Resistor **120 Ω terpasang tetap** antara CANH dan CANL (pin 4 dan 21). Lihat [catatan penting soal terminasi](#terminasi-can-onboard-baru-di-v13d) sebelum menyambung ke bus yang sudah punya terminator
 
@@ -374,21 +372,16 @@ Pin assignment **STM32F427VGT6** untuk v1.3D. **Tidak ada satu pun pin yang berp
 
 - **Fleksibilitas**: Memungkinkan channel 5-6 dikonfigurasi tegangan berbeda dari channel 1-4 sesuai kebutuhan aplikasi
 
-#### Referensi ADC Presisi (Baru di v1.3D)
-- **U12 (REF3333)**: IC referensi tegangan 3.3 V presisi yang memberi makan VREF+ MCU dari rail 5V
+#### Pembacaan Sensor Analog Lebih Stabil (Baru di v1.3D)
+- **Yang berubah**: Tegangan acuan untuk seluruh pembacaan analog kini punya sumber sendiri. Pada v1.3C acuan itu diturunkan dari rail 5V, sehingga ikut bergerak mengikuti beban sensor, tegangan aki, dan suhu
 
-- **Menggantikan**: Pembagi resistor 470R/910R pada v1.3C. Pembagi itu menghasilkan ±3.3 V tetapi **ikut bergerak** setiap kali rail 5V bergeser — beban sensor, tegangan aki, dan suhu semuanya masuk ke pembacaan
+- **Suplai Terpisah**: Bagian analog disuplai lewat jalur tersendiri dan difilter dari bagian digital, jadi derau dari sisi digital tidak masuk ke pembacaan
 
-- **Dampak**: Seluruh kanal analog (MAP, TPS, IAT, CLT, O2, Battery, spare) menjadi lebih stabil dan berulang. Ini terasa paling jelas pada pembacaan yang dipakai untuk keputusan fueling
+- **Dampak**: MAP, TPS, IAT, CLT, O2, Battery, dan input analog cadangan lebih stabil dan konsisten — paling terasa pada pembacaan yang dipakai untuk keputusan fueling
 
-- **Catatan Kalibrasi**: Karena referensinya berubah, kalibrasi sensor analog dari board v1.3C sebaiknya diperiksa ulang — bukan wajib diubah, tetapi selisih kecil yang selama ini "dikompensasi" di tabel kalibrasi bisa jadi tidak lagi diperlukan
+- **Tidak Perlu Diatur**: Semuanya berada di sisi board, tidak ada jumper atau setelan firmware yang menyertainya
 
-#### Filter Suplai Analog VDDA (Baru di v1.3D)
-- **FB1 (Ferrite Bead)**: Memisahkan suplai analog MCU (VDDA) dari rail 3.3V digital
-
-- **Dekopling**: 4.7 µF + 100 nF pada sisi VDDA (v1.3C memakai 1 µF + 100 nF langsung di rail 3.3V)
-
-- **Dampak**: Derau switching dari sisi digital tidak lagi masuk ke ADC — pasangan alami dari referensi presisi di atas
+- **Catatan Kalibrasi**: Kalibrasi sensor analog dari board v1.3C sebaiknya diperiksa ulang — bukan wajib diubah, tetapi selisih kecil yang selama ini "dikompensasi" di tabel kalibrasi bisa jadi tidak lagi diperlukan
 
 #### Terminasi CAN Onboard (Baru di v1.3D)
 - **R13 (120 Ω)**: Terpasang **tetap** antara CANH (pin 4) dan CANL (pin 21). Tidak ada jumper untuk melepasnya
@@ -451,7 +444,7 @@ Untuk jenis Idle Control yang menggunakan stepper motor diperlukan module tambah
 
 ![Stepper Module](img/mini6ch/drv8825-stepper.jpeg)
 
-Pada v1.3D, referensi ADC berasal dari IC referensi presisi REF3333 dan suplai analog MCU difilter lewat ferrite bead — keduanya berada di sisi board, bukan sesuatu yang perlu dikonfigurasi pengguna. Board juga sudah membawa resistor terminasi CAN 120 Ω.
+Pada v1.3D, bagian analog memakai tegangan acuan tersendiri dan jalur suplai yang terpisah dari bagian digital — keduanya berada di sisi board dan tidak perlu dikonfigurasi pengguna. Board juga sudah membawa resistor terminasi CAN 120 Ω.
 
 Terdapat solder jumper di bagian belakang PCB:
 
