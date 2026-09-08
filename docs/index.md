@@ -116,8 +116,9 @@ Engine Control Unit 6-channel berfitur lengkap untuk kontrol injeksi sequential 
 - **[v1.0-v1.2](mazduino-mini-6ch-v1.0-v1.2.md)** - Versi standar dengan fitur dasar
 - **[v1.3](mazduino-mini-6ch-v1.3.md)** - Dengan Knock Input dan Electronic Throttle Body (ETB)
 - **[v1.3B](mazduino-mini-6ch-v1.3b.md)** - MCU lebih cepat, input analog TPS2 tambahan, dan optimisasi hardware
-- **[v1.3C](mazduino-mini-6ch-v1.3c.md)** - Optimisasi pin MCU, knock input tunggal, dan VDrive ignition terpisah untuk channel 1-4 dan 5-6 - **versi produksi terakhir**
-- **[v1.4](mazduino-mini-6ch-v1.4.md)** - Bukan versi produksi (dokumentasi referensi); versi produksi terakhir adalah v1.3C
+- **[v1.3C](mazduino-mini-6ch-v1.3c.md)** - Optimisasi pin MCU, knock input tunggal, dan VDrive ignition terpisah untuk channel 1-4 dan 5-6
+- **[v1.3D](mazduino-mini-6ch-v1.3d.md)** - Referensi ADC presisi, filter suplai analog, dan terminasi CAN onboard; pinout sama dengan v1.3C - **versi produksi terakhir**
+- **[v1.4](mazduino-mini-6ch-v1.4.md)** - Bukan versi produksi (dokumentasi referensi); versi produksi terakhir adalah v1.3D
 
 #### Mazduino Core
 
@@ -210,8 +211,9 @@ mobil dapat dibaca — lihat
 - **[Mini 6CH v1.0-v1.2](mazduino-mini-6ch-v1.0-v1.2.md)** - Versi standar dengan fitur dasar
 - **[Mini 6CH v1.3](mazduino-mini-6ch-v1.3.md)** - Dengan knock input dan ETB support
 - **[Mini 6CH v1.3B](mazduino-mini-6ch-v1.3b.md)** - MCU upgrade, optimisasi hardware dan input analog tambahan
-- **[Mini 6CH v1.3C](mazduino-mini-6ch-v1.3c.md)** - Optimisasi pin MCU, knock input tunggal, dan VDrive ignition terpisah - **versi produksi terakhir**
-- **[Mini 6CH v1.4](mazduino-mini-6ch-v1.4.md)** - Bukan versi produksi; versi produksi terakhir adalah v1.3C
+- **[Mini 6CH v1.3C](mazduino-mini-6ch-v1.3c.md)** - Optimisasi pin MCU, knock input tunggal, dan VDrive ignition terpisah
+- **[Mini 6CH v1.3D](mazduino-mini-6ch-v1.3d.md)** - Referensi ADC presisi, filter VDDA, dan terminasi CAN onboard - **versi produksi terakhir**
+- **[Mini 6CH v1.4](mazduino-mini-6ch-v1.4.md)** - Bukan versi produksi; versi produksi terakhir adalah v1.3D
 - **[Mazduino Core rev0](mazduino-core-rev0.md)** - Konektor 48-pin, dual ETB, dual CAN bus
 - **[Mazduino Core rev1](mazduino-core-rev1.md)** - Revisi terbaru lini Core
 - **[Mazduino X600](mazduino-x600.md)** - ECU dengan layar 4.3 inci terintegrasi

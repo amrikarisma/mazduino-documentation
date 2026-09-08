@@ -1,6 +1,6 @@
 # Mazduino Mini 6CH (v1.4)
 
-> **Catatan**: v1.4 **bukan versi produksi**. Versi produksi terakhir dari lini Mini 6CH adalah **[v1.3C](mazduino-mini-6ch-v1.3c.md)**. Halaman ini disimpan sebagai dokumentasi referensi.
+> **Catatan**: v1.4 **bukan versi produksi**. Versi produksi terakhir dari lini Mini 6CH adalah **[v1.3D](mazduino-mini-6ch-v1.3d.md)**. Halaman ini disimpan sebagai dokumentasi referensi.
 
 ## Gambaran Umum
 
